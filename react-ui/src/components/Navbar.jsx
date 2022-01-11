@@ -33,7 +33,6 @@ const SearchContainer = styled.div`
     display: flex;
     align-items: center;
     margin-left: 0.5rem;
-    color: #ccc;
 `;
 
 const Input = styled.input`
@@ -78,7 +77,7 @@ const Navbar = () => {
                     <Language>EN</Language>
                     <SearchContainer>
                         <Input placeholder="Search" />
-                        <Search />
+                        <Search style={{fontSize:"1.2rem", color:"grey"}} />
                     </SearchContainer>
                 </Left>
                 <Center>
