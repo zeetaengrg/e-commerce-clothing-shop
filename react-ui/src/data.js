@@ -16,5 +16,23 @@ export const slideItems = [
         img: "https://i.ibb.co/VD0wXQy/amanda-vick-oh-Wf6-Yuz-OQk-unsplash.jpg",
         title: "SUMMER SALE",
         description: "SUMMER SALE. GET FLAT 30% OFF!!!"
+    },
+    {
+        id: 4,
+        img: "https://i.ibb.co/1JSpLfc/priscilla-du-preez-dlx-LGIy-2-VU-unsplash.jpg",
+        title: "SUMMER SALE",
+        description: "SUMMER SALE. GET FLAT 30% OFF!!!"
+    },
+    {
+        id: 5,
+        img: "https://i.ibb.co/Tkg1BLk/the-creative-exchange-k-WVIm-L5-Qx-JI-unsplash.jpg",
+        title: "SUMMER SALE",
+        description: "SUMMER SALE. GET FLAT 30% OFF!!!"
+    },
+    {
+        id: 6,
+        img: "https://i.ibb.co/PcQcFsn/alyssa-strohmann-TS-u-Nw-Jq-E-unsplash.jpg",
+        title: "SUMMER SALE",
+        description: "SUMMER SALE. GET FLAT 30% OFF!!!"
     }
-]
+];

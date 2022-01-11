@@ -53,6 +53,7 @@ const Logo = styled.h1`
     font-weight: bold;
     cursor: pointer;
     text-transform: uppercase;
+    margin: 0 100px;
 `;
 
 const Right = styled.div`
