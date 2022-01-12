@@ -4,26 +4,31 @@ import { LocationOn, LocalPhone, MailOutline } from '@mui/icons-material';
 
 const Container = styled.div`
     flex: 1;
+    margin: 1rem;
 `;
 
 const Title = styled.h3`
-
+    margin-bottom: 1rem;
 `;
 
 const Location = styled.div`
-
+    display: flex;
+    margin-bottom: 1rem;
 `;
 
 const PhoneNumber = styled.div`
-
+    display: flex;
+    margin-bottom: 1rem;
 `;
 
 const Email = styled.div`
-
+    display: flex;
+    margin-bottom: 1rem;
 `;
 
 const CreditCards = styled.div`
     display: flex;
+    gap: 1rem;
 `;
 
 const Image = styled.img`
@@ -38,15 +43,15 @@ const FooterContact = () => {
             <Container>
                 <Title>Contact</Title>
                 <Location>
-                    <LocationOn />
+                    <LocationOn style={{marginRight: "1rem"}} />
                     821 Central Park, New York, NY 10019
                 </Location>
                 <PhoneNumber>
-                    <LocalPhone />
+                    <LocalPhone style={{marginRight: "1rem"}} />
                     +1 (212) 555-0123
                 </PhoneNumber>
                 <Email>
-                    <MailOutline />
+                    <MailOutline style={{marginRight: "1rem"}} />
                     contact@contact.com
                 </Email>
                 <CreditCards>
