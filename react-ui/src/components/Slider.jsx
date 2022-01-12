@@ -93,7 +93,6 @@ const Button = styled.button`
     }
 `;
 
-
 const Slider = () => {
     const [currentSlide, setCurrentSlide] = React.useState(0);
 

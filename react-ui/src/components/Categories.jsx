@@ -10,13 +10,13 @@ const Container = styled.div`
 
 const Categories = () => {
     return (
-        <>
+        <React.Fragment>
             <Container>
                 {categories.map(item => (
                     <CategoryItems item={item} />
                 ))}
             </Container>   
-        </>
+        </React.Fragment>
     )
 }
 
