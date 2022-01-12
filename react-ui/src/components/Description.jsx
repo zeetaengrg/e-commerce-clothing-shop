@@ -4,7 +4,7 @@ import styled from 'styled-components';
 const Desc = styled.p`
     background-color: #fff;
     opacity: 0.5;
-    padding: 0.5rem;
+    padding: 0rem 0.5rem;
     border-radius: 0.5rem;
 `;
 

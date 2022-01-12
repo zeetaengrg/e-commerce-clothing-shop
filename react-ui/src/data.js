@@ -52,7 +52,7 @@ export const categories = [
 export const newArrivalsItems = [
     {
         id: 1,
-        img: "https://i.ibb.co/t4Lgv42/mennewarrival.jpg",
+        img: "https://i.ibb.co/7yWMzHr/mennewarrival.png",
         title: "MEN'S NEW ARRIVALS!!!",
         description: "NEW ARRIVALS IN THE STORE. GET THEM TODAY!!!"
     },
