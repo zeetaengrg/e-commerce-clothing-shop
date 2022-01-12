@@ -44,12 +44,12 @@ const Wrapper = styled.div`
 const Slide = styled.div`
     height: 100vh;
     width: 100vw;
+    position: relative;
     display: flex;
-    align-items: center;
 `;
 
 const ImageContainer = styled.div`
-    flex: 1;
+    /* flex: 1; */
 `;
 
 const Image = styled.img`
@@ -57,20 +57,39 @@ const Image = styled.img`
     width: 100vw;
 `;
 
-const Button = styled.div`
-    height: 1.5rem;
-    width: 5rem;
+const Info = styled.div`
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+`;
+
+const Title = styled.h1`
+    background-color: #fff;
+`;
+
+const Description = styled.p`
+    background-color: #fff;
+`;
+
+const Button = styled.button`
+    background-color: transparent;
+    height: 2.5rem;
+    width: 6rem;
     border: 1px solid black;
     border-radius: 0.5rem;
     padding: 0.5rem;
-    position: absolute;
-    z-index: 2;
-    bottom: 1rem;
-    margin: 0 50vw;
+    margin-top: 0.5rem;
+    font-weight: bold;
     cursor: pointer;
     :hover {
-        color: #707070;
-        border-color: #707070;
+        color: teal;
+        border-color: teal;
     }
 `;
 
@@ -98,7 +117,11 @@ const Slider = () => {
                             <ImageContainer>
                                 <Image src={item.img} />
                             </ImageContainer>
-                            <Button>SHOP NOW</Button>
+                            <Info>
+                                <Title>{item.title}</Title>
+                                <Description>{item.description}</Description>
+                                <Button>SHOP NOW</Button>
+                            </Info>
                         </Slide>
                     ))}
                 </Wrapper>
