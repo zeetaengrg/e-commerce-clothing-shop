@@ -1,4 +1,4 @@
-import { React, useState } from 'react';
+import * as React from 'react';
 import styled from 'styled-components';
 import { slideItems } from '../data';
 import { ArrowLeft, ArrowRight } from '@mui/icons-material';
@@ -76,7 +76,7 @@ const Button = styled.div`
 
 
 const Slider = () => {
-    const [currentSlide, setCurrentSlide] = useState(0);
+    const [currentSlide, setCurrentSlide] = React.useState(0);
 
     const handleClick = (direction) => {
         if (direction === 'left') {
@@ -87,24 +87,26 @@ const Slider = () => {
     };
 
     return (
-        <Container>
-            <Arrow direction="left" onClick={() => handleClick("left")}>
-                <ArrowLeft />
-            </Arrow>
-            <Wrapper currentSlide={currentSlide}>
-                {slideItems.map(item => (
-                    <Slide>
-                        <ImageContainer>
-                            <Image src={item.img} />
-                        </ImageContainer>
-                        <Button>SHOP NOW</Button>
-                    </Slide>
-                ))}
-            </Wrapper>
-            <Arrow direction="right" onClick={() => handleClick("right")}>
-                <ArrowRight />
-            </Arrow>
-        </Container>
+        <React.Fragment>
+            <Container>
+                <Arrow direction="left" onClick={() => handleClick("left")}>
+                    <ArrowLeft />
+                </Arrow>
+                <Wrapper currentSlide={currentSlide}>
+                    {slideItems.map(item => (
+                        <Slide>
+                            <ImageContainer>
+                                <Image src={item.img} />
+                            </ImageContainer>
+                            <Button>SHOP NOW</Button>
+                        </Slide>
+                    ))}
+                </Wrapper>
+                <Arrow direction="right" onClick={() => handleClick("right")}>
+                    <ArrowRight />
+                </Arrow>
+            </Container>
+        </React.Fragment>
     )
 }
 

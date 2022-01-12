@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import styled from 'styled-components';
 import { Search, ShoppingCartOutlined } from '@mui/icons-material';
 import { Badge } from '@mui/material';
@@ -53,7 +53,7 @@ const Logo = styled.h1`
     font-weight: bold;
     cursor: pointer;
     text-transform: uppercase;
-    margin: 0 100px;
+    /* margin: 0 100px; */
 `;
 
 const Right = styled.div`
@@ -72,29 +72,31 @@ const MenuItem = styled.div`
 
 const Navbar = () => {
     return (
-        <Container>
-            <Wrapper>
-                <Left>
-                    <Language>EN</Language>
-                    <SearchContainer>
-                        <Input placeholder="Search" />
-                        <Search style={{fontSize:"1.2rem", color:"grey"}} />
-                    </SearchContainer>
-                </Left>
-                <Center>
-                    <Logo>Logo</Logo>
-                </Center>
-                <Right>
-                    <MenuItem>Register</MenuItem>
-                    <MenuItem>Sign In</MenuItem>
-                    <MenuItem>
-                        <Badge color="primary" badgeContent={4} >
-                            <ShoppingCartOutlined />
-                        </Badge>
-                    </MenuItem>
-                </Right>
-            </Wrapper>
-        </Container>
+        <React.Fragment>
+            <Container>
+                <Wrapper>
+                    <Left>
+                        <Language>EN</Language>
+                        <SearchContainer>
+                            <Input placeholder="Search" />
+                            <Search style={{fontSize:"1.2rem", color:"grey"}} />
+                        </SearchContainer>
+                    </Left>
+                    <Center>
+                        <Logo>Logo</Logo>
+                    </Center>
+                    <Right>
+                        <MenuItem>Categories</MenuItem>
+                        <MenuItem>Sign In</MenuItem>
+                        <MenuItem>
+                            <Badge color="primary" badgeContent={4} >
+                                <ShoppingCartOutlined />
+                            </Badge>
+                        </MenuItem>
+                    </Right>
+                </Wrapper>
+            </Container>
+        </React.Fragment>
     )
 };
 
