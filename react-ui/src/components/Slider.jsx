@@ -1,5 +1,8 @@
 import * as React from 'react';
 import styled from 'styled-components';
+import Button from './Button';
+import Header from './Header';
+import Description from './Description';
 import { slideItems } from '../data';
 import { ArrowLeft, ArrowRight } from '@mui/icons-material';
 
@@ -49,7 +52,7 @@ const Slide = styled.div`
 `;
 
 const ImageContainer = styled.div`
-    /* flex: 1; */
+
 `;
 
 const Image = styled.img`
@@ -67,30 +70,6 @@ const Info = styled.div`
     align-items: center;
     justify-content: center;
     flex-direction: column;
-`;
-
-const Title = styled.h1`
-    background-color: #fff;
-`;
-
-const Description = styled.p`
-    background-color: #fff;
-`;
-
-const Button = styled.button`
-    background-color: transparent;
-    height: 2.5rem;
-    width: 6rem;
-    border: 1px solid black;
-    border-radius: 0.5rem;
-    padding: 0.5rem;
-    margin-top: 0.5rem;
-    font-weight: bold;
-    cursor: pointer;
-    :hover {
-        color: teal;
-        border-color: teal;
-    }
 `;
 
 const Slider = () => {
@@ -117,9 +96,9 @@ const Slider = () => {
                                 <Image src={item.img} />
                             </ImageContainer>
                             <Info>
-                                <Title>{item.title}</Title>
-                                <Description>{item.description}</Description>
-                                <Button>SHOP NOW</Button>
+                                <Header item={item} />
+                                <Description item={item} />
+                                <Button />
                             </Info>
                         </Slide>
                     ))}

@@ -1,5 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
+import Button from './Button';
+import Header from './Header';
 
 const Container = styled.div`
     flex: 1;
@@ -26,32 +28,14 @@ const Info = styled.div`
     flex-direction: column;
 `;
 
-const Title = styled.h1`
-
-`;
-
-const Button = styled.button`
-    background-color: transparent;
-    height: 2.5rem;
-    width: 6rem;
-    border: 1px solid black;
-    border-radius: 0.5rem;
-    padding: 0.5rem;
-    cursor: pointer;
-    :hover {
-        color: teal;
-        border-color: teal;
-    }
-`;
-
 const CategoryItems = ({item}) => {
     return (
         <>
             <Container>
                 <Image src={item.img} />
                 <Info>
-                    <Title>{item.title}</Title>
-                    <Button>SHOP NOW</Button>
+                    <Header item={item}/>
+                    <Button />
                 </Info>
             </Container>    
         </>
