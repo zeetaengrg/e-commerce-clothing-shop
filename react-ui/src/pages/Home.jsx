@@ -5,6 +5,7 @@ import Slider from '../components/Slider';
 import Categories from '../components/Categories';
 import NewArrivalCategory from '../components/NewArrivalCategory';
 import Newsletter from '../components/Newsletter';
+import FooterSection from '../components/FooterSection';
 
 const Home = () => {
     return (
@@ -15,6 +16,7 @@ const Home = () => {
             <Categories />
             <NewArrivalCategory />
             <Newsletter />
+            <FooterSection />
         </React.Fragment>
     )
 }

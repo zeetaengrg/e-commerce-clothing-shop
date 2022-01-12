@@ -6,7 +6,7 @@ const Container = styled.div`
     display: grid;
     place-content: center;
     height: 50vh;
-    background-color: #d3d3d3;
+    background-color: #f5f5f5;
 `;
 
 const Title = styled.h1`
