@@ -68,24 +68,38 @@ const SignInModal = () => {
                 onClose={handleClose}
                 aria-labelledby="modal-modal-title"
                 aria-describedby="modal-modal-description"
+                style={{ transition: "all 0.3s ease-in-out" }}
             >
                 <Box sx={style}>
                     <Wrapper>
                         <Title style={{ textTransform: "uppercase" }}>
-                            Sign In
+                            Sign Up
                         </Title>
                         <Form>
-                            <Input placeholder="First Name" />
-                            <Input placeholder="Last Name" />
-                            <Input placeholder="Username" />
-                            <Input placeholder="E-mail" />
-                            <Input placeholder="Password" />
-                            <Input placeholder="Confirm Password" />
+                            <Label>Username</Label>
+                            <Input placeholder="Username" type="text" />
+                            <Label>Email</Label>
+                            <Input placeholder="Email" type="email" />
+                            <Label>Password</Label>
+                            <Input placeholder="Password" type="password" />
+                            <Label>Confirm Password</Label>
+                            <Input placeholder="Confirm Password" type="password" />
                             <Agreement>
-                                By clicking Sign Up, you agree to our Terms,
-                                Data Policy and Cookie Policy.
+                                <Checkbox style={{ padding: "0", marginRight: "0.2rem",  }} />
+                                By clicking Sign Up, you agree to our Terms, Data Policy and Cookie Policy.
                             </Agreement>
-                            <Button>Sign Up</Button>
+                            <Button
+                                style={{
+                                    textTransform: "uppercase",
+                                    color: "black",
+                                    fontFamily: "inherit",
+                                    fontSize: "1rem",
+                                    border: "1px solid black",
+                                    padding: "0 1rem",
+                                }}
+                            >
+                                Sign Up
+                            </Button>
                         </Form>
                     </Wrapper>
                 </Box>
