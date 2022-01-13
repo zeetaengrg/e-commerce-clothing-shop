@@ -1,7 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 import Announcements from '../components/Announcements';
+import MaleJackets from '../components/MaleJackets';
 import MaleJeans from '../components/MaleJeans';
+import MaleTshirts from '../components/MaleTshirts';
 import Navbar from '../components/Navbar';
 
 const Container = styled.div`
@@ -34,7 +36,9 @@ const ProductList = () => {
                 <FilterContainer>
                     <Filter>Filter</Filter>
                 </FilterContainer>
-                <MaleJeans />
+                {/* <MaleJeans /> */}
+                {/* <MaleJackets /> */}
+                <MaleTshirts />
             </Container>
         </React.Fragment>
     )
