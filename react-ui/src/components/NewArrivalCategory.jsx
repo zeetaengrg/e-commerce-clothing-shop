@@ -12,7 +12,7 @@ const NewArrivalCategory = () => {
         <React.Fragment>
             <Container>
                 {newArrivalsItems.map(item => (
-                    <NewArrivalItems item={item}/>  
+                    <NewArrivalItems item={item} key={item.id} />  
                 ))}
             </Container>
         </React.Fragment>
