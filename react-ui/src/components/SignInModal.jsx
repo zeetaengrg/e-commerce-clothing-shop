@@ -52,9 +52,13 @@ const SignInModal = () => {
         <React.Fragment>
             <Button
                 onClick={handleOpen}
-                style={{ 
+                style={{
                     textTransform: "uppercase",
                     color: "black",
+                    fontFamily: "inherit",
+                    fontSize: "1rem",
+                    border: "1px solid black",
+                    padding: "0 1rem",
                 }}
             >
                 Sign In
