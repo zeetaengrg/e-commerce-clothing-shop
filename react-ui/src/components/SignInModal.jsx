@@ -7,12 +7,12 @@ const style = {
     top: '50%',
     left: '50%',
     transform: 'translate(-50%, -50%)',
-    width: 400,
+    width: 350,
     bgcolor: 'background.paper',
-    border: '2px solid #000',
+    border: '1px solid grey',
     borderRadius: '5px',
-    boxShadow: 24,
-    p: 4,
+    boxShadow: '2px 2px 5px 5px rgba(0,0,0,0.75)',
+    p: '1rem 1.5rem',
 };
 
 const Wrapper = styled.div`
