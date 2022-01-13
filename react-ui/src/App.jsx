@@ -5,9 +5,9 @@ import SingleProduct from "./pages/SingleProduct";
 const App = () => {
   return (
     <div className="App">
-      {/* <Home /> */}
+      <Home />
       {/* <ProductList /> */}
-      <SingleProduct />
+      {/* <SingleProduct /> */}
     </div>
   )
 }

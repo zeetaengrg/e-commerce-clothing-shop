@@ -2,6 +2,8 @@ import * as React from 'react';
 import styled from 'styled-components';
 import { Search, ShoppingCartOutlined } from '@mui/icons-material';
 import { Badge } from '@mui/material';
+import SignInModal from './SignInModal';
+import BasicModal from './BasicModal';
 
 const Container = styled.div`
     height: 50px;
@@ -53,7 +55,6 @@ const Logo = styled.h1`
     font-weight: bold;
     cursor: pointer;
     text-transform: uppercase;
-    /* margin: 0 100px; */
 `;
 
 const Right = styled.div`
@@ -86,8 +87,7 @@ const Navbar = () => {
                         <Logo>Logo</Logo>
                     </Center>
                     <Right>
-                        <MenuItem>Register</MenuItem>
-                        <MenuItem>Sign In</MenuItem>
+                        <SignInModal />
                         <MenuItem>
                             <Badge color="primary" badgeContent={4} >
                                 <ShoppingCartOutlined />
