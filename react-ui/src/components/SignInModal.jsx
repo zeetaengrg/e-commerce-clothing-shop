@@ -24,15 +24,23 @@ const Title = styled.h1`
 `;
 
 const Form = styled.form`
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+`;
 
+const Label = styled.label`
+    font-size: 1rem;
+    font-weight: 500;
 `;
 
 const Input = styled.input`
-
+    font-size: 1rem;
+    padding: 0.5rem;
 `;
 
 const Agreement = styled.p`
-
+    display: flex;
 `;
 
 const SignInModal = () => {
