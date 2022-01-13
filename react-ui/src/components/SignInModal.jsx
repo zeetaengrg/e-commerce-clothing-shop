@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Box, Button, Modal } from "@mui/material";
+import { Box, Button, Checkbox, Modal } from "@mui/material";
 import styled from 'styled-components';
 
 const style = {
