@@ -42,7 +42,15 @@ const SignInModal = () => {
 
     return (
         <React.Fragment>
-            <Button onClick={handleOpen} style={{textTransform: "uppercase", color: "black"}}>Sign In</Button>
+            <Button
+                onClick={handleOpen}
+                style={{ 
+                    textTransform: "uppercase",
+                    color: "black",
+                }}
+            >
+                Sign In
+            </Button>
             <Modal
                 open={open}
                 onClose={handleClose}
@@ -51,16 +59,19 @@ const SignInModal = () => {
             >
                 <Box sx={style}>
                     <Wrapper>
-                        <Title style={{textTransform: "uppercase"}} >Sign In</Title>
+                        <Title style={{ textTransform: "uppercase" }}>
+                            Sign In
+                        </Title>
                         <Form>
-                            <Input placeholder='First Name' />
-                            <Input placeholder='Last Name' />
-                            <Input placeholder='Username' />
-                            <Input placeholder='E-mail' />
-                            <Input placeholder='Password' />
-                            <Input placeholder='Confirm Password' />
+                            <Input placeholder="First Name" />
+                            <Input placeholder="Last Name" />
+                            <Input placeholder="Username" />
+                            <Input placeholder="E-mail" />
+                            <Input placeholder="Password" />
+                            <Input placeholder="Confirm Password" />
                             <Agreement>
-                                By clicking Sign Up, you agree to our Terms, Data Policy and Cookie Policy.
+                                By clicking Sign Up, you agree to our Terms,
+                                Data Policy and Cookie Policy.
                             </Agreement>
                             <Button>Sign Up</Button>
                         </Form>
@@ -68,7 +79,7 @@ const SignInModal = () => {
                 </Box>
             </Modal>
         </React.Fragment>
-    )
+    );
 };
 
 export default SignInModal;
