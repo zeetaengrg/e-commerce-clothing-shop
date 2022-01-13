@@ -118,6 +118,37 @@ export const maleJackets = [
     }
 ];
 
+export const maleSuits = [
+    {
+        id: 1,
+        img: "https://i.ibb.co/rwKCtct/suit1.png"
+    },
+    {
+        id: 2,
+        img: "https://i.ibb.co/3z6pD9k/suit2.png"
+    },
+    {
+        id: 3,
+        img: "https://i.ibb.co/ynQHcmZ/suit3.png"
+    },
+    {
+        id: 4,
+        img: "https://i.ibb.co/ts5Zt9z/suit4.png"
+    },
+    {
+        id: 5,
+        img: "https://i.ibb.co/Y3BSG4g/suit5.png"
+    },
+    {
+        id: 6,
+        img: "https://i.ibb.co/gtgkPSG/suit6.png"
+    },
+    {
+        id: 7,
+        img: "https://i.ibb.co/kJcKdzY/suit7.png"
+    }
+];
+
 export const femalePants = [
     {
         id: 1,
