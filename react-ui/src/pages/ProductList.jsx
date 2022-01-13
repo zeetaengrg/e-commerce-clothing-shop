@@ -11,13 +11,13 @@ const Container = styled.div`
 `;
 
 const Title = styled.h1`
-    margin: 1rem;
+    padding: 1rem;
 `;
 
 const FilterContainer = styled.div`
     display: flex;
     justify-content: space-between;
-    margin: 1rem;
+    padding: 1rem;
 `;
 
 const Filter = styled.div`
@@ -36,9 +36,9 @@ const ProductList = () => {
                 <FilterContainer>
                     <Filter>Filter</Filter>
                 </FilterContainer>
-                {/* <MaleJeans /> */}
+                <MaleJeans />
                 {/* <MaleJackets /> */}
-                <MaleTshirts />
+                {/* <MaleTshirts /> */}
             </Container>
         </React.Fragment>
     )

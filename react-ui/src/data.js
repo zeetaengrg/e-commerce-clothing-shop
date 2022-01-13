@@ -34,17 +34,17 @@ export const slideItems = [
 export const categories = [
     {
         id: 1,
-        img: "https://i.ibb.co/QY2Mzb5/jeans1.jpg",
+        img: "https://i.ibb.co/s6P9Vk6/jeans1.png",
         title: "JEANS"
     },
     {
         id: 2,
-        img: "https://i.ibb.co/4t1KzKK/jacket1.jpg",
+        img: "https://i.ibb.co/BG9Pd4D/jacket1.png",
         title: "JACKETS"
     },
     {
         id: 3,
-        img: "https://i.ibb.co/C682G2g/tee1.jpg",
+        img: "https://i.ibb.co/Zh200R9/tee1.png",
         title: "T-SHIRTS"
     }
 ];
@@ -67,38 +67,54 @@ export const newArrivalsItems = [
 export const maleJeans = [
     {
         id: 1,
-        img: "https://i.ibb.co/QY2Mzb5/jeans1.jpg"
+        img: "https://i.ibb.co/s6P9Vk6/jeans1.png"
     },
     {
         id: 2,
-        img: "https://i.ibb.co/CJNgpJz/jeans2.jpg"
+        img: "https://i.ibb.co/k0WQyFN/jeans2.png"
     },
     {
         id: 3,
-        img: "https://i.ibb.co/GMJrF2R/jeans3.jpg"
+        img: "https://i.ibb.co/pJ35J9K/jeans3.png"
     },
     {
         id: 4,
-        img: "https://i.ibb.co/7JxMtQ2/jeans4.jpg"
+        img: "https://i.ibb.co/zPm5Qqc/jeans4.png"
     },
     {
         id: 5,
-        img: "https://i.ibb.co/GWFN3n6/jeans5.jpg"
+        img: "https://i.ibb.co/WV7RCKx/jeans5.png"
+    },
+    {
+        id: 6,
+        img: "https://i.ibb.co/qrs3b0d/jeans6.png"
+    },
+    {
+        id: 7,
+        img: "https://i.ibb.co/T4L1SVV/jeans7.png"
+    },
+    {
+        id: 8,
+        img: "https://i.ibb.co/1n5d8zM/jeans8.png"
+    },
+    {
+        id: 9,
+        img: "https://i.ibb.co/cyNkqSg/jeans9.png"
     }
 ];
 
 export const maleJackets = [
     {
         id: 1,
-        img: "https://i.ibb.co/4t1KzKK/jacket1.jpg"
+        img: "https://i.ibb.co/BG9Pd4D/jacket1.png"
     },
     {
         id: 2,
-        img: "https://i.ibb.co/9Z11m5s/jacket2.jpg"
+        img: "https://i.ibb.co/cwYmBf8/jacket2.png"
     },
     {
         id: 3,
-        img: "https://i.ibb.co/5Btk7KK/jacket3.jpg"
+        img: "https://i.ibb.co/nbpP4SR/jacket3.png"
     }
 ];
 
@@ -112,19 +128,19 @@ export const femalePants = [
 export const maleTShirts = [
     {
         id: 1,
-        img: "https://i.ibb.co/C682G2g/tee1.jpg"
+        img: "https://i.ibb.co/Zh200R9/tee1.png"
     },
     {
         id: 2,
-        img: "https://i.ibb.co/8jytJ0f/tee2.jpg"
+        img: "https://i.ibb.co/txBqbfM/tee2.png"
     },
     {
         id: 3,
-        img: "https://i.ibb.co/pLJHD8q/tee4.jpg"
+        img: "https://i.ibb.co/d4JC6GC/tee3.png"
     },
     {
         id: 4,
-        img: "https://i.ibb.co/hsgM3Vg/tee3.jpg"
+        img: "https://i.ibb.co/Bzs017y/tee4.png"
     }
 ];
 

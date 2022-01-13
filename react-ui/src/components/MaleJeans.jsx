@@ -4,7 +4,9 @@ import { maleJeans } from '../data';
 import Products from './Products';
 
 const Container = styled.div`
-
+    padding: 1rem;
+    display: flex;
+    flex-wrap: wrap;
 `;
 
 const MaleJeans = () => {
