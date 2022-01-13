@@ -62,7 +62,7 @@ const Right = styled.div`
     gap: 1rem;
     justify-content: flex-end;
     text-transform: uppercase;
-    align-items: center;
+    /* align-items: center; */
 `;
 
 const MenuItem = styled.div`
