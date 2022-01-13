@@ -34,7 +34,7 @@ const CategoryItems = ({item}) => {
             <Container>
                 <Image src={item.img} />
                 <Info>
-                    <Header item={item}/>
+                    <Header item={item} />
                     <Button />
                 </Info>
             </Container>    

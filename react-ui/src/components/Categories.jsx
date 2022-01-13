@@ -13,7 +13,7 @@ const Categories = () => {
         <React.Fragment>
             <Container>
                 {categories.map(item => (
-                    <CategoryItems item={item} />
+                    <CategoryItems item={item} key={item.id} />
                 ))}
             </Container>   
         </React.Fragment>
