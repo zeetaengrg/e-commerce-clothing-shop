@@ -2,7 +2,7 @@ import * as React from 'react';
 import styled from 'styled-components';
 import { Search, ShoppingCartOutlined } from '@mui/icons-material';
 import { Badge } from '@mui/material';
-import SignInModal from './SignInModal';
+import SignUpModal from './SignUpModal';
 
 const Container = styled.div`
     height: 50px;
@@ -86,7 +86,7 @@ const Navbar = () => {
                         <Logo>Logo</Logo>
                     </Center>
                     <Right>
-                        <SignInModal />
+                        <SignUpModal />
                         <MenuItem>
                             <Badge color="primary" badgeContent={4} >
                                 <ShoppingCartOutlined />
