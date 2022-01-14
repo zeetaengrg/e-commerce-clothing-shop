@@ -34,6 +34,50 @@ const SignUpModal = () => {
         margin: "0.3rem 0",
     };
 
+    const initialValues = {
+        firstName: '',
+        lastName: '',
+        email: '',
+        gender: '',
+        password: '',
+        confirmPassword: '',
+        termsAndCondition: false,
+    };
+
+    const validationSchema = Yup.object().shape({
+        firstName: Yup.string()
+            .min(3, 'Too Short!')
+            .max(50, 'Too Long!')
+            .required('Required'),
+        lastName: Yup.string()
+            .min(3, 'Too Short!')
+            .max(50, 'Too Long!')
+            .required('Required'),
+        email: Yup.string()
+            .email('Please Enter Valid Email')
+            .required('Required'),
+        password: Yup.string()
+            .min(8, 'Password must be at least 8 characters!')
+            .max(25, 'Password must be at most 25 characters!')
+            // .uppercase('Password must contain at least one uppercase letter!')
+            // .lowercase('Password must contain at least one lowercase letter!')
+            // .length('Password must contain at least one number!')
+            // .matches(/[!@#$%^&*()_+\-=[\]{};':"\\|,.<>/?]/, 'Password must contain at least one special character!')
+            .required('Required'),
+        confirmPassword: Yup.string()
+            .oneOf([Yup.ref('password')], 'Passwords must match!')
+            .required('Required'),
+    })
+
+    const onSubmit = (values, props) => {
+        console.log(values)
+        setTimeout(() => {
+            props.resetForm();
+            props.setSubmitting(false);
+        }, 2000)
+        console.log(props);
+    };
+
     return (
         <React.Fragment>
             <Grid>
