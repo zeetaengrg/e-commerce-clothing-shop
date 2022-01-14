@@ -1,12 +1,14 @@
+import React from 'react';
 import { LockOutlined } from '@mui/icons-material';
 import { Avatar, Box, Button, Checkbox, FormControlLabel, Grid, Link, TextField, Typography } from '@mui/material';
-import React from 'react';
+import { ErrorMessage, Field, Form, Formik } from 'formik';
+import * as Yup from 'yup';
 
 const SignInModal = ({handleChange}) => {
 
     const boxStyle = {
         position: 'absolute',
-        top: 281,
+        top: 263,
         left: '50%',
         transform: 'translate(-50%, -50%)',
         width: 352,
@@ -41,11 +43,18 @@ const SignInModal = ({handleChange}) => {
                         <Avatar sx={avatarStyle}><LockOutlined/></Avatar>
                         <Typography variant="h4" sx={{ margin: "0.5rem 0" }}>Sign In</Typography>
                     </Grid>
-                    <TextField sx={textFieldStyle} label="Username" placeholder="Enter Username" type="text" fullWidth required />
-                    <TextField sx={textFieldStyle} label="Email" placeholder="Enter Email" type="email" fullWidth required />
-                    <TextField sx={textFieldStyle} label="Password" placeholder="Enter Password" type="password" fullWidth required />
-                    <FormControlLabel control={<Checkbox />} label="Remember Me" />
-                    <Button sx={btnStyle} variant="contained" type='submit' color="primary" fullWidth >Sign In</Button>
+                    <Formik initialValues={initialValues} onSubmit={onSubmit} validationSchema={validationSchema} >
+                        {props => (
+                            <Form>
+                                {console.log(props)}
+                                <Field as={TextField} sx={textFieldStyle} name='username' label="Username" placeholder="Enter Username" type="text" size="small" helperText={<ErrorMessage name='username' />} fullWidth required />
+                                <Field as={TextField} sx={textFieldStyle} name='email' label="Email" placeholder="Enter Email" type="email" size="small" helperText={<ErrorMessage name='email' />} fullWidth required />
+                                <Field as={TextField} sx={textFieldStyle} name='password' label="Password" placeholder="Enter Password" type="password" size="small" helperText={<ErrorMessage name='password' />} fullWidth required />
+                                <FormControlLabel control={<Field as={Checkbox} name='rememberMe' />} label="Remember Me" />
+                                <Button sx={btnStyle} variant="contained" type='submit' color="primary" disabled={props.isSubmitting} fullWidth >{ props.isSubmitting? "Loading..." : "Sign In" }</Button>
+                            </Form>
+                        )}
+                    </Formik>
                     <Typography>
                         <Link href="#">Forgot Password?</Link>
                     </Typography>
