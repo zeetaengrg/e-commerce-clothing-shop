@@ -35,6 +35,36 @@ const SignInModal = ({handleChange}) => {
         fontSize: "1rem"
     };
 
+    const initialValues = {
+        username: '',
+        email: '',
+        password: '',
+        rememberMe: false,
+    };
+
+    const validationSchema = Yup.object().shape({
+        username: Yup.string()
+            .min(3, 'Too Short!')
+            .max(50, 'Too Long!')
+            .required('Required'),
+        email: Yup.string()
+            .email('Please Enter Valid Email!')
+            .required('Required'),
+        password: Yup.string()
+            .min(6, 'Password must be at least 6 characters!')
+            .max(25, 'Password must be at most 25 characters!')
+            .required('Required'),
+    });
+
+    const onSubmit = (values, props) => {
+        console.log(values);
+        setTimeout(() => {
+            props.resetForm();
+            props.setSubmitting(false);
+        }, 2000)
+        console.log(props);
+    };
+
     return (
         <React.Fragment>
             <Grid>
