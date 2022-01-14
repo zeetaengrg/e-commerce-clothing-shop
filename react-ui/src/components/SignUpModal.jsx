@@ -1,110 +1,66 @@
 import * as React from 'react';
-import { Box, Button, Checkbox, Modal } from "@mui/material";
-import styled from 'styled-components';
-
-const style = {
-    position: 'absolute',
-    top: '50%',
-    left: '50%',
-    transform: 'translate(-50%, -50%)',
-    width: 350,
-    bgcolor: 'background.paper',
-    border: '1px solid grey',
-    borderRadius: '5px',
-    boxShadow: '2px 2px 5px 5px rgba(0,0,0,0.75)',
-    p: '1rem 1.5rem',
-};
-
-const Wrapper = styled.div`
-
-`;
-
-const Title = styled.h1`
-
-`;
-
-const Form = styled.form`
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-`;
-
-const Label = styled.label`
-    font-size: 1rem;
-    font-weight: 500;
-`;
-
-const Input = styled.input`
-    font-size: 1rem;
-    padding: 0.5rem;
-`;
-
-const Agreement = styled.p`
-    display: flex;
-    margin: 0.5rem 0;
-`;
+import { Avatar, Box, Button, Checkbox, FormControlLabel, FormLabel, Grid, Radio, RadioGroup, TextField, Typography } from "@mui/material";
+import { AddCircleOutline } from '@mui/icons-material';
 
 const SignInModal = () => {
-    const [open, setOpen] = React.useState(false);
-    const handleOpen = () => setOpen(true);
-    const handleClose = () => setOpen(false);
+
+    const boxStyle = {
+        position: 'absolute',
+        top: 315,
+        left: '50%',
+        transform: 'translate(-50%, -50%)',
+        width: 352,
+        bgcolor: 'background.paper',
+        border: '1px solid grey',
+        borderRadius: '5px',
+        borderTopLeftRadius: 0,
+        borderTopRightRadius: 0,
+        boxShadow: '2px 2px 2px 2px rgba(0,0,0,0.75)',
+        p: '1rem 1.5rem',
+    };
+
+    const btnStyle = {
+        fontFamily: "inherit",
+        fontSize: "1rem",
+    };
+
+    const avatarStyle = {
+        backgroundColor: 'rgb(245, 0, 87)',
+    };
+
+    const textFieldStyle = {
+        margin: "0.3rem 0",
+    };
 
     return (
         <React.Fragment>
-            <Button
-                onClick={handleOpen}
-                style={{
-                    textTransform: "uppercase",
-                    color: "black",
-                    fontFamily: "inherit",
-                    fontSize: "1rem",
-                    border: "1px solid black",
-                    padding: "0 1rem",
-                }}
-            >
-                Sign In
-            </Button>
-            <Modal
-                open={open}
-                onClose={handleClose}
-                aria-labelledby="modal-modal-title"
-                aria-describedby="modal-modal-description"
-                style={{ transition: "all 0.3s ease-in-out" }}
-            >
-                <Box sx={style}>
-                    <Wrapper>
-                        <Title style={{ textTransform: "uppercase" }}>
-                            Sign Up
-                        </Title>
-                        <Form>
-                            <Label>Username</Label>
-                            <Input placeholder="Username" type="text" />
-                            <Label>Email</Label>
-                            <Input placeholder="Email" type="email" />
-                            <Label>Password</Label>
-                            <Input placeholder="Password" type="password" />
-                            <Label>Confirm Password</Label>
-                            <Input placeholder="Confirm Password" type="password" />
-                            <Agreement>
-                                <Checkbox style={{ marginRight: "0.2rem",  }} />
-                                By clicking Sign Up, you agree to our Terms, Data Policy and Cookie Policy.
-                            </Agreement>
-                            <Button
-                                style={{
-                                    textTransform: "uppercase",
-                                    color: "black",
-                                    fontFamily: "inherit",
-                                    fontSize: "1rem",
-                                    border: "1px solid black",
-                                    padding: "0 1rem",
-                                }}
-                            >
-                                Sign Up
-                            </Button>
-                        </Form>
-                    </Wrapper>
+            <Grid>
+                <Box sx={boxStyle}>
+                    <Grid align="center">
+                        <Avatar sx={avatarStyle}><AddCircleOutline /></Avatar>
+                        <Typography variant="h4" sx={{ marginTop: "0.5rem" }}>Sign Up</Typography>
+                    </Grid>
+                    <TextField sx={textFieldStyle} label="First Name" placeholder="Enter First Name" type="text" size='small' fullWidth required />
+                    <TextField sx={textFieldStyle} label="Last Name" placeholder="Enter Last Name" type="text" size='small' fullWidth required />
+                    <TextField sx={textFieldStyle} label="Email" placeholder="Enter Email" type="email" size='small' fullWidth required />
+                    <FormLabel component="legend" style={{ marginTop: "0.3rem" }} >Gender</FormLabel>
+                    <RadioGroup
+                        aria-label="gender"
+                        defaultValue="male"
+                        name="radio-buttons-group"
+                        style={{ display: "initial"}}
+                    >
+                        <FormControlLabel value="male" control={<Radio />} label="Male" />
+                        <FormControlLabel value="female" control={<Radio />} label="Female" />
+                        <FormControlLabel value="other" control={<Radio />} label="Other" />
+                    </RadioGroup>
+                    {/* <TextField sx={textFieldStyle} label="Phone Number" placeholder="Enter Phone Number" type="number" size='small' fullWidth required /> */}
+                    <TextField sx={textFieldStyle} label="Password" placeholder="Enter Password" type="password" size='small' fullWidth required />
+                    <TextField sx={textFieldStyle} label="Confirm Password" placeholder="Enter Password Again" type="password" size='small' fullWidth required />
+                    <FormControlLabel control={<Checkbox color="primary"  style={{ margin: "0.3rem 0" }} />} label="By clicking Sign Up, I agree to the Terms and Conditions." />
+                    <Button sx={btnStyle} variant="contained" color="primary" fullWidth>Sign Up</Button>
                 </Box>
-            </Modal>
+            </Grid>
         </React.Fragment>
     );
 };
