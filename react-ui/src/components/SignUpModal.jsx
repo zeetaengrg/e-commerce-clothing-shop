@@ -41,6 +41,7 @@ const Input = styled.input`
 
 const Agreement = styled.p`
     display: flex;
+    margin: 0.5rem 0;
 `;
 
 const SignInModal = () => {
@@ -85,7 +86,7 @@ const SignInModal = () => {
                             <Label>Confirm Password</Label>
                             <Input placeholder="Confirm Password" type="password" />
                             <Agreement>
-                                <Checkbox style={{ padding: "0", marginRight: "0.2rem",  }} />
+                                <Checkbox style={{ marginRight: "0.2rem",  }} />
                                 By clicking Sign Up, you agree to our Terms, Data Policy and Cookie Policy.
                             </Agreement>
                             <Button
