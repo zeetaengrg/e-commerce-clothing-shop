@@ -31,7 +31,7 @@ const SignInOutContainer = () => {
         border: '1px solid grey',
         borderRadius: '5px',
         boxShadow: '2px 2px 5px 5px rgba(0,0,0,0.75)',
-        height: '78%',
+        height: '73%',
     };
 
     const tabStyle = {
