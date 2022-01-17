@@ -1,24 +1,16 @@
 import * as React from 'react';
-import { Avatar, Box, Button, Checkbox, FormControlLabel, FormLabel, Grid, Radio, RadioGroup, TextField, Typography } from "@mui/material";
+import { Avatar, Button, Checkbox, FormControlLabel, FormHelperText, FormLabel, Grid, Paper, Radio, RadioGroup, TextField, Typography } from "@mui/material";
 import { AddCircleOutline } from '@mui/icons-material';
 import { Formik, Field, Form, ErrorMessage } from "formik";
 import * as Yup from "yup";
 
 const SignUpModal = () => {
 
-    const boxStyle = {
-        position: 'absolute',
-        top: 314,
-        left: '50%',
-        transform: 'translate(-50%, -50%)',
-        width: 352,
-        bgcolor: 'background.paper',
-        border: '1px solid grey',
-        borderRadius: '5px',
-        borderTopLeftRadius: 0,
-        borderTopRightRadius: 0,
-        boxShadow: '2px 2px 2px 2px rgba(0,0,0,0.75)',
-        p: '1rem 1.5rem',
+    const paperStyle = {
+        width: 300,
+        backgroundColor: 'background.paper',
+        margin: '0 auto',
+        padding: '20px'
     };
 
     const btnStyle = {
@@ -81,7 +73,7 @@ const SignUpModal = () => {
     return (
         <React.Fragment>
             <Grid>
-                <Box sx={boxStyle}>
+                <Paper elevation={20} sx={paperStyle}>
                     <Grid align="center">
                         <Avatar sx={avatarStyle}><AddCircleOutline /></Avatar>
                         <Typography variant="h4" sx={{ marginTop: "0.5rem" }}>Sign Up</Typography>
@@ -103,14 +95,16 @@ const SignUpModal = () => {
                                     <FormControlLabel value="female" control={<Radio />} label="Female" />
                                     <FormControlLabel value="other" control={<Radio />} label="Other" />
                                 </Field>
+                                {/* <FormHelperText><ErrorMessage name='gender' /></FormHelperText> */}
                                 <Field as={TextField} sx={textFieldStyle} name='password' label="Password" placeholder="Enter Password" type="password" size='small' helperText={<ErrorMessage name='password' />} fullWidth required />
                                 <Field as={TextField} sx={textFieldStyle} name='confirmPassword' label="Confirm Password" placeholder="Enter Password Again" type="password" size='small' helperText={<ErrorMessage name='confirmPassword' />} fullWidth required />
                                 <FormControlLabel control={<Field as={Checkbox} color="primary" name='termsAndCondition' style={{ margin: "0.3rem 0" }} />} label="By clicking Sign Up, I agree to the Terms and Conditions." />
+                                <FormHelperText><ErrorMessage name='termsAndCondition' /></FormHelperText>
                                 <Button sx={btnStyle} variant="contained" type="submit" color="primary" disabled={props.isSubmitting} fullWidth>{ props.isSubmitting ? 'Loading...' : 'Sign Up'}</Button>
                             </Form>
                         )}
                     </Formik>
-                </Box>
+                </Paper>
             </Grid>
         </React.Fragment>
     );
