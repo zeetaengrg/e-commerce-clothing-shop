@@ -1,7 +1,7 @@
 import React from 'react';
 import SignInModal from '../components/SignInModal';
 import SignUpModal from '../components/SignUpModal';
-import { Box, Button, Modal, Tab, Tabs, Typography } from '@mui/material';
+import { Box, Button, Modal, Paper, Tab, Tabs, Typography } from '@mui/material';
 
 const SignInOutContainer = () => {
     const [value, setValue] = React.useState(0);
@@ -21,17 +21,10 @@ const SignInOutContainer = () => {
         padding: "0 1rem",
     };
 
-    const boxStyle = {
-        position: 'relative',
-        top: '45%',
-        left: '50%',
-        transform: 'translate(-50%, -50%)',
-        width: 400,
-        bgcolor: 'background.paper',
-        border: '1px solid grey',
-        borderRadius: '5px',
-        boxShadow: '2px 2px 5px 5px rgba(0,0,0,0.75)',
-        height: '73%',
+    const paperStyle = {
+        width: 340,
+        margin: '20px auto',
+        backgroundColor: 'background.paper',
     };
 
     const tabStyle = {
@@ -69,7 +62,7 @@ const SignInOutContainer = () => {
                 aria-describedby="modal-modal-description"
                 style={{ transition: "all 0.3s ease-in-out" }}    
             >
-                <Box sx={boxStyle} >
+                <Paper elevation={20} sx={paperStyle} >
                     <Tabs value={value} onChange={handleChange} variant='fullWidth' textColor="inherit" aria-label="basic tabs example">
                         <Tab sx={tabStyle} label="Sign In" />
                         <Tab sx={tabStyle} label="Sign Up" />
@@ -80,7 +73,7 @@ const SignInOutContainer = () => {
                     <TabPanel value={value} index={1}>
                         <SignUpModal />
                     </TabPanel>
-                </Box>
+                </Paper>
             </Modal>
         </React.Fragment>
     )
