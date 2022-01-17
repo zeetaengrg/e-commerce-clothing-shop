@@ -118,7 +118,7 @@ const CounterBtn = styled.div`
     justify-content: center;
 `;
 
-const MinuxBtn = styled.button`
+const MinusBtn = styled.button`
     border: none;
     background-color: transparent;
     font-size: 1.5rem;
@@ -216,7 +216,7 @@ const SingleProduct = () => {
                         </SortContainer>
                         <CartInfo>
                             <CounterBtn>
-                                <MinuxBtn onClick={handleClickMinus} ><RemoveOutlined /></MinuxBtn>
+                                <MinusBtn onClick={handleClickMinus} ><RemoveOutlined /></MinusBtn>
                                 <Counter>{count}</Counter>
                                 <AddBtn onClick={handleClickAdd}><AddOutlined /></AddBtn>
                             </CounterBtn>
