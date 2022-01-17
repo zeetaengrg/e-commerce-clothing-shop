@@ -7,7 +7,6 @@ import * as Yup from 'yup';
 const SignInModal = ({handleChange}) => {
 
     const paperStyle = {
-        height: '65vh',
         width: 300,
         backgroundColor: 'background.paper',
         margin: '0 auto',
