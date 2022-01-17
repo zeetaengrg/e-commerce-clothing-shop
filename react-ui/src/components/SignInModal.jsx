@@ -1,24 +1,17 @@
 import React from 'react';
 import { LockOutlined } from '@mui/icons-material';
-import { Avatar, Box, Button, Checkbox, FormControlLabel, Grid, Link, TextField, Typography } from '@mui/material';
+import { Avatar, Button, Checkbox, FormControlLabel, Grid, Link, Paper, TextField, Typography } from '@mui/material';
 import { ErrorMessage, Field, Form, Formik } from 'formik';
 import * as Yup from 'yup';
 
 const SignInModal = ({handleChange}) => {
 
-    const boxStyle = {
-        position: 'absolute',
-        top: 263,
-        left: '50%',
-        transform: 'translate(-50%, -50%)',
-        width: 352,
-        bgcolor: 'background.paper',
-        border: '1px solid grey',
-        borderRadius: '5px',
-        borderTopLeftRadius: 0,
-        borderTopRightRadius: 0,
-        // boxShadow: '2px 2px 5px 5px rgba(0,0,0,0.75)',
-        p: '1rem 1.5rem',
+    const paperStyle = {
+        height: '65vh',
+        width: 300,
+        backgroundColor: 'background.paper',
+        margin: '0 auto',
+        padding: '20px',
     };
 
     const textFieldStyle = {
@@ -68,7 +61,7 @@ const SignInModal = ({handleChange}) => {
     return (
         <React.Fragment>
             <Grid>
-                <Box sx={boxStyle} >
+                <Paper elevation={20} sx={paperStyle} >
                     <Grid align="center" >
                         <Avatar sx={avatarStyle}><LockOutlined/></Avatar>
                         <Typography variant="h4" sx={{ margin: "0.5rem 0" }}>Sign In</Typography>
@@ -91,7 +84,7 @@ const SignInModal = ({handleChange}) => {
                     <Typography>Don't have an account?
                         <Link style={{ marginLeft: "0.5rem" }} href="#" onClick={()=> handleChange("event", 1) }>Sign Up</Link>
                     </Typography>
-                </Box>
+                </Paper>
             </Grid>
         </React.Fragment>
     )
