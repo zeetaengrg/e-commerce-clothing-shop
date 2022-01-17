@@ -49,12 +49,12 @@ const SignInModal = ({handleChange}) => {
     });
 
     const onSubmit = (values, props) => {
-        console.log(values);
+        // console.log(values);
         setTimeout(() => {
             props.resetForm();
             props.setSubmitting(false);
         }, 2000)
-        console.log(props);
+        // console.log(props);
     };
 
     return (
