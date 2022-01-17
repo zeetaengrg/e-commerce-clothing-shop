@@ -19,6 +19,11 @@ const SignInOutContainer = () => {
         fontSize: "1rem",
         border: "1px solid black",
         padding: "0 1rem",
+        backgroundColor: "white",
+        '&:hover': {
+            backgroundColor: "black",
+            color: "white"
+        }
     };
 
     const paperStyle = {
