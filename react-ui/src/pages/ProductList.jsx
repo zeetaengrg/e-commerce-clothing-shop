@@ -45,7 +45,7 @@ const ProductList = () => {
                 <Announcements />
                 <Navbar />
                 <Title>
-                    Jeans
+                    Men's Suit
                 </Title>
                 <FilterContainer>
                     <Filter>
