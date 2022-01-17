@@ -44,7 +44,7 @@ const SignInModal = ({handleChange}) => {
             .email('Please Enter Valid Email!')
             .required('Required'),
         password: Yup.string()
-            .min(6, 'Password must be at least 6 characters!')
+            .min(8, 'Password must be at least 8 characters!')
             .max(25, 'Password must be at most 25 characters!')
             .required('Required'),
     });
