@@ -51,14 +51,11 @@ const SignUpModal = () => {
         password: Yup.string()
             .min(8, 'Password must be at least 8 characters!')
             .max(25, 'Password must be at most 25 characters!')
-            // .uppercase('Password must contain at least one uppercase letter!')
-            // .lowercase('Password must contain at least one lowercase letter!')
-            // .length('Password must contain at least one number!')
-            // .matches(/[!@#$%^&*()_+\-=[\]{};':"\\|,.<>/?]/, 'Password must contain at least one special character!')
             .required('Required'),
         confirmPassword: Yup.string()
             .oneOf([Yup.ref('password')], 'Passwords must match!')
             .required('Required'),
+        termsAndCondition: Yup.boolean(["true"], "Accept Terms and Conditions").required('Required'),
     })
 
     const onSubmit = (values, props) => {
