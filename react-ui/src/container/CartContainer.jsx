@@ -146,18 +146,20 @@ const CartSummary = styled.div`
     border-radius: 0.5rem;
     padding: 0.5rem 1rem;
     text-align: center;
+    height: 43vh;
 `;
 
 const OrderTitle = styled.h2`
     text-transform: uppercase;
     font-weight: 500;
+    margin-bottom: 0.5rem;
 `;
 
 const CostDetails = styled.div`
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    margin-top: 0.5rem;
+    margin-top: 1rem;
 `;
 
 const SubTotalCost = styled.div`
