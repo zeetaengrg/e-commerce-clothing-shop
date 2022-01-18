@@ -257,19 +257,59 @@ const CartContainer = () => {
                                     </ProductInfo>
                                     <PriceDetails>
                                         <CounterBtn>
-                                            <MinusBtn onClick={handleClickMinus} ><RemoveOutlined /></MinusBtn>
+                                            <MinusBtn onClick={handleClickMinus}><RemoveOutlined /></MinusBtn>
                                             <Counter>{count}</Counter>
                                             <AddBtn onClick={handleClickAdd}><AddOutlined /></AddBtn> 
                                         </CounterBtn>
                                         <Price>
-                                            $ 75.50
+                                            $ 125.50
                                         </Price>
                                     </PriceDetails>
                                 </ProductDetails>
                             </CartDetails>
                             <Divider />
                             <CartDetails>
-                                Product no 2
+                                <Image src="https://i.ibb.co/PFjnFB5/jacket4.png" />
+                                <ProductDetails>
+                                    <ProductInfo>
+                                        <Name><b>Product: </b>H&M T-Shirt</Name>
+                                        <NumberId><b>ID: </b>87546351</NumberId>
+                                        <Color style={{backgroundColor: 'black'}} />
+                                        <Size><b>Size: </b>L</Size>
+                                    </ProductInfo>
+                                    <PriceDetails>
+                                        <CounterBtn>
+                                            <MinusBtn onClick={handleClickMinus} ><RemoveOutlined /></MinusBtn>
+                                            <Counter>{count}</Counter>
+                                            <AddBtn onClick={handleClickAdd}><AddOutlined /></AddBtn> 
+                                        </CounterBtn>
+                                        <Price>
+                                            $ 24.50
+                                        </Price>
+                                    </PriceDetails>
+                                </ProductDetails>
+                            </CartDetails>
+                            <Divider />
+                            <CartDetails>
+                                <Image src="https://i.ibb.co/k0WQyFN/jeans2.png" />
+                                <ProductDetails>
+                                    <ProductInfo>
+                                        <Name><b>Product: </b>Levis Jeans Pant</Name>
+                                        <NumberId><b>ID: </b>71843595</NumberId>
+                                        <Color style={{backgroundColor: 'lightblue'}} />
+                                        <Size><b>Size: </b>M</Size>
+                                    </ProductInfo>
+                                    <PriceDetails>
+                                        <CounterBtn>
+                                            <MinusBtn onClick={handleClickMinus} ><RemoveOutlined /></MinusBtn>
+                                            <Counter>{count}</Counter>
+                                            <AddBtn onClick={handleClickAdd}><AddOutlined /></AddBtn> 
+                                        </CounterBtn>
+                                        <Price>
+                                            $ 32.50
+                                        </Price>
+                                    </PriceDetails>
+                                </ProductDetails>
                             </CartDetails>
                         </CartInfoContainer>
                     </CartInfo>
@@ -279,7 +319,7 @@ const CartContainer = () => {
                         <CostDetails>
                             <SubTotalCost>
                                 <SubTotal>Subtotal</SubTotal>
-                                <SubTotalPrice>$ 175.00</SubTotalPrice>
+                                <SubTotalPrice>$ 182.50</SubTotalPrice>
                             </SubTotalCost>
                             <ShippingCost>
                                 <Shipping>Estimated Shipping</Shipping>
@@ -292,7 +332,7 @@ const CartContainer = () => {
                             <Divider />
                             <TotalCost>
                                 <Total>Total</Total>
-                                <TotalPrice>$ 175.00</TotalPrice>
+                                <TotalPrice>$ 182.50</TotalPrice>
                             </TotalCost>
                             <Button>Checkout Now</Button>
                         </CostDetails>
