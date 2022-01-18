@@ -123,7 +123,7 @@ const CounterBtn = styled.div`
 `;
 
 const MinusBtn = styled.span`
-
+    cursor: pointer;
 `;
 
 const Counter = styled.span`
@@ -133,7 +133,7 @@ const Counter = styled.span`
 `;
 
 const AddBtn = styled.span`
-
+    cursor: pointer;
 `;
 
 const Price = styled.span`
