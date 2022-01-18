@@ -71,7 +71,8 @@ const CartDetails = styled.div`
 `;
 
 const Image = styled.img`
-    height: 30vh;
+    height: 150px;
+    object-fit: contain;
     flex: 1;
 `;
 
