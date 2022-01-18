@@ -191,6 +191,7 @@ const ShippingPrice = styled.span`
 const ShippingDiscount = styled.div`
     display: flex;
     justify-content: space-between;
+    margin-bottom: 0rem;
 `;
 
 const Discount = styled.span`
@@ -234,7 +235,7 @@ const CartContainer = () => {
                     <Button>Continue Shopping</Button>
                     <ShoppingInfo>
                         <ShoppingInfoItem>
-                            Shopping Bag(2)
+                            Shopping Bag(3)
                         </ShoppingInfoItem>
                         <ShoppingInfoItem>
                             Your Wishlist(0)
