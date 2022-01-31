@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { Search, ShoppingCartOutlined } from '@mui/icons-material';
 import { Badge } from '@mui/material';
 import SignInOutContainer from '../container/SignInOutContainer';
-
+import { mobile } from '../responsive';
 
 const Container = styled.div`
     height: 50px;
@@ -27,6 +27,7 @@ const Language = styled.div`
     cursor: pointer;
     align-items: center;
     display: flex;
+    ${mobile({ display: 'none' })};
 `;
 
 const SearchContainer = styled.div`
@@ -35,6 +36,7 @@ const SearchContainer = styled.div`
     display: flex;
     align-items: center;
     margin-left: 0.5rem;
+    ${mobile({ marginLeft: 0 })};
 `;
 
 const Input = styled.input`
@@ -43,6 +45,7 @@ const Input = styled.input`
     background: transparent;
     font-size: 1rem;
     padding-left: 0.2rem;
+    ${mobile({ width: '50px' })};
 `;
 
 const Center = styled.div`
@@ -64,6 +67,7 @@ const Right = styled.div`
     justify-content: flex-end;
     text-transform: uppercase;
     align-items: center;
+    /* ${mobile({ flex: '2' })}; */
 `;
 
 const MenuItem = styled.div`
