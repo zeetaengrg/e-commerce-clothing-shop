@@ -59,7 +59,7 @@ const SignInOutContainer = () => {
 
     return (
         <React.Fragment>
-            <Button onClick={handleOpen} sx={btnStyle} >Sign In</Button>
+            <Button onClick={handleOpen} sx={btnStyle}>Sign In</Button>
             <Modal
                 open={open}
                 onClose={handleClose}
