@@ -1,9 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
-import Navbar from '../../components/Navbar/Navbar';
-import Announcements from '../../components/Announcements/Announcements';
-import Footer from '../../components/Footer/Footer';
-import CartContainer from '../../components/CartContainer/CartContainer';
+import Navbar from '../../components/layouts/Navbar/Navbar';
+import Announcements from '../../components/elements/Announcements/Announcements';
+import Footer from '../../components/layouts/Footer/Footer';
+import CartContainer from '../../components/templates/CartContainer/CartContainer';
 
 const Container = styled.div`
 

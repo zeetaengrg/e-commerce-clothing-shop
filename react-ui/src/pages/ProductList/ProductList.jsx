@@ -1,12 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
-import Announcements from '../../components/Announcements/Announcements';
-// import MaleJackets from '../../components/Male/MaleJackets/MaleJackets';
-// import MaleJeans from '../../components/Male/MaleJeans/MaleJeans';
-import MaleSuits from '../../components/Male/MaleSuits/MaleSuits';
-// import MaleTshirts from '../../components/Male/MaleTshirts/MaleTshirts';
-import Navbar from '../../components/Navbar/Navbar';
-import Footer from '../../components/Footer/Footer';
+import Announcements from '../../components/elements/Announcements/Announcements';
+import MaleJackets from '../../components/templates/Male/MaleJackets/MaleJackets';
+import MaleJeans from '../../components/templates/Male/MaleJeans/MaleJeans';
+import MaleSuits from '../../components/templates/Male/MaleSuits/MaleSuits';
+import MaleTshirts from '../../components/templates/Male/MaleTshirts/MaleTshirts';
+import Navbar from '../../components/layouts/Navbar/Navbar';
+import Footer from '../../components/layouts/Footer/Footer';
 
 const Container = styled.div`
 

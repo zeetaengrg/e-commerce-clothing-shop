@@ -1,164 +1,36 @@
 import { AddOutlined, RemoveOutlined } from '@mui/icons-material';
 import { Divider } from '@mui/material';
 import React from 'react';
-import styled from 'styled-components';
-import Announcements from '../../components/Announcements/Announcements';
-import Footer from '../../components/Footer/Footer';
-import Navbar from '../../components/Navbar/Navbar';
-
-const Container = styled.div`
-
-`;
-
-const Wrapper = styled.div`
-    display: flex;
-`;
-
-const ImageContainer = styled.div`
-    flex: 1;
-    margin: 1rem;
-    padding: 1rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #f5f5f5;
-    position: relative;
-`;
-
-const Circle = styled.div`
-    height: 400px;
-    width: 400px;
-    border-radius: 50%;
-    background-color: white;
-    position: absolute;
-`;
-
-const Image = styled.img`
-    z-index: 2;
-`;
-
-const Info = styled.div`
-    flex: 1;
-    background-color: #f5f5f5;
-    padding: 1rem;
-    margin: 1rem;
-`;
-
-const Title = styled.h2`
-    font-size: 2rem;
-    font-weight: 400;
-`;
-
-const Description = styled.p`
-    margin-top: 1.5rem;
-    margin-bottom: 1.5rem;
-    width: 85%;
-`;
-
-const Price = styled.span`
-    font-size: 2.5rem;
-    font-weight: 300;
-`;
-
-const SortContainer = styled.div`
-    display: flex;
-    align-items: center;
-    margin-top: 1.5rem;
-`;
-
-const ColorContainer = styled.div`
-    display: flex;
-    margin-right: 1rem;
-`;
-
-const ColorText = styled.span`
-    margin-right: 0.5rem;
-`;
-
-const ColorInfo = styled.div`
-    display: flex;
-`;
-
-const Color = styled.div`
-    margin-right: 0.5rem;
-`;
-
-const SizeContainer = styled.div`
-    display: flex;
-`;
-
-const SizeText = styled.span`
-    margin-right: 0.5rem;
-`;
-
-const SizeInfo = styled.div`
-
-`;
-
-const Select = styled.select`
-    background: transparent;
-    cursor: pointer;
-    border: 1px solid teal;
-    border-radius: 0.2rem;
-`;
-
-const Options = styled.option`
-    padding: 0.2rem;
-`;
-
-const CartInfo = styled.div`
-    display: flex;
-    align-items: center;
-    margin-top: 1.5rem;
-`;
-
-const CounterBtn = styled.div`
-    margin-right: 1rem;
-    display: flex;
-    justify-content: center;
-`;
-
-const MinusBtn = styled.button`
-    border: none;
-    background-color: transparent;
-    font-size: 1.5rem;
-    font-weight: bold;
-    cursor: pointer;
-    margin-right: 0.2rem;
-`;
-
-const Counter = styled.span`
-    font-size: 1rem;
-    border: 1px solid teal;
-    padding: 0 0.5rem;
-    margin-right: 0.2rem;
-    border-radius: 0.2rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-`;
-
-const AddBtn = styled.button`
-    border: none;
-    background-color: transparent;
-    font-size: 1.5rem;
-    font-weight: bold;
-    cursor: pointer;
-`;
-
-const AddToCart = styled.button`
-    padding: 0.5rem;
-    font-size: 1rem;
-    text-transform: uppercase;
-    background: transparent;
-    border: 1px solid teal;
-    border-radius: 0.2rem;
-    cursor: pointer;
-
-    &:hover {
-        background: #e0e0e0;
-    }
-`;
+import Announcements from '../../components/elements/Announcements/Announcements';
+import Footer from '../../components/layouts/Footer/Footer';
+import Navbar from '../../components/layouts/Navbar/Navbar';
+import {
+    Container,
+    Wrapper,
+    ImageContainer,
+    Circle,
+    Image,
+    Info,
+    Title,
+    Description,
+    Price,
+    SortContainer,
+    ColorContainer,
+    ColorText,
+    ColorInfo,
+    Color,
+    SizeContainer,
+    SizeText,
+    SizeInfo,
+    Select,
+    Options,
+    CartInfo,
+    CounterBtn,
+    MinusBtn,
+    Counter,
+    AddBtn,
+    AddToCart,
+} from "./SingleProduct.styles";
 
 const SingleProduct = () => {
     const [count, setCount] = React.useState(1);
