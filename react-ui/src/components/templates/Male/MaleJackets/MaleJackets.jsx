@@ -1,0 +1,18 @@
+import React from 'react';
+import { maleJackets } from '../../../../data';
+import Products from '../../../elements/Products/Products';
+import { Container } from './MaleJackets.styles';
+
+const MaleJackets = () => {
+    return (
+        <React.Fragment>
+            <Container>
+                {maleJackets.map(product => (
+                    <Products key={product.id} product={product} />
+                ))}
+            </Container>
+        </React.Fragment>
+    )
+}
+
+export default MaleJackets;
