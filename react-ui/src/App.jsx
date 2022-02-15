@@ -1,7 +1,7 @@
-import Home from "./pages/Home";
-import ProductList from "./pages/ProductList";
-import SingleProduct from "./pages/SingleProduct";
-import Cart from "./pages/Cart";
+import Home from "./pages/Home/Home";
+import ProductList from "./pages/ProductList/ProductList";
+import SingleProduct from "./pages/SingleProduct/SingleProduct";
+import Cart from "./pages/Cart/Cart";
 import "./App.css";
 
 const App = () => {
