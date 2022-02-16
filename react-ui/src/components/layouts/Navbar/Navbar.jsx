@@ -23,6 +23,7 @@ const Navbar = () => {
                     </Center>
                     <Right>
                         <SignInOutContainer />
+                        Register
                         <MenuItem>
                             <Badge color="primary" badgeContent={4}>
                                 <ShoppingCartOutlined />
