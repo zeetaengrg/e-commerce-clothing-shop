@@ -1,5 +1,5 @@
 import React from 'react';
-import { Send } from '@mui/icons-material';
+import { RiSendPlaneFill } from 'react-icons/ri';
 import { Container, Title, Description, Form, Input, Button } from './Newsletter.styles';
 
 const Newsletter = () => {
@@ -11,7 +11,7 @@ const Newsletter = () => {
                 <Form>
                     <Input type="text" placeholder="Enter Your Email" />
                     <Button>
-                        <Send />
+                        <RiSendPlaneFill />
                     </Button>
                 </Form>
             </Container>

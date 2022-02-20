@@ -1,4 +1,4 @@
-import { AddOutlined, RemoveOutlined } from '@mui/icons-material';
+import { MdRemoveCircleOutline, MdAddCircleOutline } from 'react-icons/md';
 import { Divider } from '@mui/material';
 import React from 'react';
 import { Announcements } from '../../components/elements';
@@ -113,11 +113,11 @@ const SingleProduct = () => {
                         <CartInfo>
                             <CounterBtn>
                                 <MinusBtn onClick={handleClickMinus}>
-                                    <RemoveOutlined />
+                                    <MdRemoveCircleOutline />
                                 </MinusBtn>
                                 <Counter>{count}</Counter>
                                 <AddBtn onClick={handleClickAdd}>
-                                    <AddOutlined />
+                                    <MdAddCircleOutline />
                                 </AddBtn>
                             </CounterBtn>
                             <AddToCart>Add to Cart</AddToCart>
