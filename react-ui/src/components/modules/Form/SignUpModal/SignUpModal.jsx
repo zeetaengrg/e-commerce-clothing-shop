@@ -67,7 +67,7 @@ const SignUpModal = () => {
             <Container>
                 <HeaderContent>
                     <Icon>
-                        <MdAddCircleOutline />
+                        <MdAddCircleOutline style={{ fontSize: "1.5rem" }} />
                     </Icon>
                     <HeaderText>
                         Sign Up
