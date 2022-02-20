@@ -75,6 +75,10 @@ export const ColorInfo = styled.div`
 
 export const Color = styled.div`
     margin-right: 0.5rem;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    border: 0.5px solid black;
 `;
 
 export const SizeContainer = styled.div`
