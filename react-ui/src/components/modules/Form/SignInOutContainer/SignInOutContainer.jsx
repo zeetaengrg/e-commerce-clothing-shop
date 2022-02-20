@@ -1,11 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import SignInModal from '../SignInModal/SignInModal';
 import SignUpModal from '../SignUpModal/SignUpModal';
+import { Container, } from './SignInOutContainer.styles';
 import { Box, Button, Modal, Paper, Tab, Tabs, Typography } from '@mui/material';
 
 const SignInOutContainer = () => {
-    const [value, setValue] = React.useState(0);
-    const [open, setOpen] = React.useState(false);
+    const [value, setValue] = useState(0);
+    const [open, setOpen] = useState(false);
     const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);
 
