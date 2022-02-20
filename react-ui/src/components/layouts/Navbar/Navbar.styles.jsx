@@ -41,7 +41,7 @@ export const Input = styled.input`
     background: transparent;
     font-size: 1rem;
     padding-left: 0.2rem;
-    ${mobile({ width: '50px' })};
+    ${mobile({ width: '10px' })};
 `;
 
 export const Center = styled.div`
@@ -54,6 +54,7 @@ export const Logo = styled.h1`
     font-weight: bold;
     cursor: pointer;
     text-transform: uppercase;
+    padding: 0;
 `;
 
 export const Right = styled.div`

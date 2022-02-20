@@ -67,6 +67,11 @@ export const CartDetails = styled.div`
     gap: 1.5rem;
 `;
 
+export const Divider = styled.hr`
+    width: 100%;
+    opacity: 0.2;
+`;
+
 export const Image = styled.img`
     height: 150px;
     object-fit: contain;

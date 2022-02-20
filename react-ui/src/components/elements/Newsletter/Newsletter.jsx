@@ -11,7 +11,7 @@ const Newsletter = () => {
                 <Form>
                     <Input type="text" placeholder="Enter Your Email" />
                     <Button>
-                        <RiSendPlaneFill />
+                        <RiSendPlaneFill style={{ fontSize: "1.5rem" }} />
                     </Button>
                 </Form>
             </Container>

@@ -1,5 +1,4 @@
 import React from 'react';
-import { Divider } from '@mui/material';
 import { MdRemoveCircleOutline, MdAddCircleOutline } from 'react-icons/md';
 import {
     Container,
@@ -12,6 +11,7 @@ import {
     CartInfo,
     CartInfoContainer,
     CartDetails,
+    Divider,
     Image,
     ProductDetails,
     ProductInfo,

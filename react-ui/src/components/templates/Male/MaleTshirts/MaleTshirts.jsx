@@ -1,5 +1,5 @@
 import React from 'react';
-import Products from '../../../elements/Products/Products';
+import { Products } from '../../../elements'
 import { maleTShirts } from '../../../../data';
 import { Container } from './MaleTshirts.styles';
 

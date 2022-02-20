@@ -1,5 +1,4 @@
 import { MdRemoveCircleOutline, MdAddCircleOutline } from 'react-icons/md';
-import { Divider } from '@mui/material';
 import React from 'react';
 import { Announcements } from '../../components/elements';
 import { Navbar, Footer } from '../../components/layouts';
@@ -11,6 +10,7 @@ import {
     Image,
     Info,
     Title,
+    Divider,
     Description,
     Price,
     SortContainer,
@@ -57,7 +57,7 @@ const SingleProduct = () => {
                     </ImageContainer>
                     <Info>
                         <Title>H&M Bomber Jacket</Title>
-                        <Divider style={{ width: "100%" }} />
+                        <Divider />
                         <Description>
                             Lorem ipsum dolor sit amet consectetur adipisicing
                             elit. Neque, eius repudiandae soluta quas provident

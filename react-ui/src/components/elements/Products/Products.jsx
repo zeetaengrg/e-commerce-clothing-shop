@@ -1,5 +1,5 @@
-import { MdFavoriteBorder, MdSearch, MdOutlineShoppingCart } from 'react-icons/md';
 import React from 'react';
+import { MdFavoriteBorder, MdSearch, MdOutlineShoppingCart } from 'react-icons/md';
 import { Info, Container, Circle, Image, Icons } from './Products.styles';
 
 const Products = ({product}) => {

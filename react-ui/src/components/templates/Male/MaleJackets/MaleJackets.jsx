@@ -1,6 +1,6 @@
 import React from 'react';
 import { maleJackets } from '../../../../data';
-import Products from '../../../elements/Products/Products';
+import { Products } from '../../../elements'
 import { Container } from './MaleJackets.styles';
 
 const MaleJackets = () => {

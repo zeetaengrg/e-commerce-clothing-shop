@@ -43,6 +43,11 @@ export const Title = styled.h2`
     font-weight: 400;
 `;
 
+export const Divider = styled.hr`
+    width: 100%;
+    opacity: 0.2;
+`;
+
 export const Description = styled.p`
     margin-top: 1.5rem;
     margin-bottom: 1.5rem;
