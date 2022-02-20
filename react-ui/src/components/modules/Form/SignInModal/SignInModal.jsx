@@ -49,7 +49,7 @@ const SignInModal = ({handleChange}) => {
             <Container>
                 <HeaderContent>
                     <Icon>
-                        <MdLockOutline />
+                        <MdLockOutline style={{ fontSize: "1.5rem" }} />
                     </Icon>
                     <HeaderText>Sign In</HeaderText>
                 </HeaderContent>
