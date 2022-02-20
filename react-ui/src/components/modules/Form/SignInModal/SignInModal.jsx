@@ -98,6 +98,7 @@ const SignInModal = ({handleChange}) => {
                 </Formik>
                 <FooterText>
                     <ForgotText>Forgot Password?</ForgotText>
+                    <br />
                     <AccountText>
                         Don't have an account?
                         <SignUpLink
