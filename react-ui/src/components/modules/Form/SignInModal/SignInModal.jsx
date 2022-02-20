@@ -22,17 +22,12 @@ import {
 const SignInModal = ({handleChange}) => {
 
     const initialValues = {
-        username: '',
         email: '',
         password: '',
         rememberMe: false,
     };
 
     const validationSchema = Yup.object().shape({
-        username: Yup.string()
-            .min(3, 'Too Short!')
-            .max(50, 'Too Long!')
-            .required('Required'),
         email: Yup.string()
             .email('Please Enter Valid Email!')
             .required('Required'),
@@ -68,21 +63,9 @@ const SignInModal = ({handleChange}) => {
                             <FormControl>
                                 <Field
                                     as={TextField}
-                                    name="username"
-                                    label="Username"
-                                    type="text"
-                                    placeholder="Username"
-                                />
-                                <Error>
-                                    <ErrorMessage name="username" />
-                                </Error>
-                            </FormControl>
-                            <FormControl>
-                                <Field
-                                    as={TextField}
                                     name="email"
                                     label="Email"
-                                    placeholder="Enter Email"
+                                    placeholder="Email"
                                     type="email"
                                 />
                                 <Error>
@@ -94,7 +77,7 @@ const SignInModal = ({handleChange}) => {
                                     as={TextField}
                                     name="password"
                                     label="Password"
-                                    placeholder="Enter Password"
+                                    placeholder="Password"
                                     type="password"
                                 />
                                 <Error>
