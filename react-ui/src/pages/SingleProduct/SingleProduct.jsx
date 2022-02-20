@@ -1,9 +1,8 @@
 import { AddOutlined, RemoveOutlined } from '@mui/icons-material';
 import { Divider } from '@mui/material';
 import React from 'react';
-import Announcements from '../../components/elements/Announcements/Announcements';
-import Footer from '../../components/layouts/Footer/Footer';
-import Navbar from '../../components/layouts/Navbar/Navbar';
+import { Announcements } from '../../components/elements';
+import { Navbar, Footer } from '../../components/layouts';
 import {
     Container,
     Wrapper,

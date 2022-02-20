@@ -1,11 +1,8 @@
 import React from 'react';
-import Announcements from '../../components/elements/Announcements/Announcements';
-import Navbar from '../../components/layouts/Navbar/Navbar';
-import Slider from '../../components/modules/Slider/Slider';
-import Categories from '../../components/modules/Categories/Categories';
-import NewArrivalCategory from '../../components/modules/Categories/NewArrivalCategory/NewArrivalCategory';
-import Newsletter from '../../components/elements/Newsletter/Newsletter';
-import Footer from '../../components/layouts/Footer/Footer';
+import { Announcements, Newsletter } from '../../components/elements';
+import { Navbar, Footer } from '../../components/layouts'
+import { Categories, Slider } from '../../components/modules';
+import { NewArrivalCategory } from '../../components/modules/Categories';
 
 const Home = () => {
     return (

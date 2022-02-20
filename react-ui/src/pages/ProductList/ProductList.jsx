@@ -1,42 +1,8 @@
 import React from 'react';
-import styled from 'styled-components';
-import Announcements from '../../components/elements/Announcements/Announcements';
-import MaleJackets from '../../components/templates/Male/MaleJackets/MaleJackets';
-import MaleJeans from '../../components/templates/Male/MaleJeans/MaleJeans';
-import MaleSuits from '../../components/templates/Male/MaleSuits/MaleSuits';
-import MaleTshirts from '../../components/templates/Male/MaleTshirts/MaleTshirts';
-import Navbar from '../../components/layouts/Navbar/Navbar';
-import Footer from '../../components/layouts/Footer/Footer';
-
-const Container = styled.div`
-
-`;
-
-const Title = styled.h1`
-    padding: 1rem;
-`;
-
-const FilterContainer = styled.div`
-    display: flex;
-    justify-content: space-between;
-    padding: 1rem;
-`;
-
-const Filter = styled.div`
-
-`;
-
-const FilterText = styled.span`
-    margin-right: 1rem;
-`;
-
-const Select = styled.select`
-    margin-right: 1rem;
-`;
-
-const Options = styled.option`
-
-`;
+import { Container, Title, FilterContainer, Filter, FilterText, Select, Options } from './ProductList.styles';
+import { Announcements } from '../../components/elements';
+import { MaleJackets, MaleJeans, MaleSuits, MaleTshirts } from '../../components/templates';
+import { Navbar, Footer } from '../../components/layouts';
 
 const ProductList = () => {
     return (
