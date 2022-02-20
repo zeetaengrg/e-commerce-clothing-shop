@@ -72,7 +72,7 @@ const SignInModal = ({handleChange}) => {
                         onSubmit={onSubmit}
                         validationSchema={validationSchema}
                     >
-                        {(props) => (
+                        {props => (
                             <Form>
                                 {console.log(props)}
                                 <Field
