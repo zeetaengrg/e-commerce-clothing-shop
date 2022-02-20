@@ -1,7 +1,5 @@
 import React from 'react';
-import FooterInfo from './FooterInfo/FooterInfo';
-import FooterLinks from './FooterLinks/FooterLinks';
-import FooterContact from './FooterContact/FooterContact';
+import { FooterContact, FooterInfo, FooterLinks } from '.';
 import { Container } from './Footer.styles';
 
 const FooterSection = () => {
