@@ -1,8 +1,7 @@
 import styled from 'styled-components';
 
 export const FooterText = styled.div`
-    display: flex;
-    flex-direction: column;
+
 `;
 
 export const ForgotText = styled.a`
