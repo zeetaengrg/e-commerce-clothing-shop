@@ -1,4 +1,4 @@
-import { FavoriteBorder, Search, ShoppingCartOutlined } from '@mui/icons-material';
+import { MdFavoriteBorder, MdSearch, MdOutlineShoppingCart } from 'react-icons/md';
 import React from 'react';
 import { Info, Container, Circle, Image, Icons } from './Products.styles';
 
@@ -10,13 +10,13 @@ const Products = ({product}) => {
                 <Image src={product.img} />
                 <Info>
                     <Icons>
-                        <ShoppingCartOutlined />
+                        <MdOutlineShoppingCart />
                     </Icons>
                     <Icons>
-                        <Search />
+                        <MdSearch />
                     </Icons>
                     <Icons>
-                        <FavoriteBorder />
+                        <MdFavoriteBorder />
                     </Icons>
                 </Info>
             </Container>

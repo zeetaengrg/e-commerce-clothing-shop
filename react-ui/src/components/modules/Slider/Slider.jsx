@@ -1,9 +1,7 @@
 import * as React from 'react';
-import Button from '../../elements/Button/Button';
-import Header from '../../elements/Header/Header';
-import Description from '../../elements/Description/Description';
+import { Button, Header, Description } from '../../elements';
 import { slideItems } from '../../../data';
-import { ArrowLeft, ArrowRight } from '@mui/icons-material';
+import { MdArrowLeft, MdArrowRight } from 'react-icons/md';
 import { Container, Arrow, Wrapper, Slide, ImageContainer, Image, Info } from './Slider.styles';
 
 const Slider = () => {
@@ -21,7 +19,7 @@ const Slider = () => {
         <React.Fragment>
             <Container>
                 <Arrow direction="left" onClick={() => handleClick("left")}>
-                    <ArrowLeft />
+                    <MdArrowLeft style={{ fontSize: "2rem" }} />
                 </Arrow>
                 <Wrapper currentSlide={currentSlide}>
                     {slideItems.map(item => (
@@ -38,7 +36,7 @@ const Slider = () => {
                     ))}
                 </Wrapper>
                 <Arrow direction="right" onClick={() => handleClick("right")}>
-                    <ArrowRight />
+                    <MdArrowRight style={{ fontSize: "2rem" }} />
                 </Arrow>
             </Container>
         </React.Fragment>

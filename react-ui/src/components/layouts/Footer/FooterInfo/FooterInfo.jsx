@@ -1,5 +1,5 @@
 import React from 'react';
-import { Facebook, Instagram, Twitter } from '@mui/icons-material';
+import { FaFacebookSquare, FaInstagramSquare, FaTwitterSquare } from 'react-icons/fa';
 import { Container, Title, Description, Icons } from './FooterInfo.styles';
 
 const FooterInfo = () => {
@@ -13,9 +13,9 @@ const FooterInfo = () => {
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, dolorem provident, quisquam aspernatur cumque numquam odio cupiditate consectetur facere fugit tenetur obcaecati magnam repellat iste pariatur aut quos ipsum sunt.
                 </Description>
                 <Icons>
-                    <Facebook style={{marginRight: "0.5rem"}}/>
-                    <Instagram style={{marginRight: "0.5rem"}} />
-                    <Twitter />
+                    <FaFacebookSquare style={{marginRight: "0.5rem"}}/>
+                    <FaInstagramSquare style={{marginRight: "0.5rem"}} />
+                    <FaTwitterSquare />
                 </Icons>
             </Container>
         </React.Fragment>

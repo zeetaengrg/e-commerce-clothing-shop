@@ -1,5 +1,5 @@
 import React from 'react';
-import { LocationOn, LocalPhone, MailOutline } from '@mui/icons-material';
+import { MdLocationOn, MdLocalPhone, MdMailOutline } from 'react-icons/md';
 import { Container, Title, Location, PhoneNumber, Email, CreditCards, Image } from './FooterContact.styles';
 
 const FooterContact = () => {
@@ -8,15 +8,15 @@ const FooterContact = () => {
             <Container>
                 <Title>Contact</Title>
                 <Location>
-                    <LocationOn style={{marginRight: "1rem"}} />
+                    <MdLocationOn style={{marginRight: "1rem"}} />
                     821 Central Park, New York, NY 10019
                 </Location>
                 <PhoneNumber>
-                    <LocalPhone style={{marginRight: "1rem"}} />
+                    <MdLocalPhone style={{marginRight: "1rem"}} />
                     +1 (212) 555-0123
                 </PhoneNumber>
                 <Email>
-                    <MailOutline style={{marginRight: "1rem"}} />
+                    <MdMailOutline style={{marginRight: "1rem"}} />
                     contact@contact.com
                 </Email>
                 <CreditCards>

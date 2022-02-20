@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Avatar, Button, Checkbox, FormControlLabel, FormHelperText, FormLabel, Grid, Paper, Radio, RadioGroup, TextField, Typography } from "@mui/material";
-import { AddCircleOutline } from '@mui/icons-material';
+import { MdAddCircleOutline } from 'react-icons/md';
 import { Formik, Field, Form, ErrorMessage } from "formik";
 import * as Yup from "yup";
 
@@ -59,12 +59,10 @@ const SignUpModal = () => {
     })
 
     const onSubmit = (values, props) => {
-        // console.log(values)
         setTimeout(() => {
             props.resetForm();
             props.setSubmitting(false);
         }, 2000)
-        // console.log(props);
     };
 
     return (
@@ -73,7 +71,7 @@ const SignUpModal = () => {
                 <Paper elevation={20} sx={paperStyle}>
                     <Grid align="center">
                         <Avatar sx={avatarStyle}>
-                            <AddCircleOutline />
+                            <MdAddCircleOutline />
                         </Avatar>
                         <Typography variant="h4" sx={{ marginTop: "0.5rem" }}>
                             Sign Up

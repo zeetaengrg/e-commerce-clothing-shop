@@ -1,6 +1,5 @@
 import React from 'react';
-import Button from '../../../elements/Button/Button';
-import Header from '../../../elements/Header/Header';
+import { Button, Header } from '../../../elements';
 import { Container, Image, Info } from './CategoryItems.styles';
 
 const CategoryItems = ({item}) => {

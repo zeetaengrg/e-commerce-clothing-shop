@@ -1,7 +1,5 @@
 import * as React from 'react';
-import Header from '../../elements/Header/Header';
-import Description from '../../elements/Description/Description';
-import Button from '../../elements/Button/Button';
+import { Header, Description, Button } from '../../elements';
 import { Container, Image, Info } from './NewArrivals.styles';
 
 const NewArrivals = ({item}) => {

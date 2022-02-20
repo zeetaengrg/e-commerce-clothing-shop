@@ -1,6 +1,6 @@
 import React from 'react';
 import { Divider } from '@mui/material';
-import { RemoveOutlined, AddOutlined } from '@mui/icons-material';
+import { MdRemoveCircleOutline, MdAddCircleOutline } from 'react-icons/md';
 import {
     Container,
     Title,
@@ -59,12 +59,8 @@ const CartContainer = () => {
                 <ButtonContainer>
                     <Button>Continue Shopping</Button>
                     <ShoppingInfo>
-                        <ShoppingInfoItem>
-                            Shopping Bag(3)
-                        </ShoppingInfoItem>
-                        <ShoppingInfoItem>
-                            Your Wishlist(0)
-                        </ShoppingInfoItem>
+                        <ShoppingInfoItem>Shopping Bag(3)</ShoppingInfoItem>
+                        <ShoppingInfoItem>Your Wishlist(0)</ShoppingInfoItem>
                     </ShoppingInfo>
                     <Button>Checkout</Button>
                 </ButtonContainer>
@@ -75,20 +71,30 @@ const CartContainer = () => {
                                 <Image src="https://i.ibb.co/rwKCtct/suit1.png" />
                                 <ProductDetails>
                                     <ProductInfo>
-                                        <Name><b>Product: </b>ZARA SUIT</Name>
-                                        <NumberId><b>ID: </b>46851266</NumberId>
+                                        <Name>
+                                            <b>Product: </b>ZARA SUIT
+                                        </Name>
+                                        <NumberId>
+                                            <b>ID: </b>46851266
+                                        </NumberId>
                                         <Color />
-                                        <Size><b>Size: </b>M</Size>
+                                        <Size>
+                                            <b>Size: </b>M
+                                        </Size>
                                     </ProductInfo>
                                     <PriceDetails>
                                         <CounterBtn>
-                                            <MinusBtn onClick={handleClickMinus}><RemoveOutlined /></MinusBtn>
+                                            <MinusBtn
+                                                onClick={handleClickMinus}
+                                            >
+                                                <MdRemoveCircleOutline />
+                                            </MinusBtn>
                                             <Counter>{count}</Counter>
-                                            <AddBtn onClick={handleClickAdd}><AddOutlined /></AddBtn> 
+                                            <AddBtn onClick={handleClickAdd}>
+                                                <MdAddCircleOutline />
+                                            </AddBtn>
                                         </CounterBtn>
-                                        <Price>
-                                            $ 125.50
-                                        </Price>
+                                        <Price>$ 125.50</Price>
                                     </PriceDetails>
                                 </ProductDetails>
                             </CartDetails>
@@ -97,20 +103,32 @@ const CartContainer = () => {
                                 <Image src="https://i.ibb.co/PFjnFB5/jacket4.png" />
                                 <ProductDetails>
                                     <ProductInfo>
-                                        <Name><b>Product: </b>H&M T-Shirt</Name>
-                                        <NumberId><b>ID: </b>87546351</NumberId>
-                                        <Color style={{backgroundColor: 'black'}} />
-                                        <Size><b>Size: </b>L</Size>
+                                        <Name>
+                                            <b>Product: </b>H&M T-Shirt
+                                        </Name>
+                                        <NumberId>
+                                            <b>ID: </b>87546351
+                                        </NumberId>
+                                        <Color
+                                            style={{ backgroundColor: "black" }}
+                                        />
+                                        <Size>
+                                            <b>Size: </b>L
+                                        </Size>
                                     </ProductInfo>
                                     <PriceDetails>
                                         <CounterBtn>
-                                            <MinusBtn onClick={handleClickMinus} ><RemoveOutlined /></MinusBtn>
+                                            <MinusBtn
+                                                onClick={handleClickMinus}
+                                            >
+                                                <MdRemoveCircleOutline />
+                                            </MinusBtn>
                                             <Counter>{count}</Counter>
-                                            <AddBtn onClick={handleClickAdd}><AddOutlined /></AddBtn> 
+                                            <AddBtn onClick={handleClickAdd}>
+                                                <MdAddCircleOutline />
+                                            </AddBtn>
                                         </CounterBtn>
-                                        <Price>
-                                            $ 24.50
-                                        </Price>
+                                        <Price>$ 24.50</Price>
                                     </PriceDetails>
                                 </ProductDetails>
                             </CartDetails>
@@ -119,20 +137,34 @@ const CartContainer = () => {
                                 <Image src="https://i.ibb.co/k0WQyFN/jeans2.png" />
                                 <ProductDetails>
                                     <ProductInfo>
-                                        <Name><b>Product: </b>Levis Jeans Pant</Name>
-                                        <NumberId><b>ID: </b>71843595</NumberId>
-                                        <Color style={{backgroundColor: 'lightblue'}} />
-                                        <Size><b>Size: </b>M</Size>
+                                        <Name>
+                                            <b>Product: </b>Levis Jeans Pant
+                                        </Name>
+                                        <NumberId>
+                                            <b>ID: </b>71843595
+                                        </NumberId>
+                                        <Color
+                                            style={{
+                                                backgroundColor: "lightblue",
+                                            }}
+                                        />
+                                        <Size>
+                                            <b>Size: </b>M
+                                        </Size>
                                     </ProductInfo>
                                     <PriceDetails>
                                         <CounterBtn>
-                                            <MinusBtn onClick={handleClickMinus} ><RemoveOutlined /></MinusBtn>
+                                            <MinusBtn
+                                                onClick={handleClickMinus}
+                                            >
+                                                <MdRemoveCircleOutline />
+                                            </MinusBtn>
                                             <Counter>{count}</Counter>
-                                            <AddBtn onClick={handleClickAdd}><AddOutlined /></AddBtn> 
+                                            <AddBtn onClick={handleClickAdd}>
+                                                <MdAddCircleOutline />
+                                            </AddBtn>
                                         </CounterBtn>
-                                        <Price>
-                                            $ 32.50
-                                        </Price>
+                                        <Price>$ 32.50</Price>
                                     </PriceDetails>
                                 </ProductDetails>
                             </CartDetails>
@@ -165,7 +197,7 @@ const CartContainer = () => {
                 </Wrapper>
             </Container>
         </React.Fragment>
-    )
+    );
 }
 
 export default CartContainer;

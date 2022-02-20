@@ -1,5 +1,5 @@
 import React from 'react';
-import { LockOutlined } from '@mui/icons-material';
+import { MdLockOutline } from 'react-icons/md';
 import { Avatar, Button, Checkbox, FormControlLabel, Grid, Link, Paper, TextField, Typography } from '@mui/material';
 import { ErrorMessage, Field, Form, Formik } from 'formik';
 import * as Yup from 'yup';
@@ -61,7 +61,7 @@ const SignInModal = ({handleChange}) => {
                 <Paper elevation={20} sx={paperStyle}>
                     <Grid align="center">
                         <Avatar sx={avatarStyle}>
-                            <LockOutlined />
+                            <MdLockOutline />
                         </Avatar>
                         <Typography variant="h4" sx={{ margin: "0.5rem 0" }}>
                             Sign In
