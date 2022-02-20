@@ -66,8 +66,3 @@ export const Right = styled.div`
     align-items: center;
     /* ${mobile({ flex: '2' })}; */
 `;
-
-export const MenuItem = styled.div`
-    font-size: 1rem;
-    cursor: pointer;
-`;
