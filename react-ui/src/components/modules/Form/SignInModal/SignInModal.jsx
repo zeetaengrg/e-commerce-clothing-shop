@@ -1,31 +1,25 @@
 import React from 'react';
-import { MdLockOutline } from 'react-icons/md';
-import { Avatar, Button, Checkbox, FormControlLabel, Grid, Link, Paper, TextField, Typography } from '@mui/material';
-import { ErrorMessage, Field, Form, Formik } from 'formik';
+import { Formik, Field, Form, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
+import { MdLockOutline } from 'react-icons/md'
+import {
+    FooterText,
+    ForgotText,
+    AccountText,
+    SignUpLink,
+} from "./SignInModal.styles";
+import {
+    Container,
+    HeaderContent,
+    Icon,
+    HeaderText,
+    TextField,
+    Error,
+    FormControl,
+    Button,
+} from "../Form.styles";
 
 const SignInModal = ({handleChange}) => {
-
-    const paperStyle = {
-        width: 300,
-        backgroundColor: 'background.paper',
-        margin: '0 auto',
-        padding: '20px',
-    };
-
-    const textFieldStyle = {
-        marginBottom: '0.5rem',
-    };
-
-    const avatarStyle = {
-        backgroundColor: 'rgb(245, 0, 87)',
-    };
-
-    const btnStyle = {
-        fontFamily: "inherit",
-        marginBottom: "0.5rem",
-        fontSize: "1rem"
-    };
 
     const initialValues = {
         username: '',
@@ -48,112 +42,90 @@ const SignInModal = ({handleChange}) => {
             .required('Required'),
     });
 
-    const onSubmit = (values, props) => {
+    const onSubmit = (values, { setSubmitting, resetForm }) => {
         setTimeout(() => {
-            props.resetForm();
-            props.setSubmitting(false);
-        }, 2000)
+            resetForm(initialValues);
+            setSubmitting(false);
+        }, 1500)
     };
 
-    return (
+  	return (
         <React.Fragment>
-            <Grid>
-                <Paper elevation={20} sx={paperStyle}>
-                    <Grid align="center">
-                        <Avatar sx={avatarStyle}>
-                            <MdLockOutline />
-                        </Avatar>
-                        <Typography variant="h4" sx={{ margin: "0.5rem 0" }}>
-                            Sign In
-                        </Typography>
-                    </Grid>
-                    <Formik
-                        initialValues={initialValues}
-                        onSubmit={onSubmit}
-                        validationSchema={validationSchema}
-                    >
-                        {props => (
-                            <Form>
-                                {console.log(props)}
+            <Container>
+                <HeaderContent>
+                    <Icon>
+                        <MdLockOutline />
+                    </Icon>
+                    <HeaderText>Sign In</HeaderText>
+                </HeaderContent>
+                <Formik
+                    initialValues={initialValues}
+                    onSubmit={onSubmit}
+                    validationSchema={validationSchema}
+                >
+                    {({ isSubmitting }) => (
+                        <Form style={{ marginTop: "1.5rem" }}>
+                            <FormControl>
                                 <Field
                                     as={TextField}
-                                    sx={textFieldStyle}
                                     name="username"
                                     label="Username"
-                                    placeholder="Enter Username"
                                     type="text"
-                                    size="small"
-                                    helperText={
-                                        <ErrorMessage name="username" />
-                                    }
-                                    fullWidth
-                                    required
+                                    placeholder="Username"
                                 />
+                                <Error>
+                                    <ErrorMessage name="username" />
+                                </Error>
+                            </FormControl>
+                            <FormControl>
                                 <Field
                                     as={TextField}
-                                    sx={textFieldStyle}
                                     name="email"
                                     label="Email"
                                     placeholder="Enter Email"
                                     type="email"
-                                    size="small"
-                                    helperText={<ErrorMessage name="email" />}
-                                    fullWidth
-                                    required
                                 />
+                                <Error>
+                                    <ErrorMessage name="email" />
+                                </Error>
+                            </FormControl>
+                            <FormControl>
                                 <Field
                                     as={TextField}
-                                    sx={textFieldStyle}
                                     name="password"
                                     label="Password"
                                     placeholder="Enter Password"
                                     type="password"
-                                    size="small"
-                                    helperText={
-                                        <ErrorMessage name="password" />
-                                    }
-                                    fullWidth
-                                    required
                                 />
-                                <FormControlLabel
-                                    control={
-                                        <Field
-                                            as={Checkbox}
-                                            name="rememberMe"
-                                        />
-                                    }
-                                    label="Remember Me"
-                                />
-                                <Button
-                                    sx={btnStyle}
-                                    variant="contained"
-                                    type="submit"
-                                    color="primary"
-                                    disabled={props.isSubmitting}
-                                    fullWidth
-                                >
-                                    {props.isSubmitting
-                                        ? "Loading..."
-                                        : "Sign In"}
-                                </Button>
-                            </Form>
-                        )}
-                    </Formik>
-                    <Typography>
-                        <Link href="#">Forgot Password?</Link>
-                    </Typography>
-                    <Typography>
+                                <Error>
+                                    <ErrorMessage name="password" />
+                                </Error>
+                            </FormControl>
+                            <Field
+                                style={{ marginRight: '0.5rem' }}
+                                name="rememberMe"
+                                type="checkbox"
+                            />
+                            Remember Me
+                            <Button type="submit" disabled={isSubmitting}>
+                                {isSubmitting ? "Loading..." : "Sign In"}
+                            </Button>
+                        </Form>
+                    )}
+                </Formik>
+                <FooterText>
+                    <ForgotText>Forgot Password?</ForgotText>
+                    <AccountText>
                         Don't have an account?
-                        <Link
-                            style={{ marginLeft: "0.5rem" }}
+                        <SignUpLink
                             href="#"
                             onClick={() => handleChange("event", 1)}
                         >
                             Sign Up
-                        </Link>
-                    </Typography>
-                </Paper>
-            </Grid>
+                        </SignUpLink>
+                    </AccountText>
+                </FooterText>
+            </Container>
         </React.Fragment>
     );
 }
