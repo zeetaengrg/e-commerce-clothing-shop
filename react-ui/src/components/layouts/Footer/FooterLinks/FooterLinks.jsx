@@ -7,7 +7,7 @@ const FooterLinks = () => {
             <Container>
                 <Title>Useful Links</Title>
                 <Links>
-                    <LinksList to="/">Home</LinksList>
+                    <LinksList>Home</LinksList>
                     <LinksList>Man Fashion</LinksList>
                     <LinksList>Accessories</LinksList>
                     <LinksList>Order Tracking</LinksList>
