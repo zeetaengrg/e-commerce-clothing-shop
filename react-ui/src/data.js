@@ -35,17 +35,17 @@ export const categories = [
     {
         id: 1,
         img: "https://i.ibb.co/s6P9Vk6/jeans1.png",
-        title: "JEANS"
+        title: "Jeans"
     },
     {
         id: 2,
         img: "https://i.ibb.co/BG9Pd4D/jacket1.png",
-        title: "JACKETS"
+        title: "Jackets"
     },
     {
         id: 3,
         img: "https://i.ibb.co/Zh200R9/tee1.png",
-        title: "T-SHIRTS"
+        title: "T-shirts"
     }
 ];
 
@@ -115,6 +115,18 @@ export const maleJackets = [
     {
         id: 3,
         img: "https://i.ibb.co/nbpP4SR/jacket3.png"
+    },
+    {
+        id: 4,
+        img: "https://i.ibb.co/PFjnFB5/jacket4.png"
+    },
+    {
+        id: 5,
+        img: "https://i.ibb.co/37q1mt5/jacket13.webp"
+    },
+    {
+        id: 6,
+        img: "https://i.ibb.co/j3hWCDH/jacket4.webp"
     }
 ];
 
