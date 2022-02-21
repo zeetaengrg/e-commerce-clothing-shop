@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+// import { mobile } from '../../../responsive';
 
 export const Box = styled.div`
 
@@ -21,7 +22,7 @@ export const Button = styled.button`
     &:hover {
         background-color: black;
         color: white;
-    }
+    };
 `;
 
 export const Modal = styled.div`
