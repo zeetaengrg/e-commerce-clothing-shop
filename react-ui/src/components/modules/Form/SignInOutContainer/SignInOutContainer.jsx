@@ -23,7 +23,7 @@ const SignInOutContainer = () => {
         '&:hover': {
             backgroundColor: "black",
             color: "white"
-        }
+        },
     };
 
     const paperStyle = {
