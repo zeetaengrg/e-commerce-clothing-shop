@@ -1,7 +1,8 @@
 import * as React from 'react';
+import { Link } from 'react-router-dom';
 import { MdSearch, MdOutlineShoppingCart } from 'react-icons/md';
 import SignInOutContainer from '../../modules/Form/SignInOutContainer/SignInOutContainer';
-import { Container, Wrapper, Left, Language, SearchContainer, Input, Center, Logo, Right } from './Navbar.styles';
+import { Container, Wrapper, Left, NavLink, Language, SearchContainer, Input, Center, Logo, Right } from './Navbar.styles';
 
 const Navbar = () => {
     return (
@@ -9,7 +10,12 @@ const Navbar = () => {
             <Container>
                 <Wrapper>
                     <Left>
-                        <Language>EN</Language>
+                        <Link to="/" style={{ textDecoration: "none" }}>
+                            <NavLink>Home</NavLink>
+                        </Link>
+                        <Link to="/about" style={{ textDecoration: "none" }}>
+                            <NavLink>About</NavLink>
+                        </Link>
                         <SearchContainer>
                             <Input placeholder="Search" />
                             <MdSearch
@@ -22,7 +28,9 @@ const Navbar = () => {
                     </Center>
                     <Right>
                         <SignInOutContainer />
-                        <MdOutlineShoppingCart style={{ fontSize: "1.5rem", cursor: "pointer" }} />
+                        <MdOutlineShoppingCart
+                            style={{ fontSize: "1.5rem", cursor: "pointer" }}
+                        />
                     </Right>
                 </Wrapper>
             </Container>
