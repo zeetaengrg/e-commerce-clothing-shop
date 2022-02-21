@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { mobile } from '../../../responsive';
 
 export const Container = styled.div`
     height: 100vh;
@@ -7,6 +8,7 @@ export const Container = styled.div`
     display: flex;
     position: relative;
     overflow: hidden;
+    ${mobile({ height: "50vh" })};
 `;
 
 export const Arrow = styled.div`
@@ -43,6 +45,7 @@ export const Slide = styled.div`
     width: 100vw;
     position: relative;
     display: flex;
+    ${mobile({ height: "50vh" })};
 `;
 
 export const ImageContainer = styled.div`
@@ -52,6 +55,7 @@ export const ImageContainer = styled.div`
 export const Image = styled.img`
     height: 100vh;
     width: 100vw;
+    ${mobile({ height: "50vh" })};
 `;
 
 export const Info = styled.div`
@@ -64,4 +68,5 @@ export const Info = styled.div`
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    ${mobile({ height: "80%" })}
 `;
