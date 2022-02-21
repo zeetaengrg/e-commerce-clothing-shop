@@ -26,7 +26,6 @@ const FooterContact = () => {
                     <Image src="https://i.ibb.co/xJK5vV9/paypal.png" />
                 </CreditCards>
             </Container>
-
         </React.Fragment>
     )
 }
