@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { mobile } from '../../responsive';
 
 export const Container = styled.div`
 
@@ -6,12 +7,12 @@ export const Container = styled.div`
 
 export const Wrapper = styled.div`
     display: flex;
+    ${mobile({ flexDirection: 'column' })};
 `;
 
 export const ImageContainer = styled.div`
     flex: 1;
     margin: 1rem;
-    padding: 1rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -25,16 +26,17 @@ export const Circle = styled.div`
     border-radius: 50%;
     background-color: white;
     position: absolute;
+    ${mobile({ height: '350px', width: '350px' })};
 `;
 
 export const Image = styled.img`
     z-index: 2;
+    ${mobile({ height: '400px' })};
 `;
 
 export const Info = styled.div`
     flex: 1;
     background-color: #f5f5f5;
-    padding: 1rem;
     margin: 1rem;
 `;
 
