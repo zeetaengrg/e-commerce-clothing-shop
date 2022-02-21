@@ -10,6 +10,7 @@ export const Wrapper = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
+    ${mobile({ padding: "0px 10px" })}
 `;
 
 export const Left = styled.div`
@@ -32,7 +33,7 @@ export const SearchContainer = styled.div`
     display: flex;
     align-items: center;
     margin-left: 0.5rem;
-    ${mobile({ marginLeft: 0 })};
+    ${mobile({ marginLeft: "0rem" })};
 `;
 
 export const Input = styled.input`
@@ -41,7 +42,7 @@ export const Input = styled.input`
     background: transparent;
     font-size: 1rem;
     padding-left: 0.2rem;
-    ${mobile({ width: '10px' })};
+    ${mobile({ width: '50px' })};
 `;
 
 export const Center = styled.div`
@@ -64,5 +65,4 @@ export const Right = styled.div`
     justify-content: flex-end;
     text-transform: uppercase;
     align-items: center;
-    /* ${mobile({ flex: '2' })}; */
 `;
