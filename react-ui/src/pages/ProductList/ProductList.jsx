@@ -55,10 +55,10 @@ const ProductList = () => {
                         </Select>
                     </Filter>
                 </FilterContainer>
-                {/* <MaleJeans /> */}
+                <MaleJeans />
                 {/* <MaleJackets /> */}
                 {/* <MaleTshirts /> */}
-                <MaleSuits />
+                {/* <MaleSuits /> */}
                 <Footer />
             </Container>
         </React.Fragment>
