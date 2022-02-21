@@ -19,6 +19,7 @@ export const Description = styled.p`
 
 export const Form = styled.div`
     display: flex;
+    justify-content: center;
 `;
 
 export const Input = styled.input`
