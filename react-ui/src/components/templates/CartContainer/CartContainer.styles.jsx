@@ -1,7 +1,9 @@
 import styled from 'styled-components';
+import { mobile } from '../../../responsive';
 
 export const Container = styled.div`
     margin: 1rem;
+    ${mobile({ margin: '0.5rem' })};
 `;
 
 export const Title = styled.h1`
@@ -10,12 +12,15 @@ export const Title = styled.h1`
     font-family: inherit;
     font-weight: 500;
     text-align: center;
+    ${mobile({ fontSize: '1.5rem' })};
 `;
 
 export const ButtonContainer = styled.div`
     display: flex;
     justify-content: space-between;
     margin: 1rem;
+    gap: 1rem;
+    ${mobile({ margin: '0.5rem' })};
 `;
 
 export const Button = styled.button`
@@ -34,6 +39,8 @@ export const Button = styled.button`
         background-color: white;
         color: black;
     }
+
+    ${mobile({ fontSize: '0.7rem', padding: '0.3rem' })};
 `;
 
 export const ShoppingInfo = styled.div`
@@ -48,6 +55,7 @@ export const ShoppingInfoItem = styled.span`
 
 export const Wrapper = styled.div`
     display: flex;
+    ${mobile({ flexDirection: 'column' })};
 `;
 
 export const CartInfo = styled.div`
