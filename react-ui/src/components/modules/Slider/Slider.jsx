@@ -30,7 +30,7 @@ const Slider = () => {
                             <Info>
                                 <Header item={item} />
                                 <Description item={item} />
-                                <Button />
+                                {/* <Button /> */}
                             </Info>
                         </Slide>
                     ))}
