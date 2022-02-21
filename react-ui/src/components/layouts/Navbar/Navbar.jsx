@@ -13,8 +13,8 @@ const Navbar = () => {
                         <Link to="/" style={{ textDecoration: "none" }}>
                             <NavLink>Home</NavLink>
                         </Link>
-                        <Link to="/about" style={{ textDecoration: "none" }}>
-                            <NavLink>About</NavLink>
+                        <Link to="/about-us" style={{ textDecoration: "none" }}>
+                            <NavLink>About Us</NavLink>
                         </Link>
                         <SearchContainer>
                             <Input placeholder="Search" />
