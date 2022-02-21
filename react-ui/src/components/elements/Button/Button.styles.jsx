@@ -6,7 +6,7 @@ export const Btn = styled.a`
     border-radius: 0.5rem;
     border: 2px solid grey;
     padding: 0.5rem;
-    margin-top: 0.5rem;
+    margin: 0.5rem;
     font-weight: bold;
     cursor: pointer;
     :hover {
