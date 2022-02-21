@@ -23,3 +23,7 @@ export const LinksList = styled.li`
     width: 50%;
     margin-bottom: 0.5rem;
 `;
+
+export const NavLink = styled.a`
+    text-decoration: none;
+`;
