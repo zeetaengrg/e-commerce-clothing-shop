@@ -11,16 +11,19 @@ export const Title = styled.h3`
 
 export const Location = styled.div`
     display: flex;
+    align-items: center;
     margin-bottom: 1rem;
 `;
 
 export const PhoneNumber = styled.div`
     display: flex;
+    align-items: center;
     margin-bottom: 1rem;
 `;
 
 export const Email = styled.div`
     display: flex;
+    align-items: center;
     margin-bottom: 1rem;
 `;
 
