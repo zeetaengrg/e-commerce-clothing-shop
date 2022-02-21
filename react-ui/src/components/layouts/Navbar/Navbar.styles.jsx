@@ -55,7 +55,6 @@ export const Logo = styled.h1`
     font-weight: bold;
     cursor: pointer;
     text-transform: uppercase;
-    padding: 0;
 `;
 
 export const Right = styled.div`
