@@ -22,8 +22,8 @@ const Slider = () => {
                     <MdArrowLeft style={{ fontSize: "2rem" }} />
                 </Arrow>
                 <Wrapper currentSlide={currentSlide}>
-                    {slideItems.map(item => (
-                        <Slide key={item.id} >
+                    {slideItems.map((item) => (
+                        <Slide key={item.id}>
                             <ImageContainer>
                                 <Image src={item.img} />
                             </ImageContainer>
@@ -40,7 +40,7 @@ const Slider = () => {
                 </Arrow>
             </Container>
         </React.Fragment>
-    )
+    );
 }
 
 export default Slider;
