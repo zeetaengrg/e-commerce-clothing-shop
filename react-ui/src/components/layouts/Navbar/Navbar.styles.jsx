@@ -19,13 +19,19 @@ export const Left = styled.div`
     gap: 1rem;
 `;
 
-export const Language = styled.div`
-    font-size: 1rem;
-    cursor: pointer;
-    align-items: center;
-    display: flex;
-    ${mobile({ display: 'none' })};
+export const NavLink = styled.a`
+    color: black;
+    text-decoration: none;
+    text-transform: uppercase;
 `;
+
+// export const Language = styled.div`
+//     font-size: 1rem;
+//     cursor: pointer;
+//     align-items: center;
+//     display: flex;
+//     ${mobile({ display: 'none' })};
+// `;
 
 export const SearchContainer = styled.div`
     border: 1px solid #ccc;
