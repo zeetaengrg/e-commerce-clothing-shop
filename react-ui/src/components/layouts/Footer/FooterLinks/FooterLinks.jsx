@@ -1,5 +1,6 @@
 import React from 'react';
-import { Container, Title, Links, LinksList } from './FooterLinks.styles';
+import { Link } from 'react-router-dom';
+import { Container, Title, Links, LinksList, NavLink } from './FooterLinks.styles';
 
 const FooterLinks = () => {
     return (
@@ -7,8 +8,12 @@ const FooterLinks = () => {
             <Container>
                 <Title>Useful Links</Title>
                 <Links>
-                    <LinksList>Home</LinksList>
-                    <LinksList>Man Fashion</LinksList>
+                    <LinksList>
+                        <Link to="/" style={{ textDecoration: "none" }}>
+                            <NavLink href='/'>Home</NavLink>
+                        </Link>
+                    </LinksList>
+                    <LinksList>Men Fashion</LinksList>
                     <LinksList>Accessories</LinksList>
                     <LinksList>Order Tracking</LinksList>
                     <LinksList>Categories</LinksList>
@@ -20,7 +25,7 @@ const FooterLinks = () => {
                 </Links>
             </Container>
         </React.Fragment>
-    )
+    );
 }
 
 export default FooterLinks;
