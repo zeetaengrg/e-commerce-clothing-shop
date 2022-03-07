@@ -1,11 +1,14 @@
 const express = require("express");
-const mongoose = require("mongoose");
 const app = express();
+const mongoose = require("mongoose");
 const dotenv = require("dotenv");
 const userRoutes = require("./routes/user");
+const authRoutes = require("./routes/auth");
 
+// .env file configuration
 dotenv.config();
 
+// Connecting the MongoDB database
 mongoose
     .connect(process.env.MONGO_URL)
     .then(() => {
@@ -16,8 +19,11 @@ mongoose
     });
 
 app.use(express.json());
+// Create api routes for different routes created
+app.use("/api/auth", authRoutes);
 app.use("/api/users", userRoutes);
 
-app.listen(process.env.PORT || 5000, () => {
+// Create a port number to listen
+app.listen(process.env.PORT || 5500, () => {
     console.log("Backend server is running!");
 });
