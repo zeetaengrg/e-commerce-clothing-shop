@@ -1,10 +1,25 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Container, Title, FilterContainer, Filter, FilterText, Select, Options } from '../Outfits.styles';
 import { Announcements } from '../../../../components/elements';
 import { MaleJeans } from '../../../../components/templates';
 import { Navbar, Footer } from '../../../../components/layouts';
+import { useLocation } from 'react-router-dom';
 
 const Jeans = () => {
+
+    const location = useLocation();
+    const category = location.pathname.split("/")[2];
+
+    const [filter, setFilter] = useState({});
+
+    const handleFilter = (e) => {
+        const value = e.target.value;
+        setFilter({
+            [e.target.name]: value,
+        })
+    }
+    console.log(filter);
+
     return (
         <React.Fragment>
             <Container>
@@ -18,8 +33,8 @@ const Jeans = () => {
                         <FilterText>
                             Filter Products:
                         </FilterText>
-                        <Select>
-                            <Options disabled selected>Color</Options>
+                        <Select name="color" onChange={handleFilter}>
+                            <Options disabled>Color</Options>
                             <Options>Red</Options>
                             <Options>Blue</Options>
                             <Options>Green</Options>
@@ -27,8 +42,8 @@ const Jeans = () => {
                             <Options>White</Options>
                             <Options>Yellow</Options>
                         </Select>
-                        <Select>
-                            <Options disabled selected>Size</Options>
+                        <Select name="size" onChange={handleFilter}>
+                            <Options disabled>Size</Options>
                             <Options>XS</Options>
                             <Options>S</Options>
                             <Options>M</Options>
@@ -36,8 +51,8 @@ const Jeans = () => {
                             <Options>XL</Options>
                             <Options>XXL</Options>
                         </Select>
-                        <Select>
-                            <Options disabled selected>Price</Options>
+                        <Select name="price" onChange={handleFilter}>
+                            <Options disabled>Price</Options>
                             <Options>$0 - $50</Options>
                             <Options>$50 - $100</Options>
                             <Options>$100 - $150</Options>
@@ -45,8 +60,8 @@ const Jeans = () => {
                             <Options>$200 - $250</Options>
                             <Options>$250 - $300</Options>
                         </Select>
-                        <Select>
-                            <Options disabled selected>Brand</Options>
+                        <Select name="brand" onChange={handleFilter}>
+                            <Options disabled>Brand</Options>
                             <Options>Levis</Options>
                             <Options>Denim</Options>
                             <Options>Diesel</Options>
