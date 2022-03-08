@@ -44,7 +44,7 @@ const SignInModal = ({handleChange}) => {
         }, 1500)
     };
 
-  	return (
+    return (
         <React.Fragment>
             <Container>
                 <HeaderContent>
