@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Button, Header, Description } from '../../elements';
+import { Header, Description } from '../../elements';
 import { slideItems } from '../../../data';
 import { MdArrowLeft, MdArrowRight } from 'react-icons/md';
 import { Container, Arrow, Wrapper, Slide, ImageContainer, Image, Info } from './Slider.styles';

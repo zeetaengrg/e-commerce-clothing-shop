@@ -2,7 +2,7 @@ import * as React from 'react';
 import { Link } from 'react-router-dom';
 import { MdSearch, MdOutlineShoppingCart } from 'react-icons/md';
 import SignInOutContainer from '../../modules/Form/SignInOutContainer/SignInOutContainer';
-import { Container, Wrapper, Left, NavLink, Language, SearchContainer, Input, Center, Logo, Right } from './Navbar.styles';
+import { Container, Wrapper, Left, NavLink, SearchContainer, Input, Center, Logo, Right } from './Navbar.styles';
 
 const Navbar = () => {
     return (
