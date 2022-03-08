@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import SignInModal from '../SignInModal/SignInModal';
 import SignUpModal from '../SignUpModal/SignUpModal';
-import { Container, Btn, ModalDiv, PaperContainer, TabBtn, TabOne, TabTwo } from './SignInOutContainer.styles';
+// import { Container, Btn, ModalDiv, PaperContainer, TabBtn, TabOne, TabTwo } from './SignInOutContainer.styles';
 import { Button, Modal, Paper, Tab, Tabs } from '@mui/material';
 
 const SignInOutContainer = () => {
