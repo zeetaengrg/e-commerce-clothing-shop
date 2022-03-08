@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const FormLabelTitle = styled.p`
+export const FormLabelTitle = styled.label`
     font-size: 1.1rem;
     color: grey;
 `;
