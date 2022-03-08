@@ -1,13 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import SignInModal from '../SignInModal/SignInModal';
 import SignUpModal from '../SignUpModal/SignUpModal';
-import { Box, Button, Modal, Paper, Tab, Tabs, Typography } from '@mui/material';
+import { Container, Btn, ModalDiv, PaperContainer, TabBtn, TabOne, TabTwo } from './SignInOutContainer.styles';
+import { Button, Modal, Paper, Tab, Tabs } from '@mui/material';
 
 const SignInOutContainer = () => {
-    const [value, setValue] = React.useState(0);
-    const [open, setOpen] = React.useState(false);
+    const [value, setValue] = useState(0);
+    const [open, setOpen] = useState(false);
     const handleOpen = () => setOpen(true);
-    const handleClose = () => setOpen(false);
+    const handleClose = () => {
+        setOpen(false);
+    }
 
     const handleChange = (event, newValue) => {
         setValue(newValue);
@@ -49,9 +52,9 @@ const SignInOutContainer = () => {
                 {...other}
             >
                 {value === index && (
-                    <Box>
-                        <Typography>{children}</Typography>
-                    </Box>
+                    <div>
+                        <span>{children}</span>
+                    </div>
                 )}
             </div>
         );
@@ -59,6 +62,28 @@ const SignInOutContainer = () => {
 
     return (
         <React.Fragment>
+            {/* <Btn onClick={handleOpen}>Register</Btn>
+			<ModalDiv
+				open={open}
+				onClose={handleClose}
+			>
+				<PaperContainer>
+					<TabBtn
+						value={value}
+						onChange={handleChange}
+					>
+						<TabOne>Sign In</TabOne>
+						<TabTwo>Sign Up</TabTwo>
+					</TabBtn>
+					<TabPanel value={value} index={0}>
+						<SignInModal handleChange={handleChange} />
+					</TabPanel>
+					<TabPanel value={value} index={1}>
+						<SignUpModal handleChange={handleChange} />
+					</TabPanel>
+				</PaperContainer>
+			</ModalDiv> */}
+
             <Button onClick={handleOpen} sx={btnStyle}>Sign In</Button>
             <Modal
                 open={open}
