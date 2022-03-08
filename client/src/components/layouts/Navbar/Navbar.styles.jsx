@@ -19,7 +19,7 @@ export const Left = styled.div`
     gap: 1rem;
 `;
 
-export const NavLink = styled.a`
+export const NavLink = styled.span`
     color: black;
     text-decoration: none;
     text-transform: uppercase;
@@ -39,7 +39,7 @@ export const SearchContainer = styled.div`
     display: flex;
     align-items: center;
     margin-left: 0.5rem;
-    ${mobile({ marginLeft: "0rem" })};
+    ${mobile({ display: "none" })};
 `;
 
 export const Input = styled.input`
