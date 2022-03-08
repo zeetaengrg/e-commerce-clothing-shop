@@ -11,15 +11,15 @@ const CategoryItems = ({item}) => {
                 <Info>
                     <Header item={item} />
                     {item.title === "Jeans" ? (
-                        <Link to="/male/jeans" >
+                        <Link to={`/products/${item.category}`} >
                             <Button />
                         </Link>
                     ) : item.title === "Jackets" ? (
-                        <Link to="/male/jackets">
+                        <Link to={`/products/${item.category}`}>
                             <Button />
                         </Link>
                     ) : (
-                        <Link to="/male/tshirts">
+                        <Link to={`/products/${item.category}`}>
                             <Button />
                         </Link>
                     )}
