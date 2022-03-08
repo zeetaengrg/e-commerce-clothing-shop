@@ -9,7 +9,7 @@ export const Title = styled.h3`
     margin-bottom: 1rem;
 `;
 
-export const Links = styled.ul`
+export const List = styled.ul`
     margin: 0;
     padding: 0;
     list-style: none;
@@ -24,7 +24,7 @@ export const LinksList = styled.li`
     margin-bottom: 0.5rem;
 `;
 
-export const NavLink = styled.a`
+export const NavLink = styled.span`
     text-decoration: none;
     color: black;
 `;
