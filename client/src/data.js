@@ -35,17 +35,20 @@ export const categories = [
     {
         id: 1,
         img: "https://i.ibb.co/s6P9Vk6/jeans1.png",
-        title: "Jeans"
+        title: "Jeans",
+        category: "jeans"
     },
     {
         id: 2,
         img: "https://i.ibb.co/BG9Pd4D/jacket1.png",
-        title: "Jackets"
+        title: "Jackets",
+        category: "jackets"
     },
     {
         id: 3,
         img: "https://i.ibb.co/Zh200R9/tee1.png",
-        title: "T-shirts"
+        title: "T-shirts",
+        category: "tshirts"
     }
 ];
 
