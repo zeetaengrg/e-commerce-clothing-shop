@@ -176,7 +176,7 @@ const SignUpModal = () => {
                             </FormControl>
                             <Label>
                                 <Field
-                                    style={{ marginRight: "0.5rem"}}
+                                    style={{ marginRight: "0.5rem" }}
                                     name="termsAndCondition"
                                     type="checkbox"
                                 />
