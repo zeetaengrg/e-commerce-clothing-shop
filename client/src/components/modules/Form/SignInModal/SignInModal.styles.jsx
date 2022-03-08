@@ -10,7 +10,7 @@ export const ForgotText = styled.a`
     cursor: pointer;
 `;
 
-export const AccountText = styled.text`
+export const AccountText = styled.p`
     
 `;
 
