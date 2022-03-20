@@ -1,5 +1,5 @@
 import { MdRemoveCircleOutline, MdAddCircleOutline } from 'react-icons/md';
-import React from 'react';
+import React, { useState } from 'react';
 import { Announcements } from '../../components/elements';
 import { Navbar, Footer } from '../../components/layouts';
 import {
@@ -32,7 +32,7 @@ import {
 } from "./SingleProduct.styles";
 
 const SingleProduct = () => {
-    const [count, setCount] = React.useState(1);
+    const [count, setCount] = useState(1);
 
     const handleClickMinus = () => {
         if (count === 1) {
