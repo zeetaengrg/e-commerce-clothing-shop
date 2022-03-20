@@ -3,7 +3,7 @@ import { maleJackets } from '../../../../data';
 import { Products } from '../../../elements'
 import { Container } from './MaleJackets.styles';
 
-const MaleJackets = () => {
+const MaleJackets = ({ category, filters, sort }) => {
     return (
         <React.Fragment>
             <Container>
