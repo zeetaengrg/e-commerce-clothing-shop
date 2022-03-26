@@ -1,6 +1,12 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Container, Title, List, LinksList, NavLink } from './FooterLinks.styles';
+import React from "react";
+import { Link } from "react-router-dom";
+import {
+    Container,
+    Title,
+    List,
+    LinksList,
+    NavLink,
+} from "./FooterLinks.styles";
 
 const FooterLinks = () => {
     return (
@@ -26,6 +32,6 @@ const FooterLinks = () => {
             </Container>
         </React.Fragment>
     );
-}
+};
 
 export default FooterLinks;
