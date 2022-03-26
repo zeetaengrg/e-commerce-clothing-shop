@@ -18,7 +18,15 @@ const Products = ({ product }) => {
                         <MdOutlineShoppingCart />
                     </Icons>
                     <Icons>
-                        <MdSearch />
+                        <Link to={`/product/${product._id}`}>
+                            <MdSearch
+                                style={{
+                                    display: "grid",
+                                    placeContent: "center",
+                                    color: "black",
+                                }}
+                            />
+                        </Link>
                     </Icons>
                     <Icons>
                         <MdFavoriteBorder />
