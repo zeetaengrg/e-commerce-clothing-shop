@@ -1,7 +1,8 @@
-import { MdRemoveCircleOutline, MdAddCircleOutline } from 'react-icons/md';
-import React, { useState } from 'react';
-import { Announcements } from '../../components/elements';
-import { Navbar, Footer } from '../../components/layouts';
+import { MdRemoveCircleOutline, MdAddCircleOutline } from "react-icons/md";
+import React, { useEffect, useState } from "react";
+import { publicRequest } from "../../requestMethod";
+import { Announcements } from "../../components/elements";
+import { Navbar, Footer } from "../../components/layouts";
 import {
     Container,
     Wrapper,
@@ -30,14 +31,29 @@ import {
     AddBtn,
     AddToCart,
 } from "./SingleProduct.styles";
+import { useLocation } from "react-router-dom";
 
 const SingleProduct = () => {
     const [count, setCount] = useState(1);
+    const [product, setProduct] = useState({});
+
+    const location = useLocation();
+    const id = location.pathname.split("/")[2];
+
+    useEffect(() => {
+        const getProduct = async () => {
+            try {
+                const res = await publicRequest.get(`/products/find/${id}`);
+                setProduct(res.data);
+            } catch {}
+        };
+        getProduct();
+    });
 
     const handleClickMinus = () => {
         if (count === 1) {
             return;
-        } 
+        }
         setCount(count - 1);
     };
 
@@ -53,59 +69,29 @@ const SingleProduct = () => {
                 <Wrapper>
                     <ImageContainer>
                         <Circle />
-                        <Image src="https://i.ibb.co/PFjnFB5/jacket4.png" />
+                        <Image src={product.img} />
                     </ImageContainer>
                     <Info>
-                        <Title>H&M Bomber Jacket</Title>
+                        <Title>{product.title}</Title>
                         <Divider />
-                        <Description>
-                            Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Neque, eius repudiandae soluta quas provident
-                            aliquam nulla. Repellendus quos optio magni velit.
-                            Esse inventore dolor quos voluptates atque repellat
-                            porro et.
-                        </Description>
-                        <Price>$ 49.50</Price>
+                        <Description>{product.description}</Description>
+                        <Price>${product.price}</Price>
                         <SortContainer>
                             <ColorContainer>
                                 <ColorText>Color :</ColorText>
                                 <ColorInfo>
-                                    <Color
-                                        style={{
-                                            backgroundColor: "red",
-                                        }}
-                                    />
-                                    <Color
-                                        style={{
-                                            backgroundColor: "blue",
-                                        }}
-                                    />
-                                    <Color
-                                        style={{
-                                            backgroundColor: "white",
-                                        }}
-                                    />
-                                    <Color
-                                        style={{
-                                            backgroundColor: "black",
-                                        }}
-                                    />
-                                    <Color
-                                        style={{
-                                            backgroundColor: "yellow",
-                                        }}
-                                    />
+                                    {product.color?.map((c) => (
+                                        <Color key={c} color={c} />
+                                    ))}
                                 </ColorInfo>
                             </ColorContainer>
                             <SizeContainer>
                                 <SizeText>Size :</SizeText>
                                 <SizeInfo>
                                     <Select>
-                                        <Options>XS</Options>
-                                        <Options>S</Options>
-                                        <Options>M</Options>
-                                        <Options>L</Options>
-                                        <Options>XL</Options>
+                                        {product.size?.map((s) => (
+                                            <Options key={s}>{s}</Options>
+                                        ))}
                                     </Select>
                                 </SizeInfo>
                             </SizeContainer>
@@ -128,6 +114,6 @@ const SingleProduct = () => {
             </Container>
         </React.Fragment>
     );
-}
+};
 
 export default SingleProduct;
