@@ -41,13 +41,17 @@ const Jeans = () => {
                     <Filter>
                         <FilterText>Filter By:</FilterText>
                         <Select name="color" onChange={handleFilters}>
-                            <Options disabled>Color</Options>
+                            <Options disabled selected>
+                                Color
+                            </Options>
                             {colorList.map((item) => {
                                 return <Options key={item}>{item}</Options>;
                             })}
                         </Select>
                         <Select name="size" onChange={handleFilters}>
-                            <Options disabled>Size</Options>
+                            <Options disabled selected>
+                                Size
+                            </Options>
                             {sizeList.map((size) => {
                                 return <Options key={size}>{size}</Options>;
                             })}
