@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const Info = styled.div`
     opacity: 0;
@@ -10,9 +10,8 @@ export const Info = styled.div`
     background-color: rgba(0, 0, 0, 0.2);
     display: flex;
     justify-content: center;
-    align-items: center;    
+    align-items: center;
     transition: all 0.5s ease;
-    cursor: pointer;
     z-index: 3;
 `;
 
@@ -57,6 +56,7 @@ export const Icons = styled.div`
     align-items: center;
     margin: 0.5rem;
     transition: all 0.2s ease;
+    cursor: pointer;
 
     &:hover {
         background-color: #e9f5f5;
