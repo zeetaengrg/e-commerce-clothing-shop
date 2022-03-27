@@ -1,8 +1,14 @@
-import React from 'react';
-import { Announcements, Newsletter } from '../../components/elements';
-import { Navbar, Footer } from '../../components/layouts'
-import { Categories, Slider } from '../../components/modules';
-import { NewArrivalCategory } from '../../components/modules/Categories';
+import React from "react";
+import { Announcements } from "../../components/elements";
+import {} from "../../components/layouts";
+import { Categories } from "../../components/modules";
+import {
+    Navbar,
+    Slider,
+    Newsletter,
+    NewArrivalCategory,
+    Footer,
+} from "../../components/templates";
 
 const Home = () => {
     return (
@@ -15,7 +21,7 @@ const Home = () => {
             <Newsletter />
             <Footer />
         </React.Fragment>
-    )
-}
+    );
+};
 
 export default Home;

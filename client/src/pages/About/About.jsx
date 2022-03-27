@@ -1,6 +1,6 @@
-import React from 'react';
-import { Announcements, AboutCompany, Newsletter } from '../../components/elements';
-import { Footer, Navbar } from '../../components/layouts';
+import React from "react";
+import { Announcements, AboutCompany } from "../../components/elements";
+import { Navbar, Newsletter, Footer } from "../../components/templates";
 
 const About = () => {
     return (
@@ -11,7 +11,7 @@ const About = () => {
             <Newsletter />
             <Footer />
         </React.Fragment>
-    )
-}
+    );
+};
 
 export default About;

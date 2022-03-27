@@ -1,7 +1,7 @@
-import React from 'react';
-import { Navbar, Footer } from '../../components/layouts'
-import { Announcements } from '../../components/elements'
-import { CartContainer } from '../../components/templates';
+import React from "react";
+import { CartContainer } from "../../components/layouts";
+import { Announcements } from "../../components/elements";
+import { Navbar, Footer } from "../../components/templates";
 
 const Cart = () => {
     return (
@@ -12,6 +12,6 @@ const Cart = () => {
             <Footer />
         </React.Fragment>
     );
-}
+};
 
 export default Cart;

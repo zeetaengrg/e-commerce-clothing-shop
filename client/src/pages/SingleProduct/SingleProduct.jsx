@@ -2,7 +2,7 @@ import { MdRemoveCircleOutline, MdAddCircleOutline } from "react-icons/md";
 import React, { useEffect, useState } from "react";
 import { publicRequest } from "../../requestMethod";
 import { Announcements } from "../../components/elements";
-import { Navbar, Footer } from "../../components/layouts";
+import { Navbar, Footer } from "../../components/templates";
 import {
     Container,
     Wrapper,
