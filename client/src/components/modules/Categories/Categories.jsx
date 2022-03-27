@@ -1,5 +1,5 @@
 import React from "react";
-import { CategoryItems } from ".";
+import { CategoryItems } from "../../templates";
 import { categories } from "../../../data";
 import { Container } from "./Categories.styles";
 
