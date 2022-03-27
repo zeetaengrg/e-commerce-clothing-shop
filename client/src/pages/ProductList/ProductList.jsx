@@ -7,13 +7,20 @@ import {
     FilterText,
     Select,
     Options,
-} from "../Outfits.styles";
-import { Announcements } from "../../../components/elements";
-import { Navbar, Footer } from "../../../components/templates";
-import { MaleJeans } from "../../../components/layouts";
+} from "./ProductList.styles";
+import { Announcements } from "../../components/elements";
+import { Navbar, Footer } from "../../components/templates";
+import {
+    Jackets,
+    Jeans,
+    Suits,
+    Tshirts,
+    Hoodies,
+    Shoes,
+} from "../../components/layouts";
 import { useLocation } from "react-router-dom";
 
-const Jeans = () => {
+const ProductList = () => {
     const location = useLocation();
     const category = location.pathname.split("/")[2];
     const [filters, setFilters] = useState({});
@@ -70,11 +77,35 @@ const Jeans = () => {
                         </Select>
                     </Filter>
                 </FilterContainer>
-                <MaleJeans category={category} filters={filters} sort={sort} />
+                {category === "jeans" ? (
+                    <Jeans category={category} filters={filters} sort={sort} />
+                ) : category === "jackets" ? (
+                    <Jackets
+                        category={category}
+                        filters={filters}
+                        sort={sort}
+                    />
+                ) : category === "tshirts" ? (
+                    <Tshirts
+                        category={category}
+                        filters={filters}
+                        sort={sort}
+                    />
+                ) : category === "hoodies" ? (
+                    <Hoodies
+                        category={category}
+                        filters={filters}
+                        sort={sort}
+                    />
+                ) : category === "suits" ? (
+                    <Suits category={category} filters={filters} sort={sort} />
+                ) : (
+                    <Shoes category={category} filters={filters} sort={sort} />
+                )}
                 <Footer />
             </Container>
         </React.Fragment>
     );
 };
 
-export default Jeans;
+export default ProductList;
