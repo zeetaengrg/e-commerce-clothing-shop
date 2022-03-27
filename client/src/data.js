@@ -44,6 +44,24 @@ export const categories = [
         title: "T-shirts",
         category: "tshirts",
     },
+    {
+        id: 4,
+        img: "https://i.ibb.co/HFsbpDk/hoody3.png",
+        title: "Hoodies",
+        category: "hoodies",
+    },
+    {
+        id: 5,
+        img: "https://i.ibb.co/rwKCtct/suit1.png",
+        title: "Suits",
+        category: "suits",
+    },
+    {
+        id: 6,
+        img: "https://i.ibb.co/RczhjhR/shoes1.png",
+        title: "Shoes",
+        category: "shoes",
+    },
 ];
 
 export const newArrivalsItems = [
@@ -61,7 +79,7 @@ export const newArrivalsItems = [
     },
 ];
 
-export const maleJeans = [
+export const jeansWear = [
     {
         id: 1,
         img: "https://i.ibb.co/s6P9Vk6/jeans1.png",
@@ -96,7 +114,7 @@ export const maleJeans = [
     },
 ];
 
-export const maleJackets = [
+export const jacketsWear = [
     {
         id: 1,
         img: "https://i.ibb.co/BG9Pd4D/jacket1.png",
@@ -123,7 +141,7 @@ export const maleJackets = [
     },
 ];
 
-export const maleSuits = [
+export const suitsWear = [
     {
         id: 1,
         img: "https://i.ibb.co/rwKCtct/suit1.png",
@@ -154,14 +172,7 @@ export const maleSuits = [
     },
 ];
 
-export const femalePants = [
-    {
-        id: 1,
-        img: "https://i.ibb.co/1sd7kNB/pants1.jpg",
-    },
-];
-
-export const maleTShirts = [
+export const shirtsWear = [
     {
         id: 1,
         img: "https://i.ibb.co/Zh200R9/tee1.png",
@@ -180,9 +191,44 @@ export const maleTShirts = [
     },
 ];
 
-export const femaleTShirts = [
+export const hoodiesWear = [
     {
         id: 1,
-        img: "",
+        img: "https://i.ibb.co/vB4yRLx/hoody2.png",
+    },
+    {
+        id: 2,
+        img: "https://i.ibb.co/HFsbpDk/hoody3.png",
+    },
+    {
+        id: 3,
+        img: "https://i.ibb.co/t81GkC0/hoody4.png",
+    },
+    {
+        id: 4,
+        img: "https://i.ibb.co/XX7bTzw/hoody5.png",
+    },
+];
+
+export const shoesWear = [
+    {
+        id: 1,
+        img: "https://i.ibb.co/RczhjhR/shoes1.png",
+    },
+    {
+        id: 2,
+        img: "https://i.ibb.co/ss6WdkJ/shoes2.png",
+    },
+    {
+        id: 3,
+        img: "https://i.ibb.co/R6pQHqJ/shoes3.png",
+    },
+    {
+        id: 4,
+        img: "https://i.ibb.co/pfzxmwR/shoes4.png",
+    },
+    {
+        id: 5,
+        img: "https://i.ibb.co/RD6N18h/shoes5.png",
     },
 ];
