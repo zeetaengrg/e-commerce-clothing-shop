@@ -13,18 +13,12 @@ export const slideItems = [
     },
     {
         id: 3,
-        img: "https://i.ibb.co/jGf5b5H/slider3.jpg",
-        title: "SUMMER SALE!!!",
-        description: "DON'T MISS OUT ON SUMMER SALE. GET FLAT 30% OFF!!!",
-    },
-    {
-        id: 4,
         img: "https://i.ibb.co/ZMR386v/slider4.jpg",
         title: "SUMMER SALE!!!",
         description: "DON'T MISS OUT ON SUMMER SALE. GET FLAT 30% OFF!!!",
     },
     {
-        id: 5,
+        id: 4,
         img: "https://i.ibb.co/D1rFrtL/slider5.jpg",
         title: "SUMMER SALE!!!",
         description: "DON'T MISS OUT ON SUMMER SALE. GET FLAT 30% OFF!!!",
@@ -56,13 +50,13 @@ export const newArrivalsItems = [
     {
         id: 1,
         img: "https://i.ibb.co/7yWMzHr/mennewarrival.png",
-        title: "MEN'S NEW ARRIVALS!!!",
+        title: "NEW WINTER ARRIVALS!!!",
         description: "NEW ARRIVALS IN THE STORE. GET THEM TODAY!!!",
     },
     {
         id: 2,
         img: "https://i.ibb.co/mGsNc9r/womennewarrival.jpg",
-        title: "WOMEN'S NEW ARRIVALS!!!",
+        title: "NEW SPRING ARRIVALS!!!",
         description: "NEW ARRIVALS IN THE STORE. GET THEM TODAY!!!",
     },
 ];
