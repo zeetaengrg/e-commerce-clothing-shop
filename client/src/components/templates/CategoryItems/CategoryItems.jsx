@@ -10,11 +10,23 @@ const CategoryItems = ({ item }) => {
                 <Image src={item.img} />
                 <Info>
                     <Header item={item} />
-                    {item.title === "jeans" ? (
+                    {item.category === "jeans" ? (
                         <Link to={`/products/${item.category}`}>
                             <Button />
                         </Link>
-                    ) : item.title === "jackets" ? (
+                    ) : item.category === "jackets" ? (
+                        <Link to={`/products/${item.category}`}>
+                            <Button />
+                        </Link>
+                    ) : item.category === "tshirts" ? (
+                        <Link to={`/products/${item.category}`}>
+                            <Button />
+                        </Link>
+                    ) : item.category === "hoodies" ? (
+                        <Link to={`/products/${item.category}`}>
+                            <Button />
+                        </Link>
+                    ) : item.category === "suits" ? (
                         <Link to={`/products/${item.category}`}>
                             <Button />
                         </Link>
