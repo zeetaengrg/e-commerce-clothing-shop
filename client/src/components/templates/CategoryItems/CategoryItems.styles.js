@@ -1,8 +1,8 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const Container = styled.div`
     flex: 1;
-    height: 70vh;
+    flex-wrap: wrap;
     margin: 0.5rem;
     position: relative;
 `;
