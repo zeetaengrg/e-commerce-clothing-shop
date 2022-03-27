@@ -1,5 +1,6 @@
-export { default as CartContainer } from './CartContainer/CartContainer';
-export { default as MaleJackets } from './Male/MaleJackets/MaleJackets';
-export { default as MaleJeans } from './Male/MaleJeans/MaleJeans';
-export { default as MaleSuits } from './Male/MaleSuits/MaleSuits';
-export { default as MaleTshirts } from './Male/MaleTshirts/MaleTshirts';
+export { default as Navbar } from "./Navbar/Navbar";
+export { default as Slider } from "./Slider/Slider";
+export { default as CategoryItems } from "./CategoryItems/CategoryItems";
+export { default as NewArrivalCategory } from "./NewArrivalCategory/NewArrivalCategory";
+export { default as Newsletter } from "./Newsletter/Newsletter";
+export { default as Footer } from "./Footer/Footer";
