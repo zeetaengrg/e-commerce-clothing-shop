@@ -1,9 +1,9 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Button, Header } from '../../../elements';
-import { Container, Image, Info } from './CategoryItems.styles';
+import React from "react";
+import { Link } from "react-router-dom";
+import { Button, Header } from "../../../elements";
+import { Container, Image, Info } from "./CategoryItems.styles";
 
-const CategoryItems = ({item}) => {
+const CategoryItems = ({ item }) => {
     return (
         <>
             <Container>
@@ -11,7 +11,7 @@ const CategoryItems = ({item}) => {
                 <Info>
                     <Header item={item} />
                     {item.title === "jeans" ? (
-                        <Link to={`/products/${item.category}`} >
+                        <Link to={`/products/${item.category}`}>
                             <Button />
                         </Link>
                     ) : item.title === "jackets" ? (
@@ -27,6 +27,6 @@ const CategoryItems = ({item}) => {
             </Container>
         </>
     );
-}
+};
 
 export default CategoryItems;
