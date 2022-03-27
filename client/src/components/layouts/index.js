@@ -1,2 +1,5 @@
-export { default as Footer } from "./Footer/Footer";
-export { default as Navbar } from "./Navbar/Navbar";
+export { default as CartContainer } from "./CartContainer/CartContainer";
+export { default as MaleJackets } from "./MaleJackets/MaleJackets";
+export { default as MaleJeans } from "./MaleJeans/MaleJeans";
+export { default as MaleSuits } from "./MaleSuits/MaleSuits";
+export { default as MaleTshirts } from "./MaleTshirts/MaleTshirts";
