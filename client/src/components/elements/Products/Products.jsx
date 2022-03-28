@@ -1,40 +1,40 @@
 import React from "react";
 import {
-    MdFavoriteBorder,
-    MdSearch,
-    MdOutlineShoppingCart,
+  MdFavoriteBorder,
+  MdSearch,
+  MdOutlineShoppingCart,
 } from "react-icons/md";
 import { Link } from "react-router-dom";
 import { Info, Container, Circle, Image, Icons } from "./Products.styles";
 
 const Products = ({ product }) => {
-    return (
-        <React.Fragment>
-            <Container>
-                <Circle />
-                <Image src={product.img} />
-                <Info>
-                    <Icons>
-                        <MdOutlineShoppingCart />
-                    </Icons>
-                    <Icons>
-                        <Link to={`/product/${product._id}`}>
-                            <MdSearch
-                                style={{
-                                    display: "grid",
-                                    placeContent: "center",
-                                    color: "black",
-                                }}
-                            />
-                        </Link>
-                    </Icons>
-                    <Icons>
-                        <MdFavoriteBorder />
-                    </Icons>
-                </Info>
-            </Container>
-        </React.Fragment>
-    );
+  return (
+    <React.Fragment>
+      <Container>
+        <Circle />
+        <Image src={product.img} />
+        <Info>
+          <Icons>
+            <MdOutlineShoppingCart />
+          </Icons>
+          <Icons>
+            <Link to={`/product/${product._id}`}>
+              <MdSearch
+                style={{
+                  display: "grid",
+                  placeContent: "center",
+                  color: "black",
+                }}
+              />
+            </Link>
+          </Icons>
+          <Icons>
+            <MdFavoriteBorder />
+          </Icons>
+        </Info>
+      </Container>
+    </React.Fragment>
+  );
 };
 
 export default Products;
