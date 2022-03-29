@@ -38,6 +38,15 @@ const ProductList = () => {
 
   const sizeList = ["XS", "S", "M", "L", "XL", "XXL"];
 
+  const brandList = [
+    "Levis",
+    "Denim",
+    "Diesel",
+    "Calvin Klein",
+    "Wrangler",
+    "Lee",
+  ];
+
   return (
     <React.Fragment>
       <Container>
@@ -56,11 +65,19 @@ const ProductList = () => {
               })}
             </Select>
             <Select name="size" onChange={handleFilters}>
-              <Options disabled defaultValue="Size">
+              <Options disabled selected>
                 Size
               </Options>
               {sizeList.map((size) => {
                 return <Options key={size}>{size}</Options>;
+              })}
+            </Select>
+            <Select name="brand" onChange={handleFilters}>
+              <Options disabled selected>
+                Brand
+              </Options>
+              {brandList.map((brand) => {
+                return <Options key={brand}>{brand}</Options>;
               })}
             </Select>
           </Filter>
