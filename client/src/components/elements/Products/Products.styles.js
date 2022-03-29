@@ -20,13 +20,14 @@ export const Icons = styled.div`
   align-items: center;
   transition: all 0.5s ease;
   z-index: 3;
+  border-radius: 1rem;
 `;
 
 export const CardBody = styled.div`
   flex: 1;
   min-width: 300px;
   height: 350px;
-  border-radius: 1.5rem;
+  border-radius: 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
