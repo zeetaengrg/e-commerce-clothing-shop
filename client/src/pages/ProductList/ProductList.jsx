@@ -57,7 +57,7 @@ const ProductList = () => {
           <Filter>
             <FilterText>Filter By:</FilterText>
             <Select name="color" onChange={handleFilters}>
-              <Options disabled defaultValue="Color">
+              <Options disabled selected>
                 Color
               </Options>
               {colorList.map((item) => {
