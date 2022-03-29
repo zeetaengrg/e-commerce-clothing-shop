@@ -79,41 +79,6 @@ export const newArrivalsItems = [
   },
 ];
 
-export const jeansWear = [
-  {
-    id: 1,
-    img: "https://i.ibb.co/s6P9Vk6/jeans1.png",
-  },
-  {
-    id: 2,
-    img: "https://i.ibb.co/k0WQyFN/jeans2.png",
-  },
-  {
-    id: 3,
-    img: "https://i.ibb.co/pJ35J9K/jeans3.png",
-  },
-  {
-    id: 4,
-    img: "https://i.ibb.co/zPm5Qqc/jeans4.png",
-  },
-  {
-    id: 5,
-    img: "https://i.ibb.co/WV7RCKx/jeans5.png",
-  },
-  {
-    id: 6,
-    img: "https://i.ibb.co/qrs3b0d/jeans6.png",
-  },
-  {
-    id: 7,
-    img: "https://i.ibb.co/T4L1SVV/jeans7.png",
-  },
-  {
-    id: 8,
-    img: "https://i.ibb.co/1n5d8zM/jeans8.png",
-  },
-];
-
 export const jacketsWear = [
   {
     id: 1,
