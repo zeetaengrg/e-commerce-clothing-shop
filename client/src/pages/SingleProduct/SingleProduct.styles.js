@@ -49,7 +49,6 @@ export const Info = styled.div`
 export const Title = styled.h1`
   font-size: 2.5rem;
   font-weight: 400;
-  line-height: 1.6;
 `;
 
 export const Divider = styled.hr`
