@@ -5,33 +5,49 @@ import {
   MdOutlineShoppingCart,
 } from "react-icons/md";
 import { Link } from "react-router-dom";
-import { Info, Container, Circle, Image, Icons } from "./Products.styles";
+import {
+  Container,
+  Circle,
+  Image,
+  Icons,
+  Icon,
+  Title,
+  Price,
+  CardBody,
+  CardInfo,
+} from "./Products.styles";
 
 const Products = ({ product }) => {
   return (
     <React.Fragment>
       <Container>
-        <Circle />
-        <Image src={product.img} />
-        <Info>
+        <CardBody>
+          <Circle />
+          <Image src={product.img} />
           <Icons>
-            <MdOutlineShoppingCart />
+            <Icon>
+              <MdOutlineShoppingCart />
+            </Icon>
+            <Icon>
+              <Link to={`/product/${product._id}`}>
+                <MdSearch
+                  style={{
+                    display: "grid",
+                    placeContent: "center",
+                    color: "black",
+                  }}
+                />
+              </Link>
+            </Icon>
+            <Icon>
+              <MdFavoriteBorder />
+            </Icon>
           </Icons>
-          <Icons>
-            <Link to={`/product/${product._id}`}>
-              <MdSearch
-                style={{
-                  display: "grid",
-                  placeContent: "center",
-                  color: "black",
-                }}
-              />
-            </Link>
-          </Icons>
-          <Icons>
-            <MdFavoriteBorder />
-          </Icons>
-        </Info>
+        </CardBody>
+        <CardInfo>
+          <Title>{product.title}</Title>
+          <Price>${product.price}</Price>
+        </CardInfo>
       </Container>
     </React.Fragment>
   );
