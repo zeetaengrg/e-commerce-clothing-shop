@@ -76,7 +76,6 @@ export const Icon = styled.div`
 export const CardInfo = styled.section`
   display: flex;
   justify-content: space-between;
-  margin-top: 1rem;
 `;
 
 export const Title = styled.h1`
