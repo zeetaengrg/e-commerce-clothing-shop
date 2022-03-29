@@ -49,10 +49,11 @@ export const Circle = styled.div`
 `;
 
 export const Image = styled.img`
-  height: 280px;
+  height: 300px;
+  width: 250px;
   object-fit: cover;
   z-index: 2;
-  padding: 1rem;
+  padding: 1.5rem;
 `;
 
 export const Icon = styled.div`
