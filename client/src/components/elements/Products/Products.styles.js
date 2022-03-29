@@ -1,65 +1,86 @@
 import styled from "styled-components";
 
-export const Info = styled.div`
-    opacity: 0;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.2);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: all 0.5s ease;
-    z-index: 3;
-`;
-
 export const Container = styled.div`
-    flex: 1;
-    min-width: 300px;
-    height: 350px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0.5rem;
-    background-color: #f5fdfd;
-    position: relative;
-
-    &:hover ${Info} {
-        opacity: 1;
-    }
-`;
-
-export const Circle = styled.div`
-    background-color: white;
-    width: 250px;
-    height: 250px;
-    border: none;
-    border-radius: 50%;
-    position: absolute;
-`;
-
-export const Image = styled.img`
-    height: 75%;
-    object-fit: cover;
-    z-index: 2;
+  display: flex;
+  flex-direction: column;
+  margin: 0.8rem;
 `;
 
 export const Icons = styled.div`
-    height: 40px;
-    width: 40px;
-    border-radius: 50%;
-    background-color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0.5rem;
-    transition: all 0.2s ease;
-    cursor: pointer;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s ease;
+  z-index: 3;
+`;
 
-    &:hover {
-        background-color: #e9f5f5;
-        transform: scale(1.1);
-    }
+export const CardBody = styled.div`
+  flex: 1;
+  min-width: 300px;
+  height: 350px;
+  border-radius: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f5fdfd;
+  position: relative;
+
+  &:hover ${Icons} {
+    opacity: 1;
+  }
+`;
+
+export const Circle = styled.div`
+  background-color: white;
+  width: 250px;
+  height: 250px;
+  border: none;
+  border-radius: 50%;
+  position: absolute;
+`;
+
+export const Image = styled.img`
+  height: 280px;
+  object-fit: cover;
+  z-index: 2;
+  padding: 1rem;
+`;
+
+export const Icon = styled.div`
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s ease;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #e9f5f5;
+    transform: scale(1.1);
+  }
+`;
+
+export const CardInfo = styled.section`
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+`;
+
+export const Title = styled.h1`
+  font-size: 1.1rem;
+`;
+
+export const Price = styled.span`
+  font-size: 1.1rem;
 `;
