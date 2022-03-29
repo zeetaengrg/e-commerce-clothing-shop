@@ -90,7 +90,7 @@ const SingleProduct = () => {
             </Stock>
             <SortContainer>
               <ColorContainer>
-                <ColorText>Color :</ColorText>
+                <ColorText>Color: </ColorText>
                 <ColorInfo>
                   {product.color?.map((c) => (
                     <Color key={c} color={c} />
@@ -98,7 +98,7 @@ const SingleProduct = () => {
                 </ColorInfo>
               </ColorContainer>
               <SizeContainer>
-                <SizeText>Size :</SizeText>
+                <SizeText>Size: </SizeText>
                 <SizeInfo>
                   <Select>
                     {product.size?.map((s) => (
