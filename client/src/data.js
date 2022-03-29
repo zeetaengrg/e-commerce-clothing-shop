@@ -112,6 +112,10 @@ export const jeansWear = [
     id: 8,
     img: "https://i.ibb.co/1n5d8zM/jeans8.png",
   },
+  {
+    id: 9,
+    img: "https://i.ibb.co/s6P9Vk6/jeans1.png",
+  },
 ];
 
 export const jacketsWear = [
