@@ -1,5 +1,5 @@
 import { MdRemoveCircleOutline, MdAddCircleOutline } from "react-icons/md";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { publicRequest } from "../../requestMethod";
 import { Announcements, Ratings } from "../../components/elements";
 import { Navbar, Footer } from "../../components/templates";
@@ -22,7 +22,6 @@ import {
   Color,
   SizeContainer,
   SizeText,
-  SizeInfo,
   Select,
   Options,
   CartInfo,
