@@ -10,10 +10,10 @@ export const Wrapper = styled.div`
 
 export const ImageContainer = styled.div`
   flex: 1;
-  margin: 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 0rem 1rem;
   background-color: #f5f5f5;
   position: relative;
   height: 550px;
@@ -41,7 +41,7 @@ export const Info = styled.div`
   flex-direction: column;
   gap: 1rem;
   background-color: #f5f5f5;
-  margin: 1rem;
+  margin: 0rem 1rem;
   padding: 0.5rem 1rem;
   border-radius: 0.5rem;
 `;
@@ -115,8 +115,6 @@ export const SizeContainer = styled.div`
 `;
 
 export const SizeText = styled(StockTitle)``;
-
-export const SizeInfo = styled.div``;
 
 export const Select = styled.select`
   background: transparent;
