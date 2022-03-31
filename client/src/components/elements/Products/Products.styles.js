@@ -23,7 +23,7 @@ export const Icons = styled.div`
   border-radius: 1rem;
 `;
 
-export const CardBody = styled.div`
+export const CardBody = styled.section`
   flex: 1;
   min-width: 300px;
   height: 350px;
