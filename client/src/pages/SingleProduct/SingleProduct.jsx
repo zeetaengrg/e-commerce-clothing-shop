@@ -36,10 +36,15 @@ import {
   TotalReviews,
 } from "./SingleProduct.styles";
 import { useLocation } from "react-router-dom";
+import { addProduct } from "../../redux/cartRedux";
+import { useDispatch } from "react-redux";
 
 const SingleProduct = () => {
   const [count, setCount] = useState(1);
   const [product, setProduct] = useState({});
+  const [color, setColor] = useState("");
+  const [size, setSize] = useState("");
+  const dispatch = useDispatch();
 
   const location = useLocation();
   const id = location.pathname.split("/")[2];
