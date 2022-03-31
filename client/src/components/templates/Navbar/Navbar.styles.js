@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { mobile } from "../../../responsive";
 
 export const Container = styled.div`
-  padding: 1rem 2rem;
+  padding: 0.5rem 2rem;
 `;
 
 export const Wrapper = styled.div`
@@ -46,4 +46,26 @@ export const Right = styled.div`
   justify-content: flex-end;
   text-transform: uppercase;
   align-items: center;
+`;
+
+export const QuantityContainer = styled.div`
+  position: relative;
+`;
+
+export const QuantityIcon = styled.span``;
+
+export const Quantity = styled.span`
+  background-color: teal;
+  height: 1.1rem;
+  width: 1.1rem;
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: white;
+  border-radius: 50%;
+  position: absolute;
+  top: -0.5rem;
+  right: -0.5rem;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
 `;
