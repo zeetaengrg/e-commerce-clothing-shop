@@ -1,7 +1,8 @@
 {
   "name": "server",
   "version": "1.0.0",
-  "description": "",
+  "description": "Backend server for the application",
+  "license": "MIT",
   "main": "server.js",
   "dependencies": {
     "crypto-js": "^4.1.1",
