@@ -70,8 +70,12 @@ const SingleProduct = () => {
     setCount(count + 1);
   };
 
+  const handleClickAddToCart = () => {
+    dispatch(addProduct({ ...product, count, color, size }));
+  };
+
   return (
-    <React.Fragment>
+    <>
       <Container>
         <Announcements />
         <Navbar />
@@ -123,13 +127,13 @@ const SingleProduct = () => {
                   <MdAddCircleOutline />
                 </AddBtn>
               </CounterBtn>
-              <AddToCart>Add to Cart</AddToCart>
+              <AddToCart onClick={handleClickAddToCart}>Add to Cart</AddToCart>
             </CartInfo>
           </Info>
         </Wrapper>
         <Footer />
       </Container>
-    </React.Fragment>
+    </>
   );
 };
 
