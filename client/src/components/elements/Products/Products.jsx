@@ -1,4 +1,3 @@
-import React from "react";
 import {
   MdFavoriteBorder,
   MdSearch,
@@ -19,7 +18,7 @@ import {
 
 const Products = ({ product }) => {
   return (
-    <React.Fragment>
+    <>
       <Container>
         <CardBody>
           <Circle />
@@ -49,7 +48,7 @@ const Products = ({ product }) => {
           <Price>${product.price}</Price>
         </CardInfo>
       </Container>
-    </React.Fragment>
+    </>
   );
 };
 
