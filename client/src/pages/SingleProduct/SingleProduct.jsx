@@ -101,19 +101,22 @@ const SingleProduct = () => {
                 <ColorText>Color: </ColorText>
                 <ColorInfo>
                   {product.color?.map((c) => (
-                    <Color key={c} color={c} />
+                    <Color key={c} color={c} onClick={() => setColor(c)} />
                   ))}
                 </ColorInfo>
               </ColorContainer>
               <SizeContainer>
                 <SizeText>Size: </SizeText>
-                <SizeInfo>
-                  <Select>
-                    {product.size?.map((s) => (
-                      <Options key={s}>{s}</Options>
-                    ))}
-                  </Select>
-                </SizeInfo>
+                <Select onChange={(e) => setSize(e.target.value)}>
+                  <Options disabled selected>
+                    Size
+                  </Options>
+                  {product.size?.map((s) => (
+                    <Options key={s} defaultValue={s[0]}>
+                      {s}
+                    </Options>
+                  ))}
+                </Select>
               </SizeContainer>
             </SortContainer>
             <CartInfo>
