@@ -107,14 +107,15 @@ const SingleProduct = () => {
               </ColorContainer>
               <SizeContainer>
                 <SizeText>Size: </SizeText>
-                <Select onChange={(e) => setSize(e.target.value)}>
-                  <Options disabled selected>
+                <Select
+                  onChange={(e) => setSize(e.target.value)}
+                  defaultValue="Size"
+                >
+                  <Options disabled value="Size">
                     Size
                   </Options>
                   {product.size?.map((s) => (
-                    <Options key={s} defaultValue={s[0]}>
-                      {s}
-                    </Options>
+                    <Options key={s}>{s}</Options>
                   ))}
                 </Select>
               </SizeContainer>
