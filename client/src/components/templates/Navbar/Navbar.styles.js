@@ -65,7 +65,7 @@ export const Quantity = styled.span`
   position: absolute;
   top: -0.5rem;
   right: -0.5rem;
-  display: grid;
+  display: ${(props) => (props.quantity > 0 ? "grid" : "none")};
   place-items: center;
   cursor: pointer;
 `;
