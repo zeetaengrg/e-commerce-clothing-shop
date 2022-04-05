@@ -43,26 +43,41 @@ import {
   TotalCost,
   Total,
   TotalPrice,
+  CheckoutBtn,
 } from "./CartContainer.styles";
+
+const KEY = process.env.STRIPE_KEY;
 
 const CartContainer = () => {
   const [count, setCount] = useState(1);
+  const cart = useSelector((state) => state.cart);
+  const totalCount = useSelector((state) => state.cart.products.count);
+  const quantity = cart.quantity;
+  const [stripeToken, setStripeToken] = useState(null);
+
+  const onToken = (token) => {
+    setStripeToken(token);
+  };
+  console.log(stripeToken);
+
   const handleClickMinus = () => {
-    if (count === 1) {
-      return;
-    }
     setCount(count - 1);
   };
-  const handleClickAdd = () => setCount(count + 1);
+  const handleClickAdd = () => {
+    setCount(count + 1);
+  };
+
+  let shippingCost = 5.99;
+  let discount = 5.99;
 
   return (
-    <React.Fragment>
+    <>
       <Container>
         <Title>Your Shopping Cart</Title>
         <ButtonContainer>
           <Button>Continue Shopping</Button>
           <ShoppingInfo>
-            <ShoppingInfoItem>Shopping Bag(3)</ShoppingInfoItem>
+            <ShoppingInfoItem>Shopping Bag({quantity})</ShoppingInfoItem>
             <ShoppingInfoItem>Your Wishlist(0)</ShoppingInfoItem>
           </ShoppingInfo>
           <Button>Checkout</Button>
