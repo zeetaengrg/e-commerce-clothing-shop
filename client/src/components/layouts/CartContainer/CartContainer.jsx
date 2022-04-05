@@ -1,4 +1,6 @@
-import React, { useState } from "react";
+import { useState } from "react";
+import { useSelector } from "react-redux";
+import StripeCheckout from "react-stripe-checkout";
 import { MdRemoveCircleOutline, MdAddCircleOutline } from "react-icons/md";
 import {
   Container,
@@ -17,6 +19,7 @@ import {
   ProductInfo,
   Name,
   NumberId,
+  ColorTitle,
   Color,
   Size,
   PriceDetails,
