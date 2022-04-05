@@ -53,7 +53,7 @@ const Navbar = () => {
                   </QuantityIcon>
                 </NavLink>
               </Link>
-              <Quantity>{quantity}</Quantity>
+              <Quantity quantity={quantity}>{quantity}</Quantity>
             </QuantityContainer>
           </Right>
         </Wrapper>
