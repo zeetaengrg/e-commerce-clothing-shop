@@ -131,27 +131,41 @@ const CartContainer = () => {
             <CostDetails>
               <SubTotalCost>
                 <SubTotal>Subtotal</SubTotal>
-                <SubTotalPrice>$ 182.50</SubTotalPrice>
+                <SubTotalPrice>${cart.total}</SubTotalPrice>
               </SubTotalCost>
               <ShippingCost>
                 <Shipping>Estimated Shipping</Shipping>
-                <ShippingPrice>$ 5.50</ShippingPrice>
+                <ShippingPrice>${shippingCost}</ShippingPrice>
               </ShippingCost>
               <ShippingDiscount>
-                <Discount>Shipping Discount</Discount>
-                <DiscountPrice>- $ 5.50</DiscountPrice>
+                <Discount>Discount</Discount>
+                <DiscountPrice>- ${discount}</DiscountPrice>
               </ShippingDiscount>
               <Divider />
               <TotalCost>
                 <Total>Total</Total>
-                <TotalPrice>$ 182.50</TotalPrice>
+                <TotalPrice>
+                  ${cart.total - (shippingCost - discount)}
+                </TotalPrice>
               </TotalCost>
-              <Button>Checkout Now</Button>
+              <StripeCheckout
+                name="Alpha Male"
+                image="https://i.ibb.co/wwxwXPC/logo.png"
+                billingAddress
+                shippingAddress
+                description={`Your total is ${cart.total}`}
+                amount={cart.total * 100}
+                token={onToken}
+                stripeKey={KEY}
+                currency="USD"
+              >
+                <CheckoutBtn>Checkout Now</CheckoutBtn>
+              </StripeCheckout>
             </CostDetails>
           </CartSummary>
         </Wrapper>
       </Container>
-    </React.Fragment>
+    </>
   );
 };
 
