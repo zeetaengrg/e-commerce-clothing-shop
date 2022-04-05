@@ -85,99 +85,44 @@ const CartContainer = () => {
         <Wrapper>
           <CartInfo>
             <CartInfoContainer>
-              <CartDetails>
-                <Image src="https://i.ibb.co/rwKCtct/suit1.png" />
-                <ProductDetails>
-                  <ProductInfo>
-                    <Name>
-                      <b>Product: </b>ZARA SUIT
-                    </Name>
-                    <NumberId>
-                      <b>ID: </b>46851266
-                    </NumberId>
-                    <Color />
-                    <Size>
-                      <b>Size: </b>M
-                    </Size>
-                  </ProductInfo>
-                  <PriceDetails>
-                    <CounterBtn>
-                      <MinusBtn onClick={handleClickMinus}>
-                        <MdRemoveCircleOutline />
-                      </MinusBtn>
-                      <Counter>{count}</Counter>
-                      <AddBtn onClick={handleClickAdd}>
-                        <MdAddCircleOutline />
-                      </AddBtn>
-                    </CounterBtn>
-                    <Price>$ 125.50</Price>
-                  </PriceDetails>
-                </ProductDetails>
-              </CartDetails>
+              {cart.products.map((product) => (
+                <CartDetails key={product._id}>
+                  <Image src={product.img} />
+                  <ProductDetails>
+                    <ProductInfo>
+                      <Name>
+                        <b>Product: </b>
+                        {product.title}
+                      </Name>
+                      <NumberId>
+                        <b>ID: </b>
+                        {product._id}
+                      </NumberId>
+                      <ColorTitle>
+                        <b>Color: </b>
+                        <Color color={product.color} />
+                      </ColorTitle>
+                      <Size>
+                        <b>Size: </b>
+                        {product.size}
+                      </Size>
+                    </ProductInfo>
+                    <PriceDetails>
+                      <CounterBtn>
+                        <MinusBtn onClick={handleClickMinus}>
+                          <MdRemoveCircleOutline />
+                        </MinusBtn>
+                        <Counter>{product.count}</Counter>
+                        <AddBtn onClick={handleClickAdd}>
+                          <MdAddCircleOutline />
+                        </AddBtn>
+                      </CounterBtn>
+                      <Price>${product.price * product.count}</Price>
+                    </PriceDetails>
+                  </ProductDetails>
+                </CartDetails>
+              ))}
               <Divider />
-              <CartDetails>
-                <Image src="https://i.ibb.co/PFjnFB5/jacket4.png" />
-                <ProductDetails>
-                  <ProductInfo>
-                    <Name>
-                      <b>Product: </b>H&M T-Shirt
-                    </Name>
-                    <NumberId>
-                      <b>ID: </b>87546351
-                    </NumberId>
-                    <Color style={{ backgroundColor: "black" }} />
-                    <Size>
-                      <b>Size: </b>L
-                    </Size>
-                  </ProductInfo>
-                  <PriceDetails>
-                    <CounterBtn>
-                      <MinusBtn onClick={handleClickMinus}>
-                        <MdRemoveCircleOutline />
-                      </MinusBtn>
-                      <Counter>{count}</Counter>
-                      <AddBtn onClick={handleClickAdd}>
-                        <MdAddCircleOutline />
-                      </AddBtn>
-                    </CounterBtn>
-                    <Price>$ 24.50</Price>
-                  </PriceDetails>
-                </ProductDetails>
-              </CartDetails>
-              <Divider />
-              <CartDetails>
-                <Image src="https://i.ibb.co/k0WQyFN/jeans2.png" />
-                <ProductDetails>
-                  <ProductInfo>
-                    <Name>
-                      <b>Product: </b>Levis Jeans Pant
-                    </Name>
-                    <NumberId>
-                      <b>ID: </b>71843595
-                    </NumberId>
-                    <Color
-                      style={{
-                        backgroundColor: "lightblue",
-                      }}
-                    />
-                    <Size>
-                      <b>Size: </b>M
-                    </Size>
-                  </ProductInfo>
-                  <PriceDetails>
-                    <CounterBtn>
-                      <MinusBtn onClick={handleClickMinus}>
-                        <MdRemoveCircleOutline />
-                      </MinusBtn>
-                      <Counter>{count}</Counter>
-                      <AddBtn onClick={handleClickAdd}>
-                        <MdAddCircleOutline />
-                      </AddBtn>
-                    </CounterBtn>
-                    <Price>$ 32.50</Price>
-                  </PriceDetails>
-                </ProductDetails>
-              </CartDetails>
             </CartInfoContainer>
           </CartInfo>
           <CartSummary>
