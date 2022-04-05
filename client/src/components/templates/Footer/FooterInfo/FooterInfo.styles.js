@@ -1,21 +1,16 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const Container = styled.div`
-    flex: 1;
-    padding: 1rem;
+  flex: 1;
+  padding: 1rem;
 `;
 
-export const Title = styled.h3`
-    font-size: 1.5rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    margin-bottom: 1rem;
+export const Logo = styled.img`
+  width: 10rem;
 `;
 
 export const Description = styled.p`
-    margin-bottom: 0.5rem;
+  margin-bottom: 0.5rem;
 `;
 
-export const Icons = styled.div`
-
-`;
+export const Icons = styled.div``;
