@@ -56,24 +56,24 @@ const ProductList = () => {
         <FilterContainer>
           <Filter>
             <FilterText>Filter By:</FilterText>
-            <Select name="color" onChange={handleFilters}>
-              <Options disabled selected>
+            <Select onChange={handleFilters} defaultValue="Color">
+              <Options disabled value="Color">
                 Color
               </Options>
               {colorList.map((item) => {
                 return <Options key={item}>{item}</Options>;
               })}
             </Select>
-            <Select name="size" onChange={handleFilters}>
-              <Options disabled selected>
+            <Select onChange={handleFilters} defaultValue="Size">
+              <Options disabled value="Size">
                 Size
               </Options>
               {sizeList.map((size) => {
                 return <Options key={size}>{size}</Options>;
               })}
             </Select>
-            <Select name="brand" onChange={handleFilters}>
-              <Options disabled selected>
+            <Select onChange={handleFilters} defaultValue="Brand">
+              <Options disabled value="Brand">
                 Brand
               </Options>
               {brandList.map((brand) => {
