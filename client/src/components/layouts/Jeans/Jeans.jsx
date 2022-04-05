@@ -5,7 +5,6 @@ import axios from "axios";
 
 const Jeans = ({ category, filters, sort }) => {
   const [products, setProducts] = useState([]);
-
   const [filteredProducts, setFilteredProducts] = useState([]);
 
   useEffect(() => {
@@ -56,7 +55,7 @@ const Jeans = ({ category, filters, sort }) => {
     <React.Fragment>
       <Container>
         {filteredProducts.map((product) => (
-          <Products key={product.id} product={product} />
+          <Products key={product._id} product={product} />
         ))}
       </Container>
     </React.Fragment>
