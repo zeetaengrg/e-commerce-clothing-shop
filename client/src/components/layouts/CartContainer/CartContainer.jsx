@@ -46,7 +46,7 @@ import {
   CheckoutBtn,
 } from "./CartContainer.styles";
 
-const KEY = process.env.STRIPE_KEY;
+const KEY = process.env.REACT_APP_STRIPE_KEY;
 
 const CartContainer = () => {
   const [count, setCount] = useState(1);
@@ -156,7 +156,6 @@ const CartContainer = () => {
                 amount={cart.total * 100}
                 token={onToken}
                 stripeKey={KEY}
-                currency="USD"
               >
                 <CheckoutBtn>Checkout Now</CheckoutBtn>
               </StripeCheckout>
