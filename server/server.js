@@ -8,6 +8,7 @@ const authRoutes = require("./routes/auth");
 const productRoutes = require("./routes/product");
 const cartRoutes = require("./routes/cart");
 const orderRoutes = require("./routes/order");
+const stripeRoutes = require("./routes/stripe");
 
 const app = express();
 
@@ -35,6 +36,7 @@ app.use("/api/users", userRoutes);
 app.use("/api/products", productRoutes);
 app.use("/api/carts", cartRoutes);
 app.use("/api/orders", orderRoutes);
+app.use("/api/checkout", stripeRoutes);
 
 // Create a port number to listen
 app.listen(process.env.PORT || 5500, () => {
