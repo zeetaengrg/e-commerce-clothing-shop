@@ -51,7 +51,6 @@ const KEY = process.env.STRIPE_KEY;
 const CartContainer = () => {
   const [count, setCount] = useState(1);
   const cart = useSelector((state) => state.cart);
-  const totalCount = useSelector((state) => state.cart.products.count);
   const quantity = cart.quantity;
   const [stripeToken, setStripeToken] = useState(null);
 
