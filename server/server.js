@@ -10,7 +10,6 @@ const cartRoutes = require("./routes/cart");
 const orderRoutes = require("./routes/order");
 
 const app = express();
-const port = process.env.PORT || 5000;
 
 // .env file configuration
 dotenv.config();
@@ -38,6 +37,6 @@ app.use("/api/carts", cartRoutes);
 app.use("/api/orders", orderRoutes);
 
 // Create a port number to listen
-app.listen(port || 5500, () => {
+app.listen(process.env.PORT || 5500, () => {
   console.log(`Backend server is running on port ${process.env.PORT}`);
 });
