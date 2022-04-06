@@ -56,10 +56,24 @@ const CartContainer = () => {
   const quantity = cart.quantity;
   const [stripeToken, setStripeToken] = useState(null);
 
+  const navigate = useNavigate();
+
   const onToken = (token) => {
     setStripeToken(token);
   };
-  console.log(stripeToken);
+
+  useEffect(() => {
+    const makeRequest = async () => {
+      try {
+        const res = await userRequest.post("/checkout/payment", {
+          tokenId: stripeToken.id,
+          amount: cart.total * 100,
+        });
+        navigate("/thankyou", { data: res.data });
+      } catch {}
+    };
+    stripeToken && makeRequest();
+  }, [stripeToken, navigate, cart.total]);
 
   const handleClickMinus = () => {
     setCount(count - 1);
