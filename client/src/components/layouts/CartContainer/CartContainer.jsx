@@ -21,7 +21,7 @@ import {
   ProductInfo,
   Name,
   NumberId,
-  ColorTitle,
+  ColorWrapper,
   Color,
   Size,
   PriceDetails,
@@ -113,10 +113,10 @@ const CartContainer = () => {
                         <b>ID: </b>
                         {product._id}
                       </NumberId>
-                      <ColorTitle>
+                      <ColorWrapper>
                         <b>Color: </b>
                         <Color color={product.color} />
-                      </ColorTitle>
+                      </ColorWrapper>
                       <Size>
                         <b>Size: </b>
                         {product.size}

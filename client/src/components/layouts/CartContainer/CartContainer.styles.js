@@ -68,7 +68,6 @@ export const CartInfoContainer = styled.div``;
 
 export const CartDetails = styled.div`
   display: flex;
-  flex: 3;
   margin: 1rem 0;
   gap: 1.5rem;
 `;
@@ -91,17 +90,17 @@ export const ProductDetails = styled.div`
 `;
 
 export const ProductInfo = styled.div`
-  display: flex;
   flex: 1;
-  gap: 1rem;
+  display: flex;
   flex-direction: column;
+  gap: 1rem;
 `;
 
 export const Name = styled.span``;
 
 export const NumberId = styled.span``;
 
-export const ColorTitle = styled.span`
+export const ColorWrapper = styled.span`
   display: flex;
   align-items: center;
   gap: 0.3rem;
@@ -153,15 +152,17 @@ export const Price = styled.span`
 
 export const CartSummary = styled.div`
   flex: 1;
+  display: flex;
+  flex-direction: column;
   border: 1px solid black;
   border-radius: 0.5rem;
   padding: 0.5rem 1rem;
-  text-align: center;
   height: 46vh;
 `;
 
 export const OrderTitle = styled.h2`
   text-transform: uppercase;
+  text-align: center;
   font-weight: 500;
   margin-bottom: 0.5rem;
 `;
