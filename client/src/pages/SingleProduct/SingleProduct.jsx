@@ -1,5 +1,8 @@
-import { MdRemoveCircleOutline, MdAddCircleOutline } from "react-icons/md";
 import { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { MdRemoveCircleOutline, MdAddCircleOutline } from "react-icons/md";
+import { addProduct } from "../../redux/cartRedux";
 import { publicRequest } from "../../requestMethod";
 import { Announcements, Ratings } from "../../components/elements";
 import { Navbar, Footer } from "../../components/templates";
@@ -34,14 +37,12 @@ import {
   ReviewContainer,
   TotalReviews,
 } from "./SingleProduct.styles";
-import { useLocation } from "react-router-dom";
-import { addProduct } from "../../redux/cartRedux";
-import { useDispatch } from "react-redux";
 
 const SingleProduct = () => {
   const [count, setCount] = useState(1);
   const [product, setProduct] = useState({});
   const [color, setColor] = useState("");
+  // const [isSelected, setIsSelected] = useState(false);
   const [size, setSize] = useState("");
   const dispatch = useDispatch();
 
@@ -101,7 +102,13 @@ const SingleProduct = () => {
                 <ColorText>Color: </ColorText>
                 <ColorInfo>
                   {product.color?.map((c) => (
-                    <Color key={c} color={c} onClick={() => setColor(c)} />
+                    <Color
+                      key={c}
+                      color={c}
+                      onClick={() => setColor(c)}
+                      // isSelected={isSelected}
+                      // onClick={() => setIsSelected(!isSelected)}
+                    />
                   ))}
                 </ColorInfo>
               </ColorContainer>

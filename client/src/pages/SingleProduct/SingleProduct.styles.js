@@ -100,13 +100,34 @@ export const ColorInfo = styled.div`
   gap: 0.5rem;
 `;
 
-export const Color = styled.div`
-  width: 1rem;
-  height: 1rem;
+export const Color = styled.button`
+  width: 1.2rem;
+  height: 1.2rem;
+  background-color: ${(props) => props.color};
   border-radius: 50%;
   border: 0.2px solid grey;
-  background-color: ${(props) => props.color};
   cursor: pointer;
+  /* position: relative;
+
+  ${(props) =>
+    props.isSelected &&
+    `
+    border: 0.2px solid black;
+    opacity: 0.7;
+
+    &:after {
+      content: "✓";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  
+  `} */
+
+  &:hover {
+    border: 2px solid black;
+  }
 `;
 
 export const SizeContainer = styled.div`
@@ -176,7 +197,8 @@ export const AddToCart = styled.button`
   font-family: inherit;
 
   &:hover {
-    background: black;
+    transition: all 0.3s ease-in-out;
+    background-color: black;
     color: white;
   }
 `;
