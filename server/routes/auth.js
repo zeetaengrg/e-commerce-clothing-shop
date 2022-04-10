@@ -10,7 +10,7 @@ router.post("/register", async (req, res) => {
     email: req.body.email,
     password: CryptoJS.AES.encrypt(
       req.body.password,
-      process.env.REACT_APP_SECRET_PASS
+      process.env.SECRET_PASS
     ).toString(),
   });
 
@@ -30,7 +30,7 @@ router.post("/login", async (req, res) => {
     !user && res.status(401).json("Wrong Credentials");
     const hashedPass = CryptoJS.AES.decrypt(
       user.password,
-      process.env.REACT_APP_SECRET_PASS
+      process.env.SECRET_PASS
     );
     const orginalPass = hashedPass.toString(CryptoJS.enc.Utf8);
     orginalPass !== req.body.password &&
@@ -41,7 +41,7 @@ router.post("/login", async (req, res) => {
         id: user._id,
         isAdmin: user.isAdmin,
       },
-      process.env.REACT_APP_SECRET_JWT,
+      process.env.SECRET_JWT,
       { expiresIn: "3d" }
     );
 
