@@ -69,7 +69,7 @@ const CartContainer = () => {
           tokenId: stripeToken.id,
           amount: 500,
         });
-        navigate("/thankyou", { data: res.data });
+        navigate("/thankyou", { state: { data: res.data } });
       } catch {}
     };
     stripeToken && makeRequest();
