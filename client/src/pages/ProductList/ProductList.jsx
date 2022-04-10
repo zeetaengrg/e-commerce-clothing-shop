@@ -1,4 +1,15 @@
 import React, { useState } from "react";
+import { useLocation } from "react-router-dom";
+import { Navbar, Footer } from "../../components/templates";
+import { Announcements } from "../../components/elements";
+import {
+  Jackets,
+  Jeans,
+  Suits,
+  Tshirts,
+  Hoodies,
+  Shoes,
+} from "../../components/layouts";
 import {
   Container,
   Title,
@@ -8,17 +19,6 @@ import {
   Select,
   Options,
 } from "./ProductList.styles";
-import { Announcements } from "../../components/elements";
-import { Navbar, Footer } from "../../components/templates";
-import {
-  Jackets,
-  Jeans,
-  Suits,
-  Tshirts,
-  Hoodies,
-  Shoes,
-} from "../../components/layouts";
-import { useLocation } from "react-router-dom";
 
 const ProductList = () => {
   const location = useLocation();
@@ -56,15 +56,13 @@ const ProductList = () => {
         <FilterContainer>
           <Filter>
             <FilterText>Filter By:</FilterText>
-            <Select onChange={handleFilters} defaultValue="Color">
-              <Options disabled value="Color">
-                Color
-              </Options>
+            <Select name="color" onChange={handleFilters} defaultValue="Color">
+              <Options disabled>Color</Options>
               {colorList.map((item) => {
                 return <Options key={item}>{item}</Options>;
               })}
             </Select>
-            <Select onChange={handleFilters} defaultValue="Size">
+            <Select name="size" onChange={handleFilters} defaultValue="Size">
               <Options disabled value="Size">
                 Size
               </Options>
@@ -72,7 +70,7 @@ const ProductList = () => {
                 return <Options key={size}>{size}</Options>;
               })}
             </Select>
-            <Select onChange={handleFilters} defaultValue="Brand">
+            <Select name="brand" onChange={handleFilters} defaultValue="Brand">
               <Options disabled value="Brand">
                 Brand
               </Options>
