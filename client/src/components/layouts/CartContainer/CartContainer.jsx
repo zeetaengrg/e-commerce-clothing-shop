@@ -51,10 +51,10 @@ import {
 const KEY = process.env.REACT_APP_STRIPE_KEY;
 
 const CartContainer = () => {
-  const [count, setCount] = useState(1);
   const cart = useSelector((state) => state.cart);
-  const quantity = cart.quantity;
   const [stripeToken, setStripeToken] = useState(null);
+  const [count, setCount] = useState(1);
+  const quantity = cart.quantity;
 
   const navigate = useNavigate();
 
@@ -67,7 +67,7 @@ const CartContainer = () => {
       try {
         const res = await userRequest.post("/checkout/payment", {
           tokenId: stripeToken.id,
-          amount: cart.total * 100,
+          amount: 500,
         });
         navigate("/thankyou", { data: res.data });
       } catch {}
@@ -168,7 +168,7 @@ const CartContainer = () => {
                 image="https://i.ibb.co/wwxwXPC/logo.png"
                 billingAddress
                 shippingAddress
-                description={`Your total is ${cart.total}`}
+                description={`Your total is $${cart.total}`}
                 amount={cart.total * 100}
                 token={onToken}
                 stripeKey={KEY}
