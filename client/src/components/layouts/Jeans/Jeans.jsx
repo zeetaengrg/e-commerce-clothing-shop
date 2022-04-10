@@ -24,13 +24,13 @@ const Jeans = ({ category, filters, sort }) => {
   useEffect(() => {
     category &&
       setFilteredProducts(
-        products.filter((product) =>
+        products.filter((item) =>
           Object.entries(filters).every(([key, value]) =>
-            product[key].includes(value)
+            item[key].includes(value)
           )
         )
       );
-  }, [category, filters, products]);
+  }, [category, products, filters]);
 
   useEffect(() => {
     const sortProducts = () => {
