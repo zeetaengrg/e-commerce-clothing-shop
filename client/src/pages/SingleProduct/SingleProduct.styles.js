@@ -107,7 +107,7 @@ export const Color = styled.button`
   border-radius: 50%;
   border: 0.2px solid grey;
   cursor: pointer;
-  /* position: relative;
+  position: relative;
 
   ${(props) =>
     props.isSelected &&
@@ -122,8 +122,7 @@ export const Color = styled.button`
       left: 50%;
       transform: translate(-50%, -50%);
     }
-  
-  `} */
+  `}
 
   &:hover {
     border: 2px solid black;
