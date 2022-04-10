@@ -74,6 +74,11 @@ const SingleProduct = () => {
     dispatch(addProduct({ ...product, count, color, size }));
   };
 
+  // const handleColor = () => {
+  //   setColor();
+  //   setIsSelected(!isSelected);
+  // };
+
   return (
     <>
       <Container>
@@ -108,6 +113,7 @@ const SingleProduct = () => {
                       onClick={() => setColor(c)}
                       // isSelected={isSelected}
                       // onClick={() => setIsSelected(!isSelected)}
+                      // onClick={handleColor}
                     />
                   ))}
                 </ColorInfo>
