@@ -48,6 +48,24 @@ export const Right = styled.div`
   align-items: center;
 `;
 
+export const RegisterLink = styled.a`
+  color: black;
+  font-family: inherit;
+  font-size: 1rem;
+  text-transform: uppercase;
+  border-radius: 0.3rem;
+  border: 1px solid black;
+  padding: 0.2rem 0.5rem;
+  background-color: white;
+  cursor: pointer;
+
+  &:hover {
+    transition: all 0.3s ease-in-out;
+    background-color: black;
+    color: white;
+  }
+`;
+
 export const QuantityContainer = styled.div`
   position: relative;
 `;

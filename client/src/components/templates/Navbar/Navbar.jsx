@@ -1,7 +1,6 @@
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { MdOutlineShoppingCart } from "react-icons/md";
-import SignInOutContainer from "../../modules/Form/SignInOutContainer/SignInOutContainer";
 import {
   Container,
   Wrapper,
@@ -13,6 +12,7 @@ import {
   Quantity,
   QuantityContainer,
   QuantityIcon,
+  RegisterLink,
 } from "./Navbar.styles";
 
 const Navbar = () => {
@@ -39,7 +39,7 @@ const Navbar = () => {
             </Link>
           </Center>
           <Right>
-            <SignInOutContainer />
+            <RegisterLink href="/register">Register</RegisterLink>
             <QuantityContainer>
               <Link to="/cart">
                 <NavLink>
