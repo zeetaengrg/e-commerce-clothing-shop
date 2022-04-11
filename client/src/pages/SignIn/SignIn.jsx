@@ -26,7 +26,7 @@ const SignIn = () => {
         <LeftContainer>
           <TopContent>
             <Text>Create an Account?</Text>
-            <Link href="/register">Sign In</Link>
+            <Link href="/register">Sign Up</Link>
           </TopContent>
           <HeaderContent>
             <Header>Sign In</Header>
