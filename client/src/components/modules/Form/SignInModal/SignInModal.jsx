@@ -1,7 +1,9 @@
 import { useState } from "react";
+import { useDispatch } from "react-redux";
 import { Formik, Field, Form, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import { MdLockOutline } from "react-icons/md";
+import { login } from "../../../../redux/apiCalls";
 import {
   FooterText,
   ForgotText,
@@ -18,12 +20,10 @@ import {
   FormControl,
   Button,
 } from "../Form.styles";
-import { useDispatch } from "react-redux";
-import { login } from "../../../../redux/apiCalls";
 
 const SignInModal = ({ handleChange }) => {
   const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [pass, setPass] = useState("");
   const dispatch = useDispatch();
 
   const initialValues = {
@@ -48,9 +48,7 @@ const SignInModal = ({ handleChange }) => {
   };
 
   const handleClick = (e) => {
-    e.preventDefault();
-
-    login(dispatch, { email, password });
+    login(dispatch, { email, pass });
   };
 
   return (
@@ -76,7 +74,7 @@ const SignInModal = ({ handleChange }) => {
                   label="Email"
                   placeholder="Email"
                   type="email"
-                  onChange={(e) => setEmail(e.target.value)}
+                  // onChange={(e) => setEmail(e.target.value)}
                 />
                 <Error>
                   <ErrorMessage name="email" />
@@ -89,7 +87,7 @@ const SignInModal = ({ handleChange }) => {
                   label="Password"
                   placeholder="Password"
                   type="password"
-                  onChange={(e) => setPassword(e.target.value)}
+                  // onChange={(e) => setPass(e.target.value)}
                 />
                 <Error>
                   <ErrorMessage name="password" />
