@@ -58,9 +58,9 @@ export const RegisterLink = styled.a`
   padding: 0.2rem 0.5rem;
   background-color: white;
   cursor: pointer;
+  transition: all 0.3s ease;
 
   &:hover {
-    transition: all 0.3s ease-in-out;
     background-color: black;
     color: white;
   }
