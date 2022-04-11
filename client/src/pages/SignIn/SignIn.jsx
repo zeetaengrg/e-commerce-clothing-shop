@@ -16,13 +16,16 @@ import {
   UsernameLabel,
   Button,
   Link,
+  Title,
 } from "../SignUp/SignUpStyles";
 
 const SignIn = () => {
   return (
     <Container>
       <Wrapper>
-        <RightContainer></RightContainer>
+        <RightContainer>
+          <Title>Enjoy The Best Shopping Experience</Title>
+        </RightContainer>
         <LeftContainer>
           <TopContent>
             <Text>Create an Account?</Text>
