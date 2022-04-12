@@ -15,9 +15,9 @@ export const Wrapper = styled.div`
 
 export const Left = styled.div`
   display: flex;
+  text-align: center;
   flex: 1;
   gap: 3rem;
-  text-align: center;
 `;
 
 export const NavLink = styled.span`
@@ -36,7 +36,7 @@ export const Center = styled.div`
 `;
 
 export const Logo = styled.img`
-  width: 211px;
+  max-width: 13rem;
 `;
 
 export const Right = styled.div`
@@ -49,7 +49,47 @@ export const Right = styled.div`
 `;
 
 export const RegisterLink = styled.a`
+  text-transform: uppercase;
+  min-width: 5rem;
+  height: 2rem;
   color: black;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+  position: relative;
+  outline: none;
+  border-radius: 2rem;
+  border: none;
+  background: #f5f5f5;
+  opacity: 0.8;
+  z-index: 1;
+
+  :hover::after {
+    width: 100%;
+    left: 0;
+  }
+
+  ::after {
+    border-radius: 2rem;
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 100%;
+    top: 0;
+    z-index: -1;
+    transition: all 0.3s ease;
+    background-color: #ced4da;
+    right: 0;
+  }
+
+  :active {
+    top: 2px;
+  }
+
+  /* color: black;
   font-family: inherit;
   font-size: 1rem;
   text-transform: uppercase;
@@ -63,7 +103,7 @@ export const RegisterLink = styled.a`
   &:hover {
     background-color: black;
     color: white;
-  }
+  } */
 `;
 
 export const QuantityContainer = styled.div`
