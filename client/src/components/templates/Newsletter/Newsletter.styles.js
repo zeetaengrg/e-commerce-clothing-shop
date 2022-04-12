@@ -20,26 +20,29 @@ export const Description = styled.p`
 export const Form = styled.div`
   display: flex;
   justify-content: center;
+  position: relative;
 `;
 
 export const Input = styled.input`
-  width: 30vw;
+  min-width: 30rem;
   border: 1px solid grey;
-  border-radius: 0.2rem;
-  border-bottom-right-radius: 0;
-  border-top-right-radius: 0;
+  border-radius: 2rem;
   padding: 0.5rem;
   font: inherit;
+  padding-left: 1rem;
 `;
 
 export const Button = styled.button`
+  position: absolute;
+  right: 0.2rem;
+  top: 50%;
+  transform: translateY(-50%);
   cursor: pointer;
   background-color: black;
-  border: 1px solid grey;
-  border-radius: 0.2rem;
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
-  width: 3rem;
+  border: none;
+  border-radius: 2rem;
+  min-width: 3rem;
+  min-height: 2rem;
   display: grid;
   place-content: center;
   color: white;
@@ -48,7 +51,5 @@ export const Button = styled.button`
   :hover {
     color: black;
     background-color: white;
-    border-top-right-radius: 0.2rem;
-    border-bottom-right-radius: 0.2rem;
   }
 `;
