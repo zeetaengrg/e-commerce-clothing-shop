@@ -1,3 +1,5 @@
+import { Formik, Form, Field, ErrorMessage } from "formik";
+import * as Yup from "yup";
 import { LeftContainer, RightContainer } from "./SignInStyles";
 import {
   Container,
@@ -11,15 +13,32 @@ import {
   SubHeader,
   Text,
   TopContent,
-  Username,
-  UsernameInput,
-  UsernameLabel,
   Button,
   Link,
   Title,
+  Email,
+  EmailLabel,
+  EmailInput,
 } from "../SignUp/SignUpStyles";
 
 const SignIn = () => {
+  const initialValues = {
+    email: "",
+    password: "",
+  };
+
+  const validationSchema = Yup.object().shape({
+    email: Yup.string().email("Please Enter Valid Email").required("Required"),
+    password: Yup.string().required("Required"),
+  });
+
+  const onSubmit = (values, { setSubmitting, resetForm }) => {
+    setTimeout(() => {
+      resetForm(initialValues);
+      setSubmitting(false);
+    }, 1500);
+  };
+
   return (
     <Container>
       <Wrapper>
@@ -28,7 +47,7 @@ const SignIn = () => {
         </RightContainer>
         <LeftContainer>
           <TopContent>
-            <Text>Create an Account?</Text>
+            <Text>Don't have an Account?</Text>
             <Link href="/register">Sign Up</Link>
           </TopContent>
           <HeaderContent>
@@ -38,25 +57,39 @@ const SignIn = () => {
               cupiditate odio accusamus dolor aut iusto architecto aperiam.
             </SubHeader>
           </HeaderContent>
-          <FormContent>
-            <Username>
-              <UsernameLabel htmlFor="username">USERNAME</UsernameLabel>
-              <UsernameInput
-                name="username"
-                type="text"
-                placeholder="Enter Your Username"
-              />
-            </Username>
-            <Password>
-              <PasswordLabel htmlFor="password">PASSWORD</PasswordLabel>
-              <PasswordInput
-                name="password"
-                type="password"
-                placeholder="Enter Your Password"
-              />
-            </Password>
-          </FormContent>
-          <Button>Sign In</Button>
+          <Formik
+            initialValues={initialValues}
+            onSubmit={onSubmit}
+            validationSchema={validationSchema}
+          >
+            {({ isSubmitting }) => (
+              <Form>
+                <FormContent>
+                  <Email>
+                    <EmailLabel htmlFor="email">EMAIL</EmailLabel>
+                    <Field
+                      as={EmailInput}
+                      name="email"
+                      type="email"
+                      placeholder="Enter Your Email"
+                    />
+                  </Email>
+                  <Password>
+                    <PasswordLabel htmlFor="password">PASSWORD</PasswordLabel>
+                    <Field
+                      as={PasswordInput}
+                      name="password"
+                      type="password"
+                      placeholder="Enter Your Password"
+                    />
+                  </Password>
+                  <Button type="submit" disabled={isSubmitting}>
+                    {isSubmitting ? "Signing..." : "Sign In"}
+                  </Button>
+                </FormContent>
+              </Form>
+            )}
+          </Formik>
         </LeftContainer>
       </Wrapper>
     </Container>
