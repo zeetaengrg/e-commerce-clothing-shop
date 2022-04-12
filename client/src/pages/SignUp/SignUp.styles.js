@@ -8,8 +8,8 @@ export const Container = styled.div`
 
 export const Wrapper = styled.div`
   display: flex;
-  height: 80vh;
-  width: 90vw;
+  min-height: 80vh;
+  max-width: 90vw;
   border-radius: 3rem;
   background-color: #f5f5f5;
 `;
@@ -102,19 +102,50 @@ export const TermsInput = styled.input`
 export const TermsLabel = styled.p``;
 
 export const Button = styled.button`
-  max-width: 12rem;
-  padding: 0.5rem 1rem;
-  border: 1px solid grey;
-  border-radius: 3rem;
-  cursor: pointer;
+  margin-top: 1rem;
   text-transform: uppercase;
+  max-width: 15rem;
+  padding: 0.8rem 1rem;
+  border: unset;
+  border-radius: 2rem;
+  color: black;
+  z-index: 1;
+  background: #f5f5f5;
+  position: relative;
   font-weight: 600;
-  transition: all 0.3s ease;
+  -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  transition: all 250ms;
+  overflow: hidden;
+  cursor: pointer;
 
-  &:hover {
+  :disabled {
+    background: #e5e5e5;
+    cursor: not-allowed;
+  }
+
+  ::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    border-radius: 2rem;
+    border: none;
     background-color: black;
+    z-index: -1;
+    -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+    box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+    transition: all 250ms;
+  }
+
+  :hover {
     color: #f5f5f5;
-    border: 1px solid black;
+  }
+
+  :hover::before {
+    width: 100%;
   }
 `;
 
