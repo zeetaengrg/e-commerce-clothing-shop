@@ -2,17 +2,17 @@ import styled from "styled-components";
 
 export const Btn = styled.button`
   text-transform: uppercase;
-  min-width: 100px;
-  height: 35px;
+  min-width: 5rem;
+  height: 2rem;
   color: black;
-  padding: 5px 10px;
+  padding: 0.5rem 1rem;
   font-weight: bold;
   cursor: pointer;
   transition: all 0.3s ease;
   position: relative;
   display: inline-block;
   outline: none;
-  border-radius: 5px;
+  border-radius: 2rem;
   border: none;
   box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5),
     7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
@@ -26,7 +26,7 @@ export const Btn = styled.button`
   }
 
   ::after {
-    border-radius: 5px;
+    border-radius: 2rem;
     position: absolute;
     content: "";
     width: 0;
