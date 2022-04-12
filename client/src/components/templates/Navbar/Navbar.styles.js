@@ -50,60 +50,41 @@ export const Right = styled.div`
 
 export const RegisterLink = styled.a`
   text-transform: uppercase;
-  min-width: 5rem;
-  height: 2rem;
-  color: black;
   padding: 0.5rem 1rem;
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: all 0.3s ease;
-  position: relative;
-  outline: none;
   border-radius: 2rem;
-  border: none;
+  color: black;
+  z-index: 1;
   background: #f5f5f5;
   opacity: 0.8;
-  z-index: 1;
+  position: relative;
+  -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  transition: all 250ms;
+  overflow: hidden;
 
-  :hover::after {
-    width: 100%;
-    left: 0;
-  }
-
-  ::after {
-    border-radius: 2rem;
-    position: absolute;
+  ::before {
     content: "";
-    width: 0;
-    height: 100%;
+    position: absolute;
     top: 0;
-    z-index: -1;
-    transition: all 0.3s ease;
-    background-color: #ced4da;
-    right: 0;
-  }
-
-  :active {
-    top: 2px;
-  }
-
-  /* color: black;
-  font-family: inherit;
-  font-size: 1rem;
-  text-transform: uppercase;
-  border-radius: 0.3rem;
-  border: 1px solid black;
-  padding: 0.2rem 0.5rem;
-  background-color: white;
-  cursor: pointer;
-  transition: all 0.3s ease;
-
-  &:hover {
+    left: 0;
+    height: 100%;
+    width: 0;
+    border-radius: 2rem;
+    border: none;
     background-color: black;
-    color: white;
-  } */
+    z-index: -1;
+    -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+    box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+    transition: all 250ms;
+  }
+
+  :hover {
+    color: #f5f5f5;
+  }
+
+  :hover::before {
+    width: 100%;
+  }
 `;
 
 export const QuantityContainer = styled.div`
