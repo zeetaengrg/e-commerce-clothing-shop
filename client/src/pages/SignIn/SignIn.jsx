@@ -1,5 +1,4 @@
-import { Formik, Form, Field, ErrorMessage } from "formik";
-import * as Yup from "yup";
+import { login } from "../../redux/apiCalls";
 import { LeftContainer, RightContainer } from "./SignIn.styles";
 import {
   Container,
@@ -21,23 +20,20 @@ import {
   EmailInput,
   Error,
 } from "../SignUp/SignUp.styles";
+import { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 
 const SignIn = () => {
-  const initialValues = {
-    email: "",
-    password: "",
-  };
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const dispatch = useDispatch();
+  const { isFetching, error } = useSelector((state) => state.user);
 
-  const validationSchema = Yup.object().shape({
-    email: Yup.string().email("Please Enter Valid Email").required("Required"),
-    password: Yup.string().required("Required"),
-  });
-
-  const onSubmit = (values, { setSubmitting, resetForm }) => {
-    setTimeout(() => {
-      resetForm(initialValues);
-      setSubmitting(false);
-    }, 1500);
+  const handleClick = (e) => {
+    e.preventDefault();
+    login(dispatch, { email, password });
+    setIsSubmitting(true);
   };
 
   return (
@@ -58,45 +54,35 @@ const SignIn = () => {
               cupiditate odio accusamus dolor aut iusto architecto aperiam.
             </SubHeader>
           </HeaderContent>
-          <Formik
-            initialValues={initialValues}
-            onSubmit={onSubmit}
-            validationSchema={validationSchema}
-          >
-            {({ isSubmitting }) => (
-              <Form>
-                <FormContent>
-                  <Email>
-                    <EmailLabel htmlFor="email">EMAIL</EmailLabel>
-                    <Field
-                      as={EmailInput}
-                      name="email"
-                      type="email"
-                      placeholder="Enter Your Email"
-                    />
-                    <Error>
-                      <ErrorMessage name="email" />
-                    </Error>
-                  </Email>
-                  <Password>
-                    <PasswordLabel htmlFor="password">PASSWORD</PasswordLabel>
-                    <Field
-                      as={PasswordInput}
-                      name="password"
-                      type="password"
-                      placeholder="Enter Your Password"
-                    />
-                    <Error>
-                      <ErrorMessage name="password" />
-                    </Error>
-                  </Password>
-                  <Button type="submit" disabled={isSubmitting}>
-                    {isSubmitting ? "Signing..." : "Sign In"}
-                  </Button>
-                </FormContent>
-              </Form>
-            )}
-          </Formik>
+          <FormContent>
+            <Email>
+              <EmailLabel htmlFor="email">EMAIL</EmailLabel>
+              <EmailInput
+                name="email"
+                type="email"
+                placeholder="Enter Your Email"
+                onChange={(e) => setEmail(e.target.value)}
+              />
+              <Error>{isSubmitting && !email && "Email is required"}</Error>
+            </Email>
+            <Password>
+              <PasswordLabel htmlFor="password">PASSWORD</PasswordLabel>
+              <PasswordInput
+                name="password"
+                type="password"
+                placeholder="Enter Your Password"
+                onChange={(e) => setPassword(e.target.value)}
+              />
+              <Error>
+                {isSubmitting && !password && "Password is required"}
+              </Error>
+            </Password>
+            {error && <Error>Wrong Credentials</Error>}
+            <Button type="submit" onClick={handleClick} disabled={isFetching}>
+              {/* {isSubmitting ? "Sign In" : "Signing..."} */}
+              Sign In
+            </Button>
+          </FormContent>
         </LeftContainer>
       </Wrapper>
     </Container>
