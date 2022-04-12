@@ -1,6 +1,6 @@
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
-import { LeftContainer, RightContainer } from "./SignInStyles";
+import { LeftContainer, RightContainer } from "./SignIn.styles";
 import {
   Container,
   Wrapper,
@@ -19,7 +19,8 @@ import {
   Email,
   EmailLabel,
   EmailInput,
-} from "../SignUp/SignUpStyles";
+  Error,
+} from "../SignUp/SignUp.styles";
 
 const SignIn = () => {
   const initialValues = {
@@ -73,6 +74,9 @@ const SignIn = () => {
                       type="email"
                       placeholder="Enter Your Email"
                     />
+                    <Error>
+                      <ErrorMessage name="email" />
+                    </Error>
                   </Email>
                   <Password>
                     <PasswordLabel htmlFor="password">PASSWORD</PasswordLabel>
@@ -82,6 +86,9 @@ const SignIn = () => {
                       type="password"
                       placeholder="Enter Your Password"
                     />
+                    <Error>
+                      <ErrorMessage name="password" />
+                    </Error>
                   </Password>
                   <Button type="submit" disabled={isSubmitting}>
                     {isSubmitting ? "Signing..." : "Sign In"}

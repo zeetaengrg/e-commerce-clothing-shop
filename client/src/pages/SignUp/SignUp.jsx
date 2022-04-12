@@ -28,7 +28,7 @@ import {
   TermsLabel,
   TermsInput,
   Error,
-} from "./SignUpStyles";
+} from "./SignUp.styles";
 
 const SignUp = () => {
   const initialValues = {
