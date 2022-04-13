@@ -51,5 +51,6 @@ export const Button = styled.button`
   :hover {
     color: black;
     background-color: white;
+    border: 1px solid grey;
   }
 `;
