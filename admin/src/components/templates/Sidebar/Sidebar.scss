@@ -1,0 +1,86 @@
+@import "styles/abstracts/variables";
+@import "styles/abstracts/mixins";
+
+.sidebar {
+  flex: 1;
+  border-right: 2px solid $border-color;
+  min-height: 100vh;
+  background-color: white;
+
+  .top {
+    display: grid;
+    place-items: center;
+    padding: 0.5rem 0rem;
+
+    img {
+      width: 5rem;
+    }
+
+    .top__logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: $logo-color;
+      text-align: center;
+    }
+  }
+
+  hr {
+    border: 0.5px solid $border-color;
+  }
+
+  .center {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 0.5rem 1.5rem;
+
+    h4 {
+      @include heading-h4;
+      margin-bottom: 0.5rem;
+    }
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+
+      li {
+        gap: 0.5rem;
+        display: flex;
+        align-items: center;
+        padding-left: 0.5rem;
+        font-size: 0.9rem;
+
+        .icon {
+          color: $icon-color;
+          font-size: 1.3rem;
+        }
+      }
+    }
+  }
+
+  .bottom {
+    padding: 0rem 1.5rem;
+
+    h4 {
+      @include heading-h4;
+      margin: 0.5rem 0rem;
+    }
+
+    .bottom__theme {
+      display: flex;
+      gap: 0.8rem;
+      padding-left: 0.5rem;      
+
+      .theme--light {
+        @include theme;
+        background-color: $theme-light;
+      }
+  
+      .theme--dark {
+        @include theme;
+        background-color: $theme-dark;
+      }
+    }
+  }
+}
