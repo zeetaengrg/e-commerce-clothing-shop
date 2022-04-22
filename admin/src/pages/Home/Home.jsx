@@ -3,10 +3,11 @@ import "./Home.scss";
 
 const Home = () => {
   return (
-    <>
-      <Navbar />
+    <div className="home">
+      {/* <Navbar /> */}
       <Sidebar />
-    </>
+      <div className="home__content"></div>
+    </div>
   );
 };
 
