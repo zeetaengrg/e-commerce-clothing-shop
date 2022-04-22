@@ -1,9 +1,11 @@
+import { Navbar, Sidebar } from "components/templates";
 import "./Home.scss";
 
 const Home = () => {
   return (
     <>
-      <div>Home</div>
+      <Navbar />
+      <Sidebar />
     </>
   );
 };
