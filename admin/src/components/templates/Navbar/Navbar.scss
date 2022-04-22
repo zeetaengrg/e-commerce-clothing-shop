@@ -1,0 +1,60 @@
+@import "styles/abstracts/variables";
+@import "styles/abstracts/mixins";
+
+.navbar {
+  padding: 0rem 1.5rem;
+  height: 3.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2px solid $border-color;
+
+  .section-one {
+    position: relative;
+    display: flex;
+    align-items: center;
+    
+    input {
+      padding: 0.3rem 0.5rem;
+      border: 1px solid $border-color;
+      border-radius: 5px;
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    .search__icon {
+      position: absolute;
+      left: 11rem;
+      color: black;
+      opacity: 0.5;
+      cursor: pointer;
+    }
+  }
+
+  .section-two {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    .navbar__icon {
+      color: $icon-color;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+
+    &__language {
+      display: flex;
+      align-items: center;
+      color: $heading-color;
+    }
+
+    img {
+      height: 2rem;
+      width: 2rem;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+  }
+}
