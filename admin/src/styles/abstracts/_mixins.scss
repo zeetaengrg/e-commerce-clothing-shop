@@ -1,0 +1,17 @@
+@import "styles/abstracts/variables";
+
+// Light and Dark Theme
+@mixin theme {
+  height: 1.5rem;
+  width: 1.5rem;
+  border: 2px solid teal;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+// H4 Heading
+@mixin heading-h4 {
+  color: $heading-color;
+  text-transform: uppercase;
+  font-size: $heading-font-size;
+}
