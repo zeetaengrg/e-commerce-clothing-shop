@@ -1,0 +1,8 @@
+@import "styles/abstracts/variables";
+@import "styles/abstracts/mixins";
+
+.graph {
+  flex: 4;
+  border-radius: $widgets-border-radius;
+  box-shadow: $widgets-box-shadow;
+}
