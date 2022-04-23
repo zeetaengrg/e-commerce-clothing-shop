@@ -1,0 +1,89 @@
+@import "styles/abstracts/variables";
+@import "styles/abstracts/mixins";
+
+.revenue {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  flex: 2;
+  border-radius: $widgets-border-radius;
+  box-shadow: $widgets-box-shadow;
+  padding: 0.5rem 0.7rem;
+
+  .revenue-header {
+    display: flex;
+    justify-content: space-between;
+
+    h4 {
+      @include heading-h4;
+      font-size: 1rem;
+    }
+  }
+
+  .revenue-chart {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+    .chart__progress {
+      height: 7rem;
+      width: 7rem;
+    }
+
+    .chart__info {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      text-align: center;
+
+      span {
+        font-size: 1.5rem;
+        font-weight: bold;
+      }
+
+      .info__desc {
+        font-size: 0.8rem;
+      }
+    }
+  }
+
+  .revenue-footer {
+    display: flex;
+    justify-content: space-between;
+
+    .footer__content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      h4 {
+        @include heading-h4;
+        font-size: 0.8rem;
+      }
+
+      .target__growth {
+        display: flex;
+        align-items: center;
+
+        .icon {
+          font-size: 1.2rem;
+        }
+
+        span {
+          font-size: 0.8rem;
+        }
+
+        &.increase {
+          color: green;
+        }
+
+        &.decrease {
+          color: red;
+        }
+      }
+    }
+  }
+}
