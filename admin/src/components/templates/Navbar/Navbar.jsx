@@ -1,3 +1,4 @@
+import { useState } from "react";
 import {
   MdSearch,
   MdLanguage,
@@ -10,6 +11,22 @@ import {
 import "./Navbar.scss";
 
 const Navbar = () => {
+  const [isClicked, setIsClicked] = useState(false);
+
+  const setDarkMode = (
+    <MdNightlight
+      className="navbar__icon"
+      onClick={() => setIsClicked(!isClicked)}
+    />
+  );
+
+  const setLightMode = (
+    <MdLightMode
+      className="navbar__icon"
+      onClick={() => setIsClicked(!isClicked)}
+    />
+  );
+
   return (
     <nav className="navbar">
       <section className="section-one">
