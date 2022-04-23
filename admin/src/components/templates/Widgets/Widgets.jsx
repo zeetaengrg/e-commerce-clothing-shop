@@ -77,23 +77,23 @@ const Widgets = ({ type }) => {
   }
 
   return (
-    <div className="widgets">
-      <div className="widgets-top">
+    <section className="widgets">
+      <header className="widgets-top">
         <h4>{data.title}</h4>
         <div className="top-percentage increase">
           <MdArrowDropUp />
           <span>+{diff}%</span>
         </div>
-      </div>
+      </header>
       <div className="widgets-center">
         {data.isMoney && "$ "}
         {amount}
       </div>
-      <div className="widgets-bottom">
+      <footer className="widgets-bottom">
         <a href="/#">{data.link}</a>
         {data.icon}
-      </div>
-    </div>
+      </footer>
+    </section>
   );
 };
 
