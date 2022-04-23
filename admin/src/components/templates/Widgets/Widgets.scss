@@ -52,7 +52,7 @@
       color: $link-color;
       text-decoration: underline;
       display: flex;
-      align-self: flex-end;
+      align-items: center;
 
       &:hover {
         color: black;
@@ -63,6 +63,6 @@
   .widget-icon {
     font-size: 1.8rem;
     padding: 0.2rem;
-    border-radius: 0.3rem;
+    border-radius: 0.4rem;
   }
 }
