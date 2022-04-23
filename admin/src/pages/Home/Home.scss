@@ -1,3 +1,6 @@
+@import "styles/abstracts/variables";
+@import "styles/abstracts/mixins";
+
 .home {
   display: flex;
 
@@ -12,7 +15,10 @@
     }
 
     .right__charts {
-      
+      display: flex;
+      justify-content: space-between;
+      gap: 1.5rem;
+      padding: 0rem 1.5rem;
     }
   }
 }
