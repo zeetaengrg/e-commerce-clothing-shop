@@ -38,11 +38,23 @@ const Navbar = () => {
           <MdLanguage className="navbar__icon" />
           English
         </div>
-        <MdNightlight className="navbar__icon" />
-        <MdNotifications className="navbar__icon" />
-        <MdMessage className="navbar__icon" />
-        <img src="/images/profile-img.png" alt="Profile Pic" />
-        <MdSettings className="navbar__icon" />
+        <div className="section-two__theme">
+          {isClicked ? setLightMode : setDarkMode}
+        </div>
+        <div className="section-two__notification">
+          <span className="notify-count">2</span>
+          <MdNotifications className="navbar__icon" />
+        </div>
+        <div className="section-two__message">
+          <span className="notify-count">3</span>
+          <MdMessage className="navbar__icon" />
+        </div>
+        <div className="section-two__profile">
+          <img src="/images/profile-img.png" alt="Profile Pic" />
+        </div>
+        <div className="section-two__setting">
+          <MdSettings className="navbar__icon" />
+        </div>
       </section>
     </nav>
   );
