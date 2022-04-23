@@ -1,7 +1,14 @@
 .home {
   display: flex;
 
-  &__content {
+  &-right {
     flex: 6;
+
+    .right-widgets {
+      display: flex;
+      gap: 1.5rem;
+      justify-content: space-between;
+      padding: 1.5rem;
+    }
   }
 }
