@@ -51,8 +51,8 @@
       }
 
       &.Pending {
-        color: goldenrod;
-        background-color: rgba($color: goldenrod, $alpha: 0.35);
+        color: red;
+        background-color: rgba($color: red, $alpha: 0.35);
       }
     }
   }
