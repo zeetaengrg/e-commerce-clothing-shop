@@ -38,14 +38,44 @@
 
     .navbar__icon {
       color: $icon-color;
-      font-size: 1.5rem;
+      font-size: $icon-font-size;
       cursor: pointer;
     }
 
     &__language {
+      color: $heading-color;
+      font-size: $list-font-size;
+    }
+
+    &__language,
+    &__theme,
+    &__notification,
+    &__message,
+    &__profile,
+    &__setting {
       display: flex;
       align-items: center;
-      color: $heading-color;
+      user-select: none;
+    }
+
+    &__notification,
+    &__message {
+      position: relative;
+
+      .notify-count {
+        position: absolute;
+        top: -0.5rem;
+        right: -0.5rem;
+        height: 1rem;
+        width: 1rem;
+        border-radius: 50%;
+        background-color: $notification-color;
+        color: white;
+        display: grid;
+        place-items: center;
+        font-size: 0.8rem;
+        font-weight: bold;
+      }
     }
 
     img {
