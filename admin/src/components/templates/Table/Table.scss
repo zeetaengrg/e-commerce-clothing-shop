@@ -1,0 +1,59 @@
+@import "styles/abstracts/variables";
+@import "styles/abstracts/mixins";
+
+.table {
+  border: 1px solid $border-color;
+  border-radius: $widgets-border-radius;
+  box-shadow: $widgets-box-shadow;
+  padding: 0.5rem 0.7rem;
+
+  .table__title {
+    h1 {
+      @include heading-h4;
+      font-size: 1rem;
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  .table__body {
+    table {
+      border-collapse: collapse;
+      width: 100%;
+
+      th, td {
+        border: 1px solid $border-color;
+        text-align: center;
+        padding: 0.5rem;
+      }
+
+      tr:nth-child(even) {
+        background-color: hsl(0, 4%, 91%);
+      }
+    }
+
+    .row-img {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+
+      img {
+        border-radius: 50%;
+        height: 2rem;
+        width: 2rem;
+        object-fit: cover;
+      }
+    }
+
+    .status {
+      &.Approved {
+        color: green;
+        background-color: rgba($color: green, $alpha: 0.5);
+      }
+
+      &.Pending {
+        color: goldenrod;
+        background-color: rgba($color: goldenrod, $alpha: 0.35);
+      }
+    }
+  }
+}
