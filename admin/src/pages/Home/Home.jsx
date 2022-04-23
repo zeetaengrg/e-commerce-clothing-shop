@@ -4,7 +4,7 @@ import {
   Widgets,
   RevenueChart,
   GraphChart,
-  Table,
+  ProductTable,
 } from "components/templates";
 import "./Home.scss";
 
@@ -12,7 +12,7 @@ const Home = () => {
   return (
     <div className="home">
       <Sidebar />
-      <section className="home-right">
+      <div className="home-right">
         <Navbar />
         <section className="right__widgets">
           <Widgets type="users" />
@@ -22,12 +22,12 @@ const Home = () => {
         </section>
         <section className="right__charts">
           <RevenueChart />
-          <GraphChart />
+          <GraphChart title="Last 6 Months (Revenue)" />
         </section>
         <section className="right__table">
-          <Table />
+          <ProductTable />
         </section>
-      </section>
+      </div>
     </div>
   );
 };
