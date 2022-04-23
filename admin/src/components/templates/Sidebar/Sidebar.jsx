@@ -18,7 +18,6 @@ const Sidebar = () => {
     <div className="sidebar">
       <section className="top">
         <img src="/images/logo.png" alt="Logo" />
-        {/* <span className="top__logo">alphamale admin</span> */}
       </section>
       <hr />
       <section className="center">
