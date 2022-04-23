@@ -12,13 +12,14 @@ import { FaClipboardList, FaTruck } from "react-icons/fa";
 import { AiTwotoneShop } from "react-icons/ai";
 import { RiFolderUserFill } from "react-icons/ri";
 import "./Sidebar.scss";
+import { Link } from "react-router-dom";
 
 const Sidebar = () => {
   return (
     <div className="sidebar">
-      <section className="top">
+      <Link to="/" className="top">
         <img src="/images/logo.png" alt="Logo" />
-      </section>
+      </Link>
       <hr />
       <section className="center">
         <div className="center__main">
