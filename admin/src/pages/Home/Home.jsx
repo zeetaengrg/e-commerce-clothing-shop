@@ -4,6 +4,7 @@ import {
   Widgets,
   RevenueChart,
   GraphChart,
+  Table,
 } from "components/templates";
 import "./Home.scss";
 
@@ -22,6 +23,9 @@ const Home = () => {
         <section className="right__charts">
           <RevenueChart />
           <GraphChart />
+        </section>
+        <section className="right__table">
+          <Table />
         </section>
       </section>
     </div>
