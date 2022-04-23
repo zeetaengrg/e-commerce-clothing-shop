@@ -5,7 +5,7 @@
   flex: 1;
   border-right: 2px solid $border-color;
   min-height: 100vh;
-  background-color: whitesmoke;
+  background-color: $background-color;
 
   .top {
     display: grid;
