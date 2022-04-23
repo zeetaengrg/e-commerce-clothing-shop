@@ -7,12 +7,13 @@ const Home = () => {
       <Sidebar />
       <div className="home-right">
         <Navbar />
-        <div className="right-widgets">
+        <div className="right__widgets">
           <Widgets type="users" />
           <Widgets type="orders" />
           <Widgets type="earnings" />
           <Widgets type="balance" />
         </div>
+        <div className="right__charts"></div>
       </div>
     </div>
   );
