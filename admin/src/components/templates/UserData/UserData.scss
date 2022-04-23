@@ -1,0 +1,66 @@
+@import "styles/abstracts/variables";
+@import "styles/abstracts/mixins";
+
+.user {
+  height: calc(100vh - 5.7rem);
+  padding: 1rem;
+
+  h1 {
+    margin-bottom: 1rem;
+  }
+
+  .cell__img {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    img {
+      height: 1.5rem;
+      width: 1.5rem;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+  }
+
+  .cell__status {
+    padding: 0.5rem;
+    border-radius: 0.3rem;
+
+    &.active {
+      background-color: rgba($color: green, $alpha: 0.05);
+      color: green;
+    }
+
+    &.pending {
+      background-color: rgba($color: orange, $alpha: 0.05);
+      color: orange;
+    }
+
+    &.passive {
+      background-color: rgba($color: crimson, $alpha: 0.05);
+      color: crimson;
+    }
+  }
+
+  .cell-action {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    .view-btn {
+      padding: 0.2rem 0.5rem;
+      border-radius: 0.3rem;
+      color: darkblue;
+      border: 1px solid rgba($color: darkblue, $alpha: 0.5);
+      cursor: pointer;
+    }
+
+    .delete-btn {
+      padding: 0.2rem 0.5rem;
+      border-radius: 0.3rem;
+      color: crimson;
+      border: 1px solid rgba($color: crimson, $alpha: 0.5);
+      cursor: pointer;
+    }
+  }
+}
