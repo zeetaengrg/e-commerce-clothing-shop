@@ -1,17 +1,25 @@
 // *******COLORS*******
-// Logo
+$background-color: whitesmoke;
 $logo-color: teal;
-// Border
 $border-color: hsl(0, 0%, 90%);
-// Heading
 $heading-color: hsl(0, 0%, 50%);
-// Theme
-$theme-light: hsl(0, 2%, 76%)
-;
+$theme-light: hsl(0, 2%, 76%);
 $theme-dark: hsl(0, 0%, 15%);
-// Icon
 $icon-color: teal;
+$notification-color: #7072B4;
+$link-color: hsl(0, 1%, 32%);
 
-// *******FONTS*******
-// Heading
+// *******FONTS-SIZE*******
 $heading-font-size: 0.8rem;
+$list-font-size: 0.9rem;
+$icon-font-size: 1.3rem;
+$link-font-size: 0.8rem;
+
+// *******BORDER*******
+$widgets-border-radius: 0.5rem;
+$icon-border-radius: 0.3rem;
+$widgets-box-shadow:
+  0.3px 0.3px 0.9px rgba(0, 0, 0, 0.081),
+  1.1px 1.1px 3.1px rgba(0, 0, 0, 0.119),
+  5px 5px 14px rgba(0, 0, 0, 0.2)
+;
