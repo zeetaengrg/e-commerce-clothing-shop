@@ -31,6 +31,7 @@ const UserData = () => {
         </Link>
       </div>
       <DataGrid
+        className="data-grid"
         rows={userRows}
         columns={userColumns.concat(actionColumn)}
         pageSize={7}
