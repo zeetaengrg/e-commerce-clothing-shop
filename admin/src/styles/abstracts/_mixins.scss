@@ -1,17 +1,30 @@
 @import "styles/abstracts/variables";
 
+// Box Container
+@mixin box {
+  border-radius: $primary-br;
+  box-shadow: $primary-bs;
+  padding: $primary-pd;
+}
+
 // Light and Dark Theme
 @mixin theme {
   height: 1.5rem;
   width: 1.5rem;
-  border: 2px solid teal;
+  border: 2px solid $secondary-clr;
   border-radius: 5px;
   cursor: pointer;
 }
 
-// H4 Heading
-@mixin heading-h4 {
-  color: $heading-color;
+// Heading
+@mixin heading {
+  color: $primary-clr-2;
   text-transform: uppercase;
-  font-size: $heading-font-size;
+  font-size: $primary-fs;
+}
+
+// Flex Direction Column
+@mixin flex-direction-column {
+  display: flex;
+  flex-direction: column;
 }
