@@ -13,8 +13,12 @@ import { AiTwotoneShop } from "react-icons/ai";
 import { RiFolderUserFill } from "react-icons/ri";
 import "./Sidebar.scss";
 import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { DarkModeContext } from "context/darkModeContext";
 
 const Sidebar = () => {
+  const { dispatch } = useContext(DarkModeContext);
+
   return (
     <div className="sidebar">
       <Link to="/" className="top">
@@ -107,8 +111,14 @@ const Sidebar = () => {
       <section className="bottom">
         <h4>Theme</h4>
         <div className="bottom__theme">
-          <div className="theme--light"></div>
-          <div className="theme--dark"></div>
+          <div
+            className="theme--light"
+            onClick={() => dispatch({ type: "LIGHT" })}
+          ></div>
+          <div
+            className="theme--dark"
+            onClick={() => dispatch({ type: "DARK" })}
+          ></div>
         </div>
       </section>
     </div>
