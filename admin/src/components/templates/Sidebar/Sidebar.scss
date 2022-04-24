@@ -42,17 +42,18 @@
         align-items: center;
         padding: 0.2rem 0.5rem;
         font-size: $secondary-fs;
+        color: $primary-clr;
         cursor: pointer;
         transition: all 0.3s ease;
-
-        &:hover {
-          background-color: $primary-clr-3;
-          border-radius: 3px;
-        }
 
         .icon {
           color: $secondary-clr;
           font-size: $tertiary-fs;
+        }
+
+        &:hover {
+          background-color: $primary-clr-3;
+          border-radius: 3px;
         }
       }
     }
@@ -75,7 +76,7 @@
         @include theme;
         background-color: $primary-clr-4;
       }
-  
+
       .theme--dark {
         @include theme;
         background-color: $primary-clr;
