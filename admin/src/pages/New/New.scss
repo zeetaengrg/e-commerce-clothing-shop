@@ -1,0 +1,72 @@
+@import "styles/abstracts/variables";
+@import "styles/abstracts/mixins";
+
+.new {
+  display: flex;
+  flex: 1;
+
+  .new-content {
+    flex: 6;
+    @include flex-direction-column;
+
+    .top {
+      padding: 1.5rem;
+
+      .top-content {
+        flex: 1;
+        @include box;
+  
+        h4 {
+          @include heading;
+          font-size: 1rem;
+        }
+      }
+    }
+
+    .bottom {
+      padding: $secondary-pd;
+
+      .bottom-content {
+        flex: 6;
+        gap: 2.5rem;
+        display: flex;
+        justify-content: space-between;
+        @include box;
+
+        input {
+          border: none;
+          border-bottom: 1px solid $primary-clr-3;
+        }
+
+        .form-control {
+          gap: 0.5rem;
+          @include flex-direction-column;
+        }
+
+        .left {
+          flex: 1;
+          display: grid;
+          place-items: center;
+
+          img {
+            height: 10rem;
+            width: 10rem;
+            border-radius: 50%;
+          }
+        }
+
+        .center {
+          flex: 1;
+          gap: 1rem;
+          @include flex-direction-column;
+        }
+
+        .right {
+          flex: 1;
+          gap: 1rem;
+          @include flex-direction-column;
+        }
+      }
+    }
+  }
+}
