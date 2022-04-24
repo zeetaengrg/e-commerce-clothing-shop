@@ -2,14 +2,12 @@
 @import "styles/abstracts/mixins";
 
 .table {
-  border: 1px solid $border-color;
-  border-radius: $widgets-border-radius;
-  box-shadow: $widgets-box-shadow;
-  padding: 0.5rem 0.7rem;
+  border: 1px solid $primary-clr-4;
+  @include box;
 
   .table__title {
     h1 {
-      @include heading-h4;
+      @include heading;
       font-size: 1rem;
       margin-bottom: 0.8rem;
     }
@@ -21,17 +19,17 @@
       width: 100%;
 
       th, td {
-        border: 1px solid $border-color;
+        border: 1px solid $primary-clr-4;
         text-align: center;
         padding: 0.5rem;
       }
 
       th {
-        color: $table-head-color;
+        color: $primary-clr-1;
       }
 
       td {
-        color: $table-body-color;
+        color: $primary-clr-1;
       }
 
       tr:nth-child(even) {

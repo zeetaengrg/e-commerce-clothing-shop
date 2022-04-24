@@ -2,14 +2,11 @@
 @import "styles/abstracts/mixins";
 
 .widgets {
-  display: flex;
-  flex-direction: column;
+  @include flex-direction-column;
+  @include box;
   justify-content: space-between;
   flex: 1;
   gap: 1rem;
-  border-radius: $widgets-border-radius;
-  box-shadow: $widgets-box-shadow;
-  padding: 0.5rem 0.7rem;
 
   &-top {
     display: flex;
@@ -17,7 +14,7 @@
     align-items: center;
 
     h4 {
-      @include heading-h4;
+      @include heading;
       font-size: 1rem;
     }
 
@@ -48,8 +45,8 @@
     justify-content: space-between;
 
     a {
-      font-size: $link-font-size;
-      color: $link-color;
+      font-size: $primary-fs;
+      color: $primary-clr-1;
       text-decoration: underline;
       display: flex;
       align-items: center;

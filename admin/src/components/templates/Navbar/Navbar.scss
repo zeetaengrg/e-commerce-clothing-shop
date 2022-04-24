@@ -7,17 +7,17 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-bottom: 2px solid $border-color;
+  border-bottom: 2px solid $primary-clr-3;
 
   .section-one {
     display: flex;
     align-items: center;
-    border: 1px solid $border-color;
+    border: 1px solid $primary-clr-4;
     border-radius: 5px;
     
     input {
       padding: 0.3rem 0.5rem;
-      border: 1px solid $border-color;
+      border: 1px solid $primary-clr-4;
       border-radius: 5px;
       border: none;
       outline: none;
@@ -25,8 +25,7 @@
     }
 
     .search__icon {
-      color: black;
-      opacity: 0.5;
+      color: $primary-clr-3;
       cursor: pointer;
     }
   }
@@ -37,14 +36,14 @@
     gap: 1rem;
 
     .navbar__icon {
-      color: $icon-color;
-      font-size: $icon-font-size;
+      color: $secondary-clr;
+      font-size: $tertiary-fs;
       cursor: pointer;
     }
 
     &__language {
-      color: $heading-color;
-      font-size: $list-font-size;
+      color: $primary-clr-2;
+      font-size: $secondary-fs;
     }
 
     &__language,
@@ -69,8 +68,8 @@
         height: 1rem;
         width: 1rem;
         border-radius: 50%;
-        background-color: $notification-color;
-        color: white;
+        background-color: $secondary-clr;
+        color: $secondary-clr-4;
         display: grid;
         place-items: center;
         font-size: 0.8rem;

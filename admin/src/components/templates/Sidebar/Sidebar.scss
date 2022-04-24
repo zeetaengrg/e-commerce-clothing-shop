@@ -3,9 +3,9 @@
 
 .sidebar {
   flex: 1;
-  border-right: 2px solid $border-color;
+  border-right: 2px solid $primary-clr-3;
   min-height: 100vh;
-  background-color: $background-color;
+  background-color: $primary-clr-4;
 
   .top {
     display: grid;
@@ -18,23 +18,21 @@
   }
 
   hr {
-    border: 0.5px solid $border-color;
+    border: 0.5px solid $primary-clr-3;
   }
 
   .center {
-    display: flex;
-    flex-direction: column;
+    @include flex-direction-column;
     gap: 0.8rem;
-    padding: 0.5rem 0.8rem;
+    padding: $primary-pd;
 
     h4 {
-      @include heading-h4;
+      @include heading;
       margin-bottom: 0.3rem;
     }
 
     ul {
-      display: flex;
-      flex-direction: column;
+      @include flex-direction-column;
       gap: 0.2rem;
 
       li {
@@ -42,18 +40,18 @@
         display: flex;
         align-items: center;
         padding: 0.2rem 0.5rem;
-        font-size: $list-font-size;
+        font-size: $secondary-fs;
         cursor: pointer;
         transition: all 0.3s ease;
 
         &:hover {
-          background-color: $theme-light;
+          background-color: $primary-clr-3;
           border-radius: 3px;
         }
 
         .icon {
-          color: $icon-color;
-          font-size: $icon-font-size
+          color: $secondary-clr;
+          font-size: $tertiary-fs;
         }
       }
     }
@@ -63,7 +61,7 @@
     padding: 0rem 0.8rem;
 
     h4 {
-      @include heading-h4;
+      @include heading;
       margin: 0.5rem 0rem;
     }
 
@@ -74,12 +72,12 @@
 
       .theme--light {
         @include theme;
-        background-color: $theme-light;
+        background-color: $primary-clr-4;
       }
   
       .theme--dark {
         @include theme;
-        background-color: $theme-dark;
+        background-color: $primary-clr;
       }
     }
   }

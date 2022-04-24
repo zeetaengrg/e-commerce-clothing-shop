@@ -3,16 +3,14 @@
 
 .graph {
   flex: 4;
-  border-radius: $widgets-border-radius;
-  box-shadow: $widgets-box-shadow;
-  padding: 0.5rem 0.7rem;
+  @include box;
 
   h1 {
-    @include heading-h4;
+    @include heading;
     font-size: 1rem;
   }
 
   .chart-grid {
-    stroke: hsl(0, 0%, 92%);
+    stroke: $primary-clr-4;
   }
 }
