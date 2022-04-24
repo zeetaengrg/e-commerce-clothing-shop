@@ -2,11 +2,11 @@
 @import "styles/abstracts/mixins";
 
 .revenue {
+  @include box;
   display: flex;
   flex-direction: column;
   gap: 0.8rem;
   flex: 2;
-  @include box;
 
   .revenue-header {
     display: flex;

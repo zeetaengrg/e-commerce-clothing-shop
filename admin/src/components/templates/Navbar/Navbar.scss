@@ -8,16 +8,20 @@
   align-items: center;
   justify-content: space-between;
   border-bottom: 2px solid $primary-clr-3;
+  border-left: 2px solid $primary-clr-3;
+  top: -0.1px;
+  background-color: $primary-clr-4;
+  position: sticky;
+  z-index: 999;
 
   .section-one {
     display: flex;
     align-items: center;
-    border: 1px solid $primary-clr-4;
+    border: 1px solid $primary-clr-3;
     border-radius: 5px;
     
     input {
       padding: 0.3rem 0.5rem;
-      border: 1px solid $primary-clr-4;
       border-radius: 5px;
       border: none;
       outline: none;
@@ -68,8 +72,8 @@
         height: 1rem;
         width: 1rem;
         border-radius: 50%;
-        background-color: $secondary-clr;
-        color: $secondary-clr-4;
+        background-color: #8B8B8B;
+        color: $primary-clr-4;
         display: grid;
         place-items: center;
         font-size: 0.8rem;

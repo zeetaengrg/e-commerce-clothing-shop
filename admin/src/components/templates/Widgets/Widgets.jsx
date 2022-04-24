@@ -77,7 +77,7 @@ const Widgets = ({ type }) => {
   }
 
   return (
-    <section className="widgets">
+    <article className="widgets">
       <header className="widgets-top">
         <h4>{data.title}</h4>
         <div className="top-percentage increase">
@@ -93,7 +93,7 @@ const Widgets = ({ type }) => {
         <a href="/#">{data.link}</a>
         {data.icon}
       </footer>
-    </section>
+    </article>
   );
 };
 

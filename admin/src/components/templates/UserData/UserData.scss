@@ -1,8 +1,12 @@
+@import "styles/abstracts/mixins";
+
 .user {
   height: calc(100vh - 5.7rem);
   padding: 1rem;
 
   h1 {
+    @include heading;
+    font-size: 1.5rem;
     margin-bottom: 1rem;
   }
 
