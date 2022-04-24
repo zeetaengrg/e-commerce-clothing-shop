@@ -1,5 +1,5 @@
 import { DataGrid } from "@mui/x-data-grid";
-import { userColumns, userRows } from "data-user";
+import { userColumns, userRows } from "data/user";
 import "./UserData.scss";
 
 const UserData = () => {
