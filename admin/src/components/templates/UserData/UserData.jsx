@@ -1,9 +1,17 @@
+import { useState } from "react";
+import { Link } from "react-router-dom";
 import { DataGrid } from "@mui/x-data-grid";
 import { userColumns, userRows } from "data/user";
-import { Link } from "react-router-dom";
 import "./UserData.scss";
 
 const UserData = () => {
+  const [data, setData] = useState(userRows);
+
+  // Delete user from the list
+  const handleDelete = (id) => {
+    setData(data.filter((item) => item.id !== id));
+  };
+
   const actionColumn = [
     {
       field: "action",
@@ -15,7 +23,12 @@ const UserData = () => {
             <Link to="/users/test">
               <div className="view-btn">View</div>
             </Link>
-            <div className="delete-btn">Delete</div>
+            <div
+              className="delete-btn"
+              onClick={() => handleDelete(params.row.id)}
+            >
+              Delete
+            </div>
           </div>
         );
       },
@@ -32,10 +45,10 @@ const UserData = () => {
       </div>
       <DataGrid
         className="data-grid"
-        rows={userRows}
+        rows={data}
         columns={userColumns.concat(actionColumn)}
-        pageSize={7}
-        rowsPerPageOptions={[7]}
+        pageSize={8}
+        rowsPerPageOptions={[8]}
         checkboxSelection
       />
     </div>
