@@ -2,8 +2,8 @@
 @import "styles/abstracts/mixins";
 
 .table {
-  border: 1px solid $primary-clr-4;
   @include box;
+  border: 1px solid $primary-clr-4;
 
   .table__title {
     h1 {
@@ -13,54 +13,56 @@
     }
   }
 
-  .table__body {
-    table {
-      border-collapse: collapse;
-      width: 100%;
+  table {
+    border-collapse: collapse;
+    width: 100%;
 
-      th, td {
-        border: 1px solid $primary-clr-4;
-        text-align: center;
-        padding: 0.5rem;
-      }
+    th, td {
+      border: 1px solid $primary-clr-4;
+      text-align: center;
+      padding: 0.5rem;
+    }
 
+    thead {
       th {
         color: $primary-clr-1;
+      }
+    }
+
+    tbody {
+      tr:nth-child(even) {
+        background-color: hsl(0, 4%, 91%);
       }
 
       td {
         color: $primary-clr-1;
       }
+    }
+  }
 
-      tr:nth-child(even) {
-        background-color: hsl(0, 4%, 91%);
-      }
+  .row-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+
+    img {
+      border-radius: 50%;
+      height: 2rem;
+      width: 2rem;
+      object-fit: cover;
+    }
+  }
+
+  .status {
+    &.Approved {
+      color: green;
+      background-color: rgba($color: green, $alpha: 0.5);
     }
 
-    .row-img {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 0.5rem;
-
-      img {
-        border-radius: 50%;
-        height: 2rem;
-        width: 2rem;
-        object-fit: cover;
-      }
-    }
-
-    .status {
-      &.Approved {
-        color: green;
-        background-color: rgba($color: green, $alpha: 0.5);
-      }
-
-      &.Pending {
-        color: red;
-        background-color: rgba($color: red, $alpha: 0.35);
-      }
+    &.Pending {
+      color: red;
+      background-color: rgba($color: red, $alpha: 0.35);
     }
   }
 }
