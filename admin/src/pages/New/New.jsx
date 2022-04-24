@@ -1,8 +1,11 @@
+import { useState } from "react";
 import { MdCloudUpload } from "react-icons/md";
 import { Navbar, Sidebar } from "components/templates";
 import "./New.scss";
 
-const New = () => {
+const New = ({ inputs, title }) => {
+  const [file, setFile] = useState("");
+
   const handleClick = (e) => {
     e.preventDefault();
   };
@@ -14,14 +17,18 @@ const New = () => {
         <Navbar />
         <section className="top">
           <article className="top-content">
-            <h4>Add New User</h4>
+            <h4>{title}</h4>
           </article>
         </section>
         <section className="bottom">
           <div className="bottom-content">
             <figure className="left">
               <img
-                src="https://icon-library.com/images/no-image-icon/no-image-icon-0.jpg"
+                src={
+                  file
+                    ? URL.createObjectURL(file)
+                    : "https://icon-library.com/images/no-image-icon/no-image-icon-0.jpg"
+                }
                 alt="Camera"
               />
               <figcaption>
