@@ -1,28 +1,33 @@
 // *******COLORS*******
-$background-color: whitesmoke;
-$logo-color: teal;
-$border-color: hsl(0, 0%, 90%);
-$heading-color: hsl(0, 0%, 50%);
-$theme-light: hsl(0, 2%, 76%);
-$theme-dark: hsl(0, 0%, 15%);
-$icon-color: teal;
-$notification-color: #7072B4;
-$link-color: hsl(0, 1%, 32%);
-$table-head-color: hsl(0, 0%, 41%);
-$table-body-color: hsl(0, 0%, 33%);
+// Primary color shades
+$primary-clr: hsl(0, 0%, 18%);
+$primary-clr-1: hsl(0, 0%, 36%);
+$primary-clr-2: hsl(0, 0%, 55%);
+$primary-clr-3: hsl(0, 0%, 75%);
+$primary-clr-4: hsl(0, 0%, 96%);
+
+// Secondary color shades
+$secondary-clr: hsl(161, 20%, 33%);
+$secondary-clr-1: hsl(180, 14%, 44%);
+$secondary-clr-2: hsl(194, 14%, 58%);
+$secondary-clr-3: hsl(207, 14%, 71%);
+$secondary-clr-4: hsl(220, 11%, 84%);
 
 // *******FONTS-SIZE*******
-$heading-font-size: 0.8rem;
-$list-font-size: 0.9rem;
-$icon-font-size: 1.3rem;
-$link-font-size: 0.8rem;
+$primary-fs: 0.8rem;
+$secondary-fs: 0.9rem;
+$tertiary-fs: 1.3rem;
+
+// *******PADDING*********
+$primary-pd: 0.5rem 0.8rem;
+$secondary-pd: 0rem 1.5rem 1.5rem;
 
 // *******BORDER*******
-$widgets-border-radius: 0.5rem;
-$icon-border-radius: 0.3rem;
+$primary-br: 0.5rem;
+$secondary-br: 0.3rem;
 
 // *******BOX SHADOW*******
-$widgets-box-shadow:
+$primary-bs:
   0.3px 0.3px 0.9px rgba(0, 0, 0, 0.081),
   1.1px 1.1px 3.1px rgba(0, 0, 0, 0.119),
   5px 5px 14px rgba(0, 0, 0, 0.2);
