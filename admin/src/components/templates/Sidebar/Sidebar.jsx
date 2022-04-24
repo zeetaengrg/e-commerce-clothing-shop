@@ -25,27 +25,35 @@ const Sidebar = () => {
         <div className="center__main">
           <h4>Main</h4>
           <ul>
-            <li>
-              <MdDashboard className="icon" />
-              Dashboard
-            </li>
+            <Link to="/">
+              <li>
+                <MdDashboard className="icon" />
+                Dashboard
+              </li>
+            </Link>
           </ul>
         </div>
         <div className="center__lists">
           <h4>Lists</h4>
           <ul>
-            <li>
-              <MdAccountCircle className="icon" />
-              Users
-            </li>
-            <li>
-              <AiTwotoneShop className="icon" />
-              Products
-            </li>
-            <li>
-              <FaClipboardList className="icon" />
-              Orders
-            </li>
+            <Link to="/users">
+              <li>
+                <MdAccountCircle className="icon" />
+                Users
+              </li>
+            </Link>
+            <Link to="/products">
+              <li>
+                <AiTwotoneShop className="icon" />
+                Products
+              </li>
+            </Link>
+            <Link to="/orders">
+              <li>
+                <FaClipboardList className="icon" />
+                Orders
+              </li>
+            </Link>
             <li>
               <FaTruck className="icon" />
               Delivery

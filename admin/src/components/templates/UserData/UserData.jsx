@@ -1,5 +1,6 @@
 import { DataGrid } from "@mui/x-data-grid";
 import { userColumns, userRows } from "data/user";
+import { Link } from "react-router-dom";
 import "./UserData.scss";
 
 const UserData = () => {
@@ -11,7 +12,9 @@ const UserData = () => {
       renderCell: (params) => {
         return (
           <div className="cell-action">
-            <div className="view-btn">View</div>
+            <Link to="/users/test">
+              <div className="view-btn">View</div>
+            </Link>
             <div className="delete-btn">Delete</div>
           </div>
         );
@@ -21,7 +24,12 @@ const UserData = () => {
 
   return (
     <div className="user">
-      <h1>Users</h1>
+      <div className="user-top">
+        <h1>Users</h1>
+        <Link to="/users/new">
+          <div className="add-btn">Add New User</div>
+        </Link>
+      </div>
       <DataGrid
         rows={userRows}
         columns={userColumns.concat(actionColumn)}
