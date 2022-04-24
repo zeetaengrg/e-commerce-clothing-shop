@@ -1,0 +1,150 @@
+@import "styles/abstracts/variables";
+
+.App.dark {
+  background-color: $primary-clr;
+  color: $primary-clr-3;
+
+  // Navbar dark theme
+  .navbar {
+    background-color: $primary-clr;
+    border-bottom: 2px solid $primary-clr-1;
+    border-left: 2px solid $primary-clr-1;
+
+    .section-one {
+      border: 1px solid $primary-clr-1;
+
+      .search__icon {
+        color: $primary-clr-1;
+      }
+    }
+
+    .section-two {
+      .navbar__icon {
+        color: $secondary-clr-2;
+      }
+
+      &__language {
+        color: $primary-clr-3;
+      }
+
+      &__notification,
+      &__message {
+        .notify-count {
+          background-color: $secondary-clr;
+        }
+      }
+    }
+  }
+
+  // Sidebar Dark Theme
+  .sidebar {
+    border-right: 2px solid $primary-clr-1;
+    background-color: $primary-clr;
+
+    hr {
+      border: 0.5px solid $primary-clr-1;
+    }
+
+    .center {
+      ul {
+        li {
+          color: $primary-clr-3;
+
+          .icon {
+            color: $secondary-clr-2;
+          }
+
+          &:hover {
+            background-color: $primary-clr-1;
+          }
+        }
+      }
+    }
+  }
+
+  // Graph Chart Dark Theme
+  .graph {
+    .chart-grid {
+      stroke: $primary-clr-1;
+    }
+  }
+
+  // Products Table Dark Theme
+  .table {
+    table {
+
+      th,
+      td {
+        border: 1px solid $primary-clr-1;
+      }
+
+      thead {
+        th {
+          color: $primary-clr-3;
+        }
+      }
+
+      tbody {
+        tr:nth-child(odd) {
+          background-color: hsl(0, 0%, 29%);
+        }
+
+        td {
+          color: $primary-clr-3;
+        }
+      }
+    }
+  }
+
+  // Users Page Dark Theme
+  .user {
+
+    .user-top {
+      .add-btn {
+        background-color: $primary-clr-1;
+        box-shadow: none;
+      }
+    }
+
+    .cell__status {
+      color: $primary-clr-4;
+    }
+
+    .data-grid {
+      color: $primary-clr-3;
+
+      .view-btn,
+      .delete-btn {
+        color: $primary-clr-4;
+        border: 1px solid $primary-clr-1;
+      }
+    }
+  }
+
+  // New User Page Dark Theme
+  .new {
+
+    .new-content {
+
+      .bottom {
+        .bottom-content {
+          label {
+            color: $primary-clr-3;
+          }
+
+          input {
+            background-color: transparent;
+            border-bottom: 1px solid $primary-clr-1;
+          }
+        }
+
+        .right {
+          .btn {
+            background-color: $primary-clr-1;
+            box-shadow: none;
+          }
+        }
+      }
+    }
+  }
+}
