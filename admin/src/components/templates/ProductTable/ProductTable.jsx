@@ -69,8 +69,8 @@ const ProductTable = () => {
       <header className="table__title">
         <h1>Latest Transactions</h1>
       </header>
-      <div className="table__body">
-        <table>
+      <table>
+        <thead>
           <tr>
             <th>Tracking ID</th>
             <th>Product</th>
@@ -80,24 +80,24 @@ const ProductTable = () => {
             <th>Payment Method</th>
             <th>Status</th>
           </tr>
-          {rows.map((row) => {
-            return (
-              <tr key={row.id}>
-                <td>{row.id}</td>
-                <td className="row-img">
-                  <img src={row.img} alt={row.title} />
-                  <span>{row.title}</span>
-                </td>
-                <td>{row.customer}</td>
-                <td>{row.date}</td>
-                <td>{row.amount}</td>
-                <td>{row.method}</td>
-                <td className={`status ${row.status}`}>{row.status}</td>
-              </tr>
-            );
-          })}
-        </table>
-      </div>
+        </thead>
+        <tbody>
+          {rows.map((row) => (
+            <tr key={row.id}>
+              <td>{row.id}</td>
+              <td className="row-img">
+                <img src={row.img} alt={row.title} />
+                <span>{row.title}</span>
+              </td>
+              <td>{row.customer}</td>
+              <td>{row.date}</td>
+              <td>{row.amount}</td>
+              <td>{row.method}</td>
+              <td className={`status ${row.status}`}>{row.status}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
     </div>
   );
 };
