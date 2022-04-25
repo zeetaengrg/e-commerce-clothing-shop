@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+import { useContext } from "react";
 import {
   MdAccountCircle,
   MdDashboard,
@@ -11,10 +13,9 @@ import {
 import { FaClipboardList, FaTruck } from "react-icons/fa";
 import { AiTwotoneShop } from "react-icons/ai";
 import { RiFolderUserFill } from "react-icons/ri";
-import "./Sidebar.scss";
-import { Link } from "react-router-dom";
-import { useContext } from "react";
+
 import { DarkModeContext } from "context/darkModeContext";
+import "./Sidebar.scss";
 
 const Sidebar = () => {
   const { dispatch } = useContext(DarkModeContext);
