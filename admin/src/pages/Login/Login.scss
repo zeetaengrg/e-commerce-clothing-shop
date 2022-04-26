@@ -7,7 +7,7 @@
   align-items: center;
   height: 100vh;
 
-  .login-container {
+  form {
     @include flex-direction-column;
     @include box;
     gap: 1rem;
@@ -28,6 +28,11 @@
         max-width: 20rem;
         height: 1.5rem;
       }
+    }
+
+    .btn {
+      @include button;
+      margin: 0.5rem auto 0 auto;
     }
   }
 }
