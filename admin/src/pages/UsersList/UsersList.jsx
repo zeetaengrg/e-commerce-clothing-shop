@@ -1,4 +1,4 @@
-import { Navbar, Sidebar, UserData } from "components/templates";
+import { Navbar, Sidebar, UserData } from "components";
 import "./UsersList.scss";
 
 const UsersList = () => {

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { MdCloudUpload } from "react-icons/md";
-import { Navbar, Sidebar } from "components/templates";
+import { Navbar, Sidebar } from "components";
 import "./New.scss";
 
 const New = ({ inputs, title }) => {

@@ -5,7 +5,7 @@ import {
   RevenueChart,
   GraphChart,
   ProductTable,
-} from "components/templates";
+} from "components";
 import "./Home.scss";
 
 const Home = () => {

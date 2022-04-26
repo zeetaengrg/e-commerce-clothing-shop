@@ -3,7 +3,7 @@ import {
   Navbar,
   ProductTable,
   Sidebar,
-} from "components/templates";
+} from "components";
 import "./Single.scss";
 
 const Single = () => {
