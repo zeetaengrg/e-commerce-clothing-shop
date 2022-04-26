@@ -1,0 +1,33 @@
+@import "styles/abstracts/mixins";
+@import "styles/abstracts/variables";
+
+.login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+  .login-container {
+    @include flex-direction-column;
+    @include box;
+    gap: 1rem;
+    padding: 2rem;
+
+    .form-control {
+      @include flex-direction-column;
+      gap: 0.5rem;
+
+      label {
+        color: $primary-clr;
+      }
+
+      input {
+        border: none;
+        outline: none;
+        border-bottom: 1px solid $primary-clr-3;
+        max-width: 20rem;
+        height: 1.5rem;
+      }
+    }
+  }
+}
